@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f2-6c00-7d72-a89c-15d213242819"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_backend_refactor_en\",\"decision\":\"no-skill\",\"reason\":\"The request is a backend-only refactor with no rendered strings, API response changes, or user-facing behavior changes, so speak-human does not apply.\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16812,"cached_input_tokens":13056,"cache_write_input_tokens":0,"output_tokens":97,"reasoning_output_tokens":31}}

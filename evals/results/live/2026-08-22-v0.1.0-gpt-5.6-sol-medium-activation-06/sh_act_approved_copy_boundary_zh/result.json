@@ -1,0 +1,25 @@
+{
+  "caseId": "sh_act_approved_copy_boundary_zh",
+  "caseStatus": "accepted",
+  "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T15:07:43.575Z",
+  "finishedAt": "2026-08-22T15:08:00.931Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_approved_copy_boundary_zh",
+    "decision": "use-skill",
+    "reason": "该请求涉及前端首页组件及用户可见文案；speak-human 用于守护并保留已确认的界面文案，且可检查重构中的意外变更。",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": null,
+    "expected": "contextual-boundary",
+    "reviewRequired": true,
+    "observedDecision": "use-skill",
+    "observedSelectedSkill": "speak-human"
+  },
+  "error": null
+}

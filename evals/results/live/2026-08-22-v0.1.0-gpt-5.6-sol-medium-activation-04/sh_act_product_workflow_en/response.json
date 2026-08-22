@@ -1,0 +1,1 @@
+{"caseId":"sh_act_product_workflow_en","decision":"use-skill","selectedSkill":"speak-human","reason":"The request requires implementing user-visible product UI copy for loading, success, and failure states shown to workspace members, which directly matches the skill."}

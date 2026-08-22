@@ -1,0 +1,32 @@
+{
+  "caseId": "sh_beh_saved_filters_empty_zh",
+  "caseStatus": "accepted",
+  "caseHash": "7207897ccbee61c71f1c1b4a23d2f78b36407f0a229e72a3b68e73101007da5d",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:00:10.571Z",
+  "finishedAt": "2026-08-22T15:00:29.116Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_saved_filters_empty_zh",
+    "copy": [
+      {
+        "role": "empty",
+        "text": "暂无已保存的筛选"
+      },
+      {
+        "role": "button",
+        "text": "创建筛选"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

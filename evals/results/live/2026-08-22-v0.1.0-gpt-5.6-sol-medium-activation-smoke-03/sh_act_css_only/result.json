@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_css_only",
+  "caseStatus": "accepted",
+  "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T14:45:12.602Z",
+  "finishedAt": "2026-08-22T14:45:33.144Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_css_only",
+    "decision": "use-skill",
+    "reason": "这是一个前端界面样式调整请求，涉及设置页卡片间距与布局细节，适用 impeccable；任务不涉及用户可见文案，因此不使用 speak-human。",
+    "selectedSkill": "impeccable"
+  },
+  "assessment": {
+    "pass": false,
+    "expected": "no-skill"
+  },
+  "error": null
+}

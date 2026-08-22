@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a1a-4b27-76d2-a5a2-6a39a5e4390d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_import_failure_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"文件导入失败\"},{\"role\":\"body\",\"text\":\"解析在第 214 行失败，本次导入没有保存任何记录。\"},{\"role\":\"button\",\"text\":\"重新上传\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18333,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":223,"reasoning_output_tokens":149}}

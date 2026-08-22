@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/speak-human/behavior-case.schema.json",
+  "title": "Speak Human behavior case suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "kind",
+    "suite",
+    "description",
+    "cases"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "kind": {
+      "const": "behavior"
+    },
+    "suite": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "copyFragment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "text"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "heading",
+            "body",
+            "label",
+            "button",
+            "helper",
+            "error",
+            "empty",
+            "status",
+            "metadata",
+            "accessibility"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "addedAt",
+        "origin",
+        "locale",
+        "surface",
+        "tags",
+        "context",
+        "inputCopy",
+        "approvedCopy",
+        "verifiedFacts",
+        "availableActions",
+        "permissionState",
+        "mustPreservePropositions",
+        "mustRemoveIntents",
+        "mustNotInfer",
+        "layoutConstraints",
+        "rationale",
+        "safetyImpact",
+        "supersedes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^sh_beh_[a-z0-9_]+$"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "accepted",
+            "retired"
+          ]
+        },
+        "addedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "acceptedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "retiredAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "retirementReason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacedBy": {
+          "type": "string",
+          "pattern": "^sh_beh_[a-z0-9_]+$"
+        },
+        "duplicateOf": {
+          "type": "string",
+          "pattern": "^sh_beh_[a-z0-9_]+$"
+        },
+        "origin": {
+          "enum": [
+            "synthetic",
+            "real-redacted",
+            "regression"
+          ]
+        },
+        "locale": {
+          "enum": [
+            "zh-CN",
+            "en"
+          ]
+        },
+        "surface": {
+          "enum": [
+            "marketing",
+            "product-workflow",
+            "admin-ops",
+            "developer-tool",
+            "form-validation",
+            "loading",
+            "error",
+            "success",
+            "empty",
+            "confirmation",
+            "permission",
+            "read-only",
+            "no-action"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputCopy": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/copyFragment"
+          }
+        },
+        "approvedCopy": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/copyFragment"
+          }
+        },
+        "verifiedFacts": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "availableActions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "permissionState": {
+          "enum": [
+            "unknown",
+            "unrestricted",
+            "restricted",
+            "read-only",
+            "denied",
+            "disabled"
+          ]
+        },
+        "mustPreservePropositions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "mustRemoveIntents": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "mustNotInfer": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "layoutConstraints": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "safetyImpact": {
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
+        },
+        "supersedes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^sh_beh_[a-z0-9_]+$"
+          }
+        }
+      }
+    }
+  }
+}

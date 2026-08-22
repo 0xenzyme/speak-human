@@ -1,0 +1,36 @@
+{
+  "caseId": "sh_beh_webhook_error_zh",
+  "caseStatus": "accepted",
+  "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec",
+  "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+  "startedAt": "2026-08-22T14:56:53.873Z",
+  "finishedAt": "2026-08-22T14:57:11.299Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_webhook_error_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Webhook 投递失败：HTTP 401"
+      },
+      {
+        "role": "body",
+        "text": "最近一次请求返回 HTTP 401，系统不会自动重试这次投递。"
+      },
+      {
+        "role": "button",
+        "text": "查看请求日志"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

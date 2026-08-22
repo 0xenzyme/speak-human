@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f2-b4a2-7e72-94c5-32f786de02bb"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_api_docs_zh\",\"decision\":\"no-skill\",\"reason\":\"该请求是开发者技术文档内容，不涉及产品界面上的用户可见文案，因此不适用 speak-human。\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16826,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":106,"reasoning_output_tokens":42}}

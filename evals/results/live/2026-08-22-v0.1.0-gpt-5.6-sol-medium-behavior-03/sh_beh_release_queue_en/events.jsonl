@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a06-6021-79e2-a0c1-5e66384d96a4"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_release_queue_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Release approved\"},{\"role\":\"status\",\"text\":\"Not deployed. Only release managers can deploy. You have read-only access.\"},{\"role\":\"button\",\"text\":\"View release\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18270,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":351,"reasoning_output_tokens":281}}

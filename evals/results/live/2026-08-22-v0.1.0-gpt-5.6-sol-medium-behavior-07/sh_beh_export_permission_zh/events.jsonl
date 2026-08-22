@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a1c-86c6-73c2-bae8-7c7bbadd2146"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_export_permission_zh\",\"copy\":[{\"role\":\"status\",\"text\":\"你可以查看看板数据，但没有导出权限。\"},{\"role\":\"button\",\"text\":\"申请导出权限\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18287,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":173,"reasoning_output_tokens":112}}

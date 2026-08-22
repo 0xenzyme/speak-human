@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_marketing_page_zh",
+  "caseStatus": "accepted",
+  "caseHash": "6aa8d31426454a955b5563928e2b943a5150886127f84637835560ad8594e4fa",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T14:50:36.205Z",
+  "finishedAt": "2026-08-22T14:50:56.337Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_marketing_page_zh",
+    "decision": "use-skill",
+    "reason": "请求涉及为真实渲染的数据产品落地页编写标题、说明和按钮等用户可见界面文案，且需遵循仓库中已确认的产品事实；这正属于 speak-human 的前端 UI 文案保护范围。",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

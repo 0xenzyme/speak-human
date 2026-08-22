@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a17-9c69-78e2-b6a1-aa661fcffc74"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_delete_rules_confirmation_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Delete 3 draft automation rules?\"},{\"role\":\"body\",\"text\":\"This permanently deletes 3 draft automation rules. Published rules are not affected.\"},{\"role\":\"button\",\"text\":\"Delete 3 draft rules\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18326,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":177,"reasoning_output_tokens":98}}

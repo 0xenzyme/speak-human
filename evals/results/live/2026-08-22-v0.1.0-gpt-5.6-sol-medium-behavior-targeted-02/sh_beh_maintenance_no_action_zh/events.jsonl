@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a01-99d0-7f13-81f8-4ecab672682e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_maintenance_no_action_zh\",\"copy\":[{\"role\":\"status\",\"text\":\"服务计划维护中，将持续到 03:00。客户端会自动重新连接。\"}],\"notes\":\"已省略不支持的 button 角色“立即重试”。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18251,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":183,"reasoning_output_tokens":112}}

@@ -1,0 +1,37 @@
+{
+  "caseId": "sh_beh_webhook_error_zh",
+  "caseStatus": "accepted",
+  "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec",
+  "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+  "startedAt": "2026-08-22T15:18:45.672Z",
+  "finishedAt": "2026-08-22T15:19:03.982Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_webhook_error_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "下游鉴权失败（HTTP 401）"
+      },
+      {
+        "role": "body",
+        "text": "最近一次 webhook 请求返回 HTTP 401，系统不会自动重试。"
+      }
+    ],
+    "notes": "已省略不对应可用操作的 button 角色“继续处理”。"
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "introducedRoles": [],
+    "excessiveRoles": [],
+    "missingNonActionRoles": [],
+    "reviewRequired": true,
+    "note": "Approved-copy, blank-fragment, no-action, and role-shape checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

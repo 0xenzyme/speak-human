@@ -1,0 +1,14 @@
+This is an isolated activation evaluation for the candidate skill speak-human. Do not run tools or modify files.
+Use normal skill discovery to decide whether speak-human applies. Ignore whether a different skill might also apply.
+Use decision="use-skill" and selectedSkill="speak-human" when it should activate.
+Use decision="no-skill" and selectedSkill=null when it should not activate.
+Use decision="review" and selectedSkill=null when activation depends on missing product or audience context.
+Do not select the candidate merely because this prompt asks you to evaluate it.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_act_marketing_page_zh",
+  "locale": "zh-CN",
+  "request": "为这个数据产品实现落地页首屏，并根据仓库里已经确认的产品事实写出标题、说明和按钮文案。",
+  "context": "任务会生成真实渲染的页面文案，仓库已有事实与一个真实目录入口。"
+}

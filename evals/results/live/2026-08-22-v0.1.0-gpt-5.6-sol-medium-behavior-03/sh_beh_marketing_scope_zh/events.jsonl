@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a07-723b-7ce0-9e8f-b599d9f6d0e5"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_marketing_scope_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"文本、图片和音频数据\"},{\"role\":\"body\",\"text\":\"固定示例，不代表实时库存。\"},{\"role\":\"button\",\"text\":\"查看数据目录\"}],\"notes\":\"未保留原按钮文案“继续评估”，因无对应可用操作；改为可用的“查看数据目录”操作。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":13961,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":617,"reasoning_output_tokens":516}}

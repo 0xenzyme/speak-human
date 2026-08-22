@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a02-7113-7d02-836b-a0983dad6cfa"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_css_only\",\"decision\":\"no-skill\",\"reason\":\"这是纯样式调整，不涉及创建、修改或评审任何用户可见文案。\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16831,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":101,"reasoning_output_tokens":46}}

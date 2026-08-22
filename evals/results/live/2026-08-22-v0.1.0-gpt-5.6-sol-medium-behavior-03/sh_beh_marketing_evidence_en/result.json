@@ -1,0 +1,38 @@
+{
+  "caseId": "sh_beh_marketing_evidence_en",
+  "caseStatus": "accepted",
+  "caseHash": "a5bfa938a3911e5c73e3833444018f45fd15d673aff5573d655ad36c4757a4eb",
+  "suiteFileHash": "3bcc713e2c622061be196f70a4719d6202ee97f676dadd25ab3f8e9a7e8be469",
+  "startedAt": "2026-08-22T15:12:34.495Z",
+  "finishedAt": "2026-08-22T15:12:54.138Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_marketing_evidence_en",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Explore 12 public templates"
+      },
+      {
+        "role": "body",
+        "text": "Browse the public template gallery."
+      },
+      {
+        "role": "button",
+        "text": "View 12 templates"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy, blank-fragment, and no-action checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

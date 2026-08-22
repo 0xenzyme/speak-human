@@ -1,0 +1,1 @@
+{"caseId":"sh_act_developer_settings_en","decision":"use-skill","reason":"The request involves building a frontend settings screen and writing user-visible labels and error messages, which is exactly the scope of speak-human. The developer audience and API/HTTP terminology are established, so the skill should activate.","selectedSkill":"speak-human"}

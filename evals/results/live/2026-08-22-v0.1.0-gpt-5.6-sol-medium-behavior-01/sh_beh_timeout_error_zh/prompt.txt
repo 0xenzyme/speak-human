@@ -1,0 +1,37 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_timeout_error_zh",
+  "locale": "zh-CN",
+  "surface": "error",
+  "context": "保存设置时请求超时。服务器没有确认写入，页面保留用户输入，并提供重新保存按钮。",
+  "inputCopy": [
+    {
+      "role": "error",
+      "text": "mutation timeout，提交链路异常"
+    },
+    {
+      "role": "button",
+      "text": "继续"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "保存请求超时",
+    "服务器没有确认设置是否写入",
+    "用户输入仍保留在页面",
+    "用户可以重新保存"
+  ],
+  "availableActions": [
+    {
+      "id": "save-again",
+      "label": "重新保存"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "错误提示和重新保存按钮应在同一状态区域"
+  ]
+}

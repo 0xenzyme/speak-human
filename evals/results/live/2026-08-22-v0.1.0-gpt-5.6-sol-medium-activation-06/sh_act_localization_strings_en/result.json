@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_localization_strings_en",
+  "caseStatus": "accepted",
+  "caseHash": "8b9d460d0d8683042c3a3a7daf0839c1576d866fb30b2cbc25515025298370dc",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T15:09:38.926Z",
+  "finishedAt": "2026-08-22T15:09:54.844Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_localization_strings_en",
+    "decision": "use-skill",
+    "reason": "The request adds rendered English UI copy for a destructive account-deletion confirmation dialog, which is exactly the scope of the speak-human skill.",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

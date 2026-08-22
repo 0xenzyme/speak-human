@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavior",
+  "suite": "product-ui",
+  "description": "Product workflows where current state, limitations, and real recovery actions must remain exact.",
+  "cases": [
+    {
+      "id": "sh_beh_import_failure_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "product-workflow",
+      "tags": [
+        "error",
+        "real-action",
+        "workflow"
+      ],
+      "context": "文件导入详情页。解析在第 214 行失败，已导入的记录没有保存；页面只有重新上传入口。",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "阶段 3 验收未通过"
+        },
+        {
+          "role": "body",
+          "text": "Parser pipeline 在 row 214 抛错，请完成修复闭环。"
+        },
+        {
+          "role": "button",
+          "text": "处理问题"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "解析在第 214 行失败",
+        "本次导入没有保存任何记录",
+        "用户可以重新上传文件"
+      ],
+      "availableActions": [
+        {
+          "id": "upload-again",
+          "label": "重新上传",
+          "destination": "/imports/new"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "指出第 214 行",
+        "说明本次没有保存记录",
+        "只提供重新上传这一真实恢复动作"
+      ],
+      "mustRemoveIntents": [
+        "暴露内部阶段编号、验收和修复闭环语言",
+        "把解析器实现名称作为用户解释"
+      ],
+      "mustNotInfer": [
+        "具体字段或格式错误原因",
+        "可在页面内修复文件",
+        "可重试当前任务或恢复部分记录"
+      ],
+      "layoutConstraints": [
+        "错误标题不超过两行",
+        "主按钮保持一个"
+      ],
+      "rationale": "错误文案必须从内部流水线语言转成可验证的当前状态和唯一恢复路径。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_approved_workflow_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "en",
+      "surface": "product-workflow",
+      "tags": [
+        "approved-copy",
+        "permission",
+        "scope"
+      ],
+      "context": "A billing settings panel. Legal approved the renewal sentence. The current viewer can see the plan but cannot change it; no request-access control exists.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Plan settings"
+        },
+        {
+          "role": "body",
+          "text": "Your subscription renews automatically on October 1 unless canceled before renewal."
+        },
+        {
+          "role": "status",
+          "text": "Implementation note: hide mutation controls for viewer role"
+        }
+      ],
+      "approvedCopy": [
+        {
+          "role": "body",
+          "text": "Your subscription renews automatically on October 1 unless canceled before renewal."
+        }
+      ],
+      "verifiedFacts": [
+        "The subscription renews automatically on October 1 unless canceled before renewal",
+        "The viewer role cannot change the plan",
+        "There is no request-access action"
+      ],
+      "availableActions": [],
+      "permissionState": "read-only",
+      "mustPreservePropositions": [
+        "Preserve the approved renewal sentence verbatim",
+        "State that the viewer cannot change the plan"
+      ],
+      "mustRemoveIntents": [
+        "Expose the implementation note or mutation-control terminology"
+      ],
+      "mustNotInfer": [
+        "A route to cancel, manage, upgrade, or request access",
+        "A different renewal date or cancellation condition",
+        "The reason the viewer has read-only access"
+      ],
+      "layoutConstraints": [
+        "Do not add a button or link",
+        "Keep the approved sentence as one unchanged copy fragment"
+      ],
+      "rationale": "Natural wording cannot override approved legal copy or create a missing permission workflow.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_import_success_en",
+  "locale": "en",
+  "surface": "success",
+  "context": "A completed contact import created 23 records and skipped 2 duplicate rows. The user can open the import report.",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "Import pipeline complete"
+    },
+    {
+      "role": "body",
+      "text": "Everything was imported successfully."
+    },
+    {
+      "role": "button",
+      "text": "Continue"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "23 records were created",
+    "2 duplicate rows were skipped",
+    "The import report is available"
+  ],
+  "availableActions": [
+    {
+      "id": "view-import-report",
+      "label": "View import report",
+      "destination": "/imports/current/report"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "Both counts remain visible in the success state"
+  ]
+}

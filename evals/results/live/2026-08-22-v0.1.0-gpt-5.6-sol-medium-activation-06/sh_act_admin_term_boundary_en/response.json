@@ -1,0 +1,1 @@
+{"caseId":"sh_act_admin_term_boundary_en","decision":"use-skill","reason":"The request reviews user-visible status labels in an operations console, which is frontend/product UI copy. The operator audience and approved product terms are sufficiently defined.","selectedSkill":"speak-human"}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a17-5c35-7cd2-b995-478dd77a670c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_webhook_error_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"Webhook 投递失败：HTTP 401\"},{\"role\":\"body\",\"text\":\"最近一次请求未通过鉴权，系统不会自动重试这次投递。你可以查看请求日志；当前页无法重发。\"},{\"role\":\"button\",\"text\":\"查看请求日志\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":13975,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":149,"reasoning_output_tokens":55}}

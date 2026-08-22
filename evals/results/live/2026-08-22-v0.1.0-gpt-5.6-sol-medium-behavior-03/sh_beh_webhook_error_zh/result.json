@@ -1,0 +1,38 @@
+{
+  "caseId": "sh_beh_webhook_error_zh",
+  "caseStatus": "accepted",
+  "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec",
+  "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+  "startedAt": "2026-08-22T15:11:17.674Z",
+  "finishedAt": "2026-08-22T15:11:43.905Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_webhook_error_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Webhook 投递失败：HTTP 401"
+      },
+      {
+        "role": "body",
+        "text": "最近一次请求返回 HTTP 401，系统不会自动重试。"
+      },
+      {
+        "role": "link",
+        "text": "查看请求日志"
+      }
+    ],
+    "notes": "已移除原按钮“继续处理”，因为当前页没有对应的可用操作；改为提供可用的“查看请求日志”链接。"
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy, blank-fragment, and no-action checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

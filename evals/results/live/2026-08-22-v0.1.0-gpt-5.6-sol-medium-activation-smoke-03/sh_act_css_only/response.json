@@ -1,0 +1,1 @@
+{"caseId":"sh_act_css_only","decision":"use-skill","reason":"这是一个前端界面样式调整请求，涉及设置页卡片间距与布局细节，适用 impeccable；任务不涉及用户可见文案，因此不使用 speak-human。","selectedSkill":"impeccable"}

@@ -1,0 +1,1 @@
+{"caseId":"sh_beh_api_token_en","copy":[{"role":"heading","text":"Revoke API token?"},{"role":"body","text":"Revoking this token immediately rejects future API requests that use it. Existing request logs remain available. This action cannot be undone."},{"role":"button","text":"Revoke token"}],"notes":""}

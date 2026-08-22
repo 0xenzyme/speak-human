@@ -1,0 +1,14 @@
+{
+  "caseId": "sh_act_css_only",
+  "caseStatus": "accepted",
+  "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T14:24:58.950Z",
+  "finishedAt": "2026-08-22T14:29:58.964Z",
+  "exitCode": null,
+  "signal": "SIGTERM",
+  "authLinkType": "hard-link",
+  "output": null,
+  "assessment": null,
+  "error": "Codex exceeded the 300-second per-case timeout"
+}

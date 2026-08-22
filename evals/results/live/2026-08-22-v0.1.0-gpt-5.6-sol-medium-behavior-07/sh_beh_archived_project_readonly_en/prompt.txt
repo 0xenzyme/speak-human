@@ -1,0 +1,41 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Use only roles present in inputCopy. Do not add a role, change a role or control type, or return more fragments for a role than were supplied.
+Return one rewritten fragment for every supplied non-action role; removing internal language must not drop a verified fact, state, permission, or limitation.
+For a supplied button, link, or action role, keep that same role and replace vague text with the applicable supplied available-action label.
+A vague original label does not make the control unsupported. Omit the action role only when no applicable supplied action exists; name omissions in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_archived_project_readonly_en",
+  "locale": "en",
+  "surface": "read-only",
+  "context": "An archived project detail page. Archived projects can be viewed but not edited. The user can open project history; restore and duplicate controls do not exist.",
+  "inputCopy": [
+    {
+      "role": "status",
+      "text": "Mutation controls disabled by lifecycle state"
+    },
+    {
+      "role": "button",
+      "text": "Take action"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "The project is archived",
+    "It can be viewed but not edited",
+    "Project history is available"
+  ],
+  "availableActions": [
+    {
+      "id": "view-history",
+      "label": "View project history",
+      "destination": "/projects/current/history"
+    }
+  ],
+  "permissionState": "read-only",
+  "layoutConstraints": [
+    "The archived status remains visible near the project title"
+  ]
+}

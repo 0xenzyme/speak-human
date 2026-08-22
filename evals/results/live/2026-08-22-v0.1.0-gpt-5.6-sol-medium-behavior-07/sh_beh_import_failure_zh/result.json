@@ -1,0 +1,42 @@
+{
+  "caseId": "sh_beh_import_failure_zh",
+  "caseStatus": "accepted",
+  "caseHash": "b7f3f39795b702a3d746be77632f07ac6a4c2930bd3eb97250ee0b84148be1e0",
+  "suiteFileHash": "68d5a5dc60e6d36e8dab0102318ac361beaf481fe9b7f75f48c72597124fde47",
+  "startedAt": "2026-08-22T15:32:41.266Z",
+  "finishedAt": "2026-08-22T15:33:02.047Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_import_failure_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "文件导入失败"
+      },
+      {
+        "role": "body",
+        "text": "解析在第 214 行失败，本次导入没有保存任何记录。"
+      },
+      {
+        "role": "button",
+        "text": "重新上传"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "introducedRoles": [],
+    "excessiveRoles": [],
+    "missingNonActionRoles": [],
+    "missingSupportedActionRoles": [],
+    "reviewRequired": true,
+    "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

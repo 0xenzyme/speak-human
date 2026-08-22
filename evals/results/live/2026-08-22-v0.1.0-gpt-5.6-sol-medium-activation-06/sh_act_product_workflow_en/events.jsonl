@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a04-31f4-7730-ba52-d67cf3be4c5e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_product_workflow_en\",\"decision\":\"use-skill\",\"reason\":\"The request adds rendered loading, success, and failure copy to a product workflow UI, which is exactly the scope of speak-human.\",\"selectedSkill\":\"speak-human\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":16824,"cached_input_tokens":16128,"cache_write_input_tokens":0,"output_tokens":152,"reasoning_output_tokens":88}}

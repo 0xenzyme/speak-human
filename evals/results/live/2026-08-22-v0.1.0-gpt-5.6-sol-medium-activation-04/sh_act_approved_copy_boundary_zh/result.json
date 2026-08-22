@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_approved_copy_boundary_zh",
+  "caseStatus": "accepted",
+  "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T14:49:59.976Z",
+  "finishedAt": "2026-08-22T14:50:18.654Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_approved_copy_boundary_zh",
+    "decision": "use-skill",
+    "reason": "该请求涉及重构含用户可见文案的前端首页组件；speak-human 明确要求保留已批准的文案，可用于防止重构时发生意外改写。",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": false,
+    "expected": "review:null"
+  },
+  "error": null
+}

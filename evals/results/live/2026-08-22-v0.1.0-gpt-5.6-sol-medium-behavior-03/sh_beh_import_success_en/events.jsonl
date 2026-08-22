@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a09-9d28-7b00-890a-540a7d9787f8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_import_success_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Import complete\"},{\"role\":\"body\",\"text\":\"23 records were created, and 2 duplicate rows were skipped.\"},{\"role\":\"button\",\"text\":\"View import report\"}],\"notes\":\"Omitted the supplied \\\"Continue\\\" action wording because no matching action was available.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18249,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":291,"reasoning_output_tokens":207}}

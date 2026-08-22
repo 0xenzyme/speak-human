@@ -1,0 +1,32 @@
+{
+  "caseId": "sh_beh_export_permission_zh",
+  "caseStatus": "accepted",
+  "caseHash": "42f8c0f94119e8e5363a3fc0773ee5dd5d20cd7fee05fba201e1be91e87a1e79",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:00:49.389Z",
+  "finishedAt": "2026-08-22T15:01:07.773Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_export_permission_zh",
+    "copy": [
+      {
+        "role": "status",
+        "text": "你可以查看看板数据，但暂无导出权限"
+      },
+      {
+        "role": "button",
+        "text": "申请导出权限"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

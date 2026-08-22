@@ -1,0 +1,36 @@
+{
+  "caseId": "sh_beh_candidate_governance_zh",
+  "caseStatus": "accepted",
+  "caseHash": "4c781b63b36c3a41284b7cbb05fd7bb34224dd61307c5dd01f4134da262ea7eb",
+  "suiteFileHash": "c761de2c54f19afdb815444003b1e83dd57b12d82da20432bce365edb09d0c8a",
+  "startedAt": "2026-08-22T14:56:10.214Z",
+  "finishedAt": "2026-08-22T14:56:34.407Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_candidate_governance_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "候选样本"
+      },
+      {
+        "role": "body",
+        "text": "当前列表包含候选样本，可审核后决定是否入集。"
+      },
+      {
+        "role": "status",
+        "text": "候选 12 个；隔离 3 个"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

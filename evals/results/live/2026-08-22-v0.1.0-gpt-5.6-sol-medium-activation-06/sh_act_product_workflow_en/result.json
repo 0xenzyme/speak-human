@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_product_workflow_en",
+  "caseStatus": "accepted",
+  "caseHash": "3c9fc4c5185a165e094478c940630e404fc69a819503d4753c3eebf5f6ace90f",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T15:08:33.001Z",
+  "finishedAt": "2026-08-22T15:08:48.867Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_product_workflow_en",
+    "decision": "use-skill",
+    "reason": "The request adds rendered loading, success, and failure copy to a product workflow UI, which is exactly the scope of speak-human.",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

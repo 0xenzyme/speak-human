@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a0e-1a56-7de2-85b0-c3f0583d5740"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_form_validation_zh\",\"copy\":[{\"role\":\"error\",\"text\":\"邮箱格式无效\"},{\"role\":\"helper\",\"text\":\"表单尚未提交，请修改邮箱地址。\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18301,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":161,"reasoning_output_tokens":102}}

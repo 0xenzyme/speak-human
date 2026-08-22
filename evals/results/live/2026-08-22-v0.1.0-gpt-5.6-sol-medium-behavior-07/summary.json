@@ -1,0 +1,865 @@
+{
+  "mode": "live",
+  "networkOrModelCall": true,
+  "provenance": {
+    "runnerVersion": 10,
+    "manifestSchemaVersion": 1,
+    "skillVersion": "0.1.0",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "medium",
+    "timeoutSeconds": 600,
+    "sourceCommit": "5beaa90afa1c4c59d7d4c7c78c922f843157acc1",
+    "sourceDirty": true,
+    "provider": {
+      "source": "allowlisted-active-config",
+      "providerId": "OpenAI",
+      "baseUrlHash": "dcbe54e373401bb3d5d03bff79b2d1e5076470dc8abfc41d62e7bbfae3cbf172",
+      "wireApi": "responses",
+      "requiresOpenAIAuth": true,
+      "credentialMode": "openai-auth",
+      "configHash": "e29cc75b2c064101dab08ec845865e2366ec7a7152f57fc94f0757d92f06f859"
+    },
+    "lane": "behavior",
+    "skillHash": "2ce5c0b9885376bace99080e20d96bda778dfc398788b6fcab428a1e672b9227",
+    "manifestHash": "1cb9b4e306f64e240cc98aed7fb4ae206b10b5a3b1614e4371b12f3e9f0a1d6e",
+    "runnerHash": "aae8cd9cd8f0a447a14d9dca063fd545602e95d67f9ca612e1c2e888e464e211"
+  },
+  "cases": [
+    {
+      "id": "sh_beh_candidate_governance_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "admin-ops",
+      "caseHash": "4c781b63b36c3a41284b7cbb05fd7bb34224dd61307c5dd01f4134da262ea7eb"
+    },
+    {
+      "id": "sh_beh_release_queue_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "admin-ops",
+      "caseHash": "ad82edfa0146c91bb21a0d5e02b0ceb73add31b08bf061b39b10af554f0f9b44"
+    },
+    {
+      "id": "sh_beh_webhook_error_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "developer-tool",
+      "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec"
+    },
+    {
+      "id": "sh_beh_api_token_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "developer-tool",
+      "caseHash": "2d8ed4a21a147dafa7b180a2f4e7975514d7c396142f790d5f4d013e9a3f174d"
+    },
+    {
+      "id": "sh_beh_marketing_scope_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "caseHash": "d42e46ec66b0a91e2c9550ece55ab8c50eea9f146a8f332c62e3c6697dd65d84"
+    },
+    {
+      "id": "sh_beh_marketing_evidence_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "marketing",
+      "caseHash": "a5bfa938a3911e5c73e3833444018f45fd15d673aff5573d655ad36c4757a4eb"
+    },
+    {
+      "id": "sh_beh_import_failure_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "product-workflow",
+      "caseHash": "b7f3f39795b702a3d746be77632f07ac6a4c2930bd3eb97250ee0b84148be1e0"
+    },
+    {
+      "id": "sh_beh_approved_workflow_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "product-workflow",
+      "caseHash": "b954e2aff98c698ef40deda4e1a6cbf90a90d32b3c242960800a03ebb6da323b"
+    },
+    {
+      "id": "sh_beh_form_validation_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "form-validation",
+      "caseHash": "3d952f9787329294856161a74b4f1c041528286107087adce0ae98f795685756"
+    },
+    {
+      "id": "sh_beh_loading_export_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "loading",
+      "caseHash": "afa3b157016b5b4d99674a186cf8d792fdaf9611a557573a0c4a23323dfb3385"
+    },
+    {
+      "id": "sh_beh_timeout_error_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "error",
+      "caseHash": "6b378b061cd1f7c40fd66d30556a211b8f70de66754857e5d430a8d0b259f84a"
+    },
+    {
+      "id": "sh_beh_import_success_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "success",
+      "caseHash": "e831276e748ad76a8ef63bf3be49a76b6beca080347fe9fedde762fe841df92e"
+    },
+    {
+      "id": "sh_beh_saved_filters_empty_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "empty",
+      "caseHash": "7207897ccbee61c71f1c1b4a23d2f78b36407f0a229e72a3b68e73101007da5d"
+    },
+    {
+      "id": "sh_beh_delete_rules_confirmation_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "confirmation",
+      "caseHash": "811f15f93b8ddf7f7b634115f2b505e9aa1d8fd3e693af71d63bafba0f75868d"
+    },
+    {
+      "id": "sh_beh_export_permission_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "permission",
+      "caseHash": "42f8c0f94119e8e5363a3fc0773ee5dd5d20cd7fee05fba201e1be91e87a1e79"
+    },
+    {
+      "id": "sh_beh_archived_project_readonly_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "read-only",
+      "caseHash": "d3b28645778cd5eb7ad717275e3e12d1a815e0b2e897a9e9b422e3c2332981c8"
+    },
+    {
+      "id": "sh_beh_maintenance_no_action_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "no-action",
+      "caseHash": "434f1c74ac2084fb26c10824230fffdf64488abf84cab2014a4e87760647dbde"
+    }
+  ],
+  "isolation": {
+    "temporaryCodexHome": true,
+    "temporaryEmptyWorkspace": true,
+    "onlyStagedUserSkill": "speak-human",
+    "userConfigMode": "temporary allowlisted provider-only config",
+    "userRulesIgnored": true,
+    "pluginLoadingDisabled": true,
+    "sandbox": "read-only",
+    "sessionPersistence": "ephemeral",
+    "authHandling": "temporary filesystem link; contents are not read or copied",
+    "userScopeInstall": false
+  },
+  "providerAuthorization": {
+    "required": true,
+    "host": "sub.videofree.fun",
+    "exactMatchProvided": true
+  },
+  "codexVersion": "codex-cli 0.149.0",
+  "codexLauncher": "windows-npm-entrypoint",
+  "startedAt": "2026-08-22T15:30:44.979Z",
+  "finishedAt": "2026-08-22T15:35:59.393Z",
+  "outputDirectory": "evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-behavior-07",
+  "casesRun": 17,
+  "invocationFailures": 0,
+  "assessmentFailures": 1,
+  "reviewRequiredCases": 17,
+  "cleanupWarnings": [],
+  "gateStatus": "failed",
+  "results": [
+    {
+      "caseId": "sh_beh_candidate_governance_zh",
+      "caseStatus": "accepted",
+      "caseHash": "4c781b63b36c3a41284b7cbb05fd7bb34224dd61307c5dd01f4134da262ea7eb",
+      "suiteFileHash": "c761de2c54f19afdb815444003b1e83dd57b12d82da20432bce365edb09d0c8a",
+      "startedAt": "2026-08-22T15:30:44.983Z",
+      "finishedAt": "2026-08-22T15:31:04.456Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_candidate_governance_zh",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "候选样本"
+          },
+          {
+            "role": "body",
+            "text": "当前列表仅包含候选样本。"
+          },
+          {
+            "role": "status",
+            "text": "候选样本 12 个，隔离样本 3 个"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_release_queue_en",
+      "caseStatus": "accepted",
+      "caseHash": "ad82edfa0146c91bb21a0d5e02b0ceb73add31b08bf061b39b10af554f0f9b44",
+      "suiteFileHash": "c761de2c54f19afdb815444003b1e83dd57b12d82da20432bce365edb09d0c8a",
+      "startedAt": "2026-08-22T15:31:04.460Z",
+      "finishedAt": "2026-08-22T15:31:22.056Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_release_queue_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Release approved, deployment pending"
+          },
+          {
+            "role": "status",
+            "text": "Approved, not deployed. Only release managers can deploy. You can view the release."
+          },
+          {
+            "role": "button",
+            "text": "View release"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_webhook_error_zh",
+      "caseStatus": "accepted",
+      "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec",
+      "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+      "startedAt": "2026-08-22T15:31:22.061Z",
+      "finishedAt": "2026-08-22T15:31:42.065Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_webhook_error_zh",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Webhook 投递失败：下游鉴权未通过（HTTP 401）"
+          },
+          {
+            "role": "body",
+            "text": "最近一次 Webhook 请求返回 HTTP 401，系统不会自动重试。"
+          },
+          {
+            "role": "button",
+            "text": "查看请求日志"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_api_token_en",
+      "caseStatus": "accepted",
+      "caseHash": "2d8ed4a21a147dafa7b180a2f4e7975514d7c396142f790d5f4d013e9a3f174d",
+      "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+      "startedAt": "2026-08-22T15:31:42.078Z",
+      "finishedAt": "2026-08-22T15:32:00.632Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_api_token_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Revoke this API token?"
+          },
+          {
+            "role": "body",
+            "text": "Revoking this token immediately rejects future API requests using it. Existing request logs remain available, but revocation cannot be undone."
+          },
+          {
+            "role": "button",
+            "text": "Revoke token"
+          }
+        ],
+        "notes": "The supplied input had no Cancel action role, so it was not added."
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_marketing_scope_zh",
+      "caseStatus": "accepted",
+      "caseHash": "d42e46ec66b0a91e2c9550ece55ab8c50eea9f146a8f332c62e3c6697dd65d84",
+      "suiteFileHash": "3bcc713e2c622061be196f70a4719d6202ee97f676dadd25ab3f8e9a7e8be469",
+      "startedAt": "2026-08-22T15:32:00.636Z",
+      "finishedAt": "2026-08-22T15:32:19.483Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_marketing_scope_zh",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "文本、图片和音频数据"
+          },
+          {
+            "role": "body",
+            "text": "我们提供文本、图片和音频数据。固定示例，不代表实时库存。"
+          },
+          {
+            "role": "button",
+            "text": "查看数据目录"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": false,
+        "missing": [
+          {
+            "role": "body",
+            "text": "固定示例，不代表实时库存。"
+          }
+        ],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_marketing_evidence_en",
+      "caseStatus": "accepted",
+      "caseHash": "a5bfa938a3911e5c73e3833444018f45fd15d673aff5573d655ad36c4757a4eb",
+      "suiteFileHash": "3bcc713e2c622061be196f70a4719d6202ee97f676dadd25ab3f8e9a7e8be469",
+      "startedAt": "2026-08-22T15:32:19.486Z",
+      "finishedAt": "2026-08-22T15:32:41.262Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_marketing_evidence_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Explore 12 public templates"
+          },
+          {
+            "role": "body",
+            "text": "Browse 12 public templates in the gallery."
+          },
+          {
+            "role": "button",
+            "text": "View 12 templates"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_import_failure_zh",
+      "caseStatus": "accepted",
+      "caseHash": "b7f3f39795b702a3d746be77632f07ac6a4c2930bd3eb97250ee0b84148be1e0",
+      "suiteFileHash": "68d5a5dc60e6d36e8dab0102318ac361beaf481fe9b7f75f48c72597124fde47",
+      "startedAt": "2026-08-22T15:32:41.266Z",
+      "finishedAt": "2026-08-22T15:33:02.047Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_import_failure_zh",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "文件导入失败"
+          },
+          {
+            "role": "body",
+            "text": "解析在第 214 行失败，本次导入没有保存任何记录。"
+          },
+          {
+            "role": "button",
+            "text": "重新上传"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_approved_workflow_en",
+      "caseStatus": "accepted",
+      "caseHash": "b954e2aff98c698ef40deda4e1a6cbf90a90d32b3c242960800a03ebb6da323b",
+      "suiteFileHash": "68d5a5dc60e6d36e8dab0102318ac361beaf481fe9b7f75f48c72597124fde47",
+      "startedAt": "2026-08-22T15:33:02.051Z",
+      "finishedAt": "2026-08-22T15:33:18.313Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_approved_workflow_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Plan details"
+          },
+          {
+            "role": "body",
+            "text": "Your subscription renews automatically on October 1 unless canceled before renewal."
+          },
+          {
+            "role": "status",
+            "text": "You can view this plan, but you can't change it."
+          }
+        ],
+        "notes": "The approved renewal sentence is unchanged. No action controls were added."
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_form_validation_zh",
+      "caseStatus": "accepted",
+      "caseHash": "3d952f9787329294856161a74b4f1c041528286107087adce0ae98f795685756",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:33:18.318Z",
+      "finishedAt": "2026-08-22T15:33:39.051Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_form_validation_zh",
+        "copy": [
+          {
+            "role": "error",
+            "text": "邮箱格式无效，表单尚未提交。"
+          },
+          {
+            "role": "helper",
+            "text": "你可以修改邮箱。"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_loading_export_en",
+      "caseStatus": "accepted",
+      "caseHash": "afa3b157016b5b4d99674a186cf8d792fdaf9611a557573a0c4a23323dfb3385",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:33:39.055Z",
+      "finishedAt": "2026-08-22T15:33:57.665Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_loading_export_en",
+        "copy": [
+          {
+            "role": "status",
+            "text": "Preparing your report export…"
+          },
+          {
+            "role": "helper",
+            "text": "This export continues on the server if you leave this page. No completion estimate is available."
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_timeout_error_zh",
+      "caseStatus": "accepted",
+      "caseHash": "6b378b061cd1f7c40fd66d30556a211b8f70de66754857e5d430a8d0b259f84a",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:33:57.668Z",
+      "finishedAt": "2026-08-22T15:34:16.145Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_timeout_error_zh",
+        "copy": [
+          {
+            "role": "error",
+            "text": "保存请求超时，服务器尚未确认设置是否写入。你的输入仍保留在页面上。"
+          },
+          {
+            "role": "button",
+            "text": "重新保存"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_import_success_en",
+      "caseStatus": "accepted",
+      "caseHash": "e831276e748ad76a8ef63bf3be49a76b6beca080347fe9fedde762fe841df92e",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:34:16.148Z",
+      "finishedAt": "2026-08-22T15:34:33.797Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_import_success_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Import complete"
+          },
+          {
+            "role": "body",
+            "text": "23 records were created, and 2 duplicate rows were skipped."
+          },
+          {
+            "role": "button",
+            "text": "View import report"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_saved_filters_empty_zh",
+      "caseStatus": "accepted",
+      "caseHash": "7207897ccbee61c71f1c1b4a23d2f78b36407f0a229e72a3b68e73101007da5d",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:34:33.801Z",
+      "finishedAt": "2026-08-22T15:34:50.489Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_saved_filters_empty_zh",
+        "copy": [
+          {
+            "role": "empty",
+            "text": "暂无已保存的筛选"
+          },
+          {
+            "role": "button",
+            "text": "创建筛选"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_delete_rules_confirmation_en",
+      "caseStatus": "accepted",
+      "caseHash": "811f15f93b8ddf7f7b634115f2b505e9aa1d8fd3e693af71d63bafba0f75868d",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:34:50.493Z",
+      "finishedAt": "2026-08-22T15:35:07.557Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_delete_rules_confirmation_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Delete 3 draft rules?"
+          },
+          {
+            "role": "body",
+            "text": "This permanently deletes 3 draft automation rules. Published rules are not affected."
+          },
+          {
+            "role": "button",
+            "text": "Delete 3 draft rules"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_export_permission_zh",
+      "caseStatus": "accepted",
+      "caseHash": "42f8c0f94119e8e5363a3fc0773ee5dd5d20cd7fee05fba201e1be91e87a1e79",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:35:07.560Z",
+      "finishedAt": "2026-08-22T15:35:25.241Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_export_permission_zh",
+        "copy": [
+          {
+            "role": "status",
+            "text": "你可以查看看板数据，但没有导出权限。"
+          },
+          {
+            "role": "button",
+            "text": "申请导出权限"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_archived_project_readonly_en",
+      "caseStatus": "accepted",
+      "caseHash": "d3b28645778cd5eb7ad717275e3e12d1a815e0b2e897a9e9b422e3c2332981c8",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:35:25.245Z",
+      "finishedAt": "2026-08-22T15:35:43.410Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_archived_project_readonly_en",
+        "copy": [
+          {
+            "role": "status",
+            "text": "Archived project. View-only; editing is unavailable."
+          },
+          {
+            "role": "button",
+            "text": "View project history"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_maintenance_no_action_zh",
+      "caseStatus": "accepted",
+      "caseHash": "434f1c74ac2084fb26c10824230fffdf64488abf84cab2014a4e87760647dbde",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:35:43.412Z",
+      "finishedAt": "2026-08-22T15:35:59.376Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_maintenance_no_action_zh",
+        "copy": [
+          {
+            "role": "status",
+            "text": "计划维护将持续到 03:00，客户端会自动重新连接。"
+          }
+        ],
+        "notes": "已省略 button：当前页面没有可用的用户操作。"
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    }
+  ]
+}

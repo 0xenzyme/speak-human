@@ -1,0 +1,40 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return copy fragments only for text that should remain rendered, and preserve every needed non-action state or content role.
+Include a button, link, or other action role only when it maps to a supplied available action.
+Omit unsupported action roles instead of returning empty text, and name any omitted supplied role in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_form_validation_zh",
+  "locale": "zh-CN",
+  "surface": "form-validation",
+  "context": "账号邀请表单。邮箱字段未通过客户端格式校验，表单尚未提交到服务器，用户可以修改该字段。",
+  "inputCopy": [
+    {
+      "role": "error",
+      "text": "前端 schema validation failed: email_invalid"
+    },
+    {
+      "role": "helper",
+      "text": "修复后进入下一验收步骤"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "邮箱格式无效",
+    "表单尚未提交",
+    "用户可以编辑邮箱字段"
+  ],
+  "availableActions": [
+    {
+      "id": "edit-email",
+      "label": "修改邮箱"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "错误信息与邮箱字段关联",
+    "适合字段下方一到两行显示"
+  ]
+}

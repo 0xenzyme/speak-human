@@ -1,0 +1,1 @@
+{"caseId":"sh_act_approved_copy_boundary_zh","decision":"use-skill","reason":"该请求涉及前端首页组件及用户可见文案；speak-human 用于守护并保留已确认的界面文案，且可检查重构中的意外变更。","selectedSkill":"speak-human"}

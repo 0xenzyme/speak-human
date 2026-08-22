@@ -1,0 +1,32 @@
+{
+  "caseId": "sh_beh_timeout_error_zh",
+  "caseStatus": "accepted",
+  "caseHash": "6b378b061cd1f7c40fd66d30556a211b8f70de66754857e5d430a8d0b259f84a",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T14:59:25.392Z",
+  "finishedAt": "2026-08-22T14:59:45.591Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_timeout_error_zh",
+    "copy": [
+      {
+        "role": "error",
+        "text": "保存请求超时，服务器尚未确认设置是否写入。你的输入仍保留在页面上。"
+      },
+      {
+        "role": "button",
+        "text": "重新保存"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

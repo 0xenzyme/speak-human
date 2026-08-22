@@ -1,4 +1,7 @@
 interface:
   display_name: "Speak Human"
-  short_description: "Turn internal product language into natural user-facing copy"
-  default_prompt: "Use $speak-human to rewrite this UI copy in natural user language without exposing internal development language or inventing claims."
+  short_description: "Keep generated UI copy clear, factual, and user-facing"
+  default_prompt: "Use $speak-human to review this interface copy, preserve verified meaning and real actions, and remove internal development language."
+
+policy:
+  allow_implicit_invocation: true

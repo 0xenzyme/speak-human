@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "kind": "activation",
+  "suite": "core",
+  "description": "High-confidence requests that create or change rendered interface copy.",
+  "cases": [
+    {
+      "id": "sh_act_marketing_page_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "tags": [
+        "generated-copy",
+        "landing-page"
+      ],
+      "request": "为这个数据产品实现落地页首屏，并根据仓库里已经确认的产品事实写出标题、说明和按钮文案。",
+      "context": "任务会生成真实渲染的页面文案，仓库已有事实与一个真实目录入口。",
+      "expectedActivation": "yes",
+      "rationale": "前端实现同时生成用户可见文案，需要防止内部话术和无依据卖点进入页面。",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_product_workflow_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "product-workflow",
+      "tags": [
+        "generated-copy",
+        "workflow"
+      ],
+      "request": "Implement the import progress panel, including the loading, success, and failure messages shown to workspace members.",
+      "context": "The implementation must supply new rendered status copy as part of a product workflow.",
+      "expectedActivation": "yes",
+      "rationale": "Visible state language is being created and must stay aligned with actual states and actions.",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_admin_labels_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "zh-CN",
+      "surface": "admin-ops",
+      "tags": [
+        "admin",
+        "domain-terms"
+      ],
+      "request": "调整后台候选样本表的列名、空状态和批量操作提示，让运营同事能直接看懂，但保留候选、隔离和入集这些状态含义。",
+      "context": "这是内部运营产品的渲染界面；领域术语是操作者完成工作的必要信息。",
+      "expectedActivation": "yes",
+      "rationale": "需要改善可见文案，同时保护精确的运营状态和权限含义。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_developer_settings_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "en",
+      "surface": "developer-tool",
+      "tags": [
+        "developer-ui",
+        "technical-terms"
+      ],
+      "request": "Build the webhook settings screen and write the labels and error messages for endpoint URL, signing secret, HTTP status, and retries.",
+      "context": "API and HTTP terminology is legitimate user language for the developer audience.",
+      "expectedActivation": "yes",
+      "rationale": "The task creates visible product copy, but the guardrail must preserve technically required terms.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_mixed_request_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "mixed",
+      "tags": [
+        "scope-boundary",
+        "visible-copy"
+      ],
+      "request": "给导出接口增加超时处理，同时把页面上的失败提示改清楚。",
+      "context": "同一任务包含后端逻辑和一处用户可见错误信息。",
+      "expectedActivation": "yes",
+      "rationale": "只对可见错误信息应用文案守卫，不扩展到后端命名或接口契约。",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_localization_strings_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "localization",
+      "tags": [
+        "i18n",
+        "visible-copy"
+      ],
+      "request": "Add the English localization strings for the account deletion dialog, including the irreversible-action warning and both buttons.",
+      "context": "Localization keys already exist; the task supplies rendered English UI text for a destructive confirmation.",
+      "expectedActivation": "yes",
+      "rationale": "Localized visible copy needs semantic and action integrity even though the file itself is a resource file.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

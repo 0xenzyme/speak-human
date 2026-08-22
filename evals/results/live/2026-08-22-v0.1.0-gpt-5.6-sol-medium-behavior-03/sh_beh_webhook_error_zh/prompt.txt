@@ -1,0 +1,46 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return copy fragments only for text that should remain rendered, and preserve every needed non-action state or content role.
+Include a button, link, or other action role only when it maps to a supplied available action.
+Omit unsupported action roles instead of returning empty text, and name any omitted supplied role in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_webhook_error_zh",
+  "locale": "zh-CN",
+  "surface": "developer-tool",
+  "context": "Webhook 投递详情。最近一次请求返回 HTTP 401，系统不会自动重试；用户可以查看请求日志，但不能从当前页重发。",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "API/DB note：下游鉴权未通过"
+    },
+    {
+      "role": "body",
+      "text": "delivery worker 收到 401，进入 no-retry branch。"
+    },
+    {
+      "role": "button",
+      "text": "继续处理"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "最近一次 webhook 请求返回 HTTP 401",
+    "系统不会自动重试这次投递",
+    "用户可以查看该请求的日志",
+    "当前页没有重发动作"
+  ],
+  "availableActions": [
+    {
+      "id": "view-request-log",
+      "label": "查看请求日志",
+      "destination": "/webhooks/deliveries/current/log"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "HTTP 状态码必须可扫描",
+    "按钮保持单行"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "caseId": "sh_beh_archived_project_readonly_en",
+  "caseStatus": "accepted",
+  "caseHash": "d3b28645778cd5eb7ad717275e3e12d1a815e0b2e897a9e9b422e3c2332981c8",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:01:07.777Z",
+  "finishedAt": "2026-08-22T15:01:25.674Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_archived_project_readonly_en",
+    "copy": [
+      {
+        "role": "status",
+        "text": "Archived — view only"
+      },
+      {
+        "role": "button",
+        "text": "View project history"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavior",
+  "suite": "marketing",
+  "description": "Marketing surfaces where verified scope must replace internal persuasion or layout rationale.",
+  "cases": [
+    {
+      "id": "sh_beh_marketing_scope_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "tags": [
+        "approved-copy",
+        "claim-safety",
+        "cta"
+      ],
+      "context": "数据产品落地页首屏。目录入口已存在，但页面展示的是固定示例，仓库没有规模、质量或交付速度证据。",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "首屏命题：先证明我们覆盖所有数据类型"
+        },
+        {
+          "role": "body",
+          "text": "我们提供文本、图片和音频数据。固定示例，不代表实时库存。"
+        },
+        {
+          "role": "button",
+          "text": "继续评估"
+        }
+      ],
+      "approvedCopy": [
+        {
+          "role": "body",
+          "text": "固定示例，不代表实时库存。"
+        }
+      ],
+      "verifiedFacts": [
+        "产品目录包含文本、图片和音频三类数据",
+        "页面展示的是固定示例而非实时库存",
+        "页面存在可打开数据目录的入口"
+      ],
+      "availableActions": [
+        {
+          "id": "open-catalog",
+          "label": "查看数据目录",
+          "destination": "/catalog"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "明确列出文本、图片和音频",
+        "保留固定示例不代表实时库存的完整限制"
+      ],
+      "mustRemoveIntents": [
+        "把团队的首屏命题或证明目标写给访客",
+        "让访客继续内部评估流程"
+      ],
+      "mustNotInfer": [
+        "海量、全量或覆盖所有数据类型",
+        "实时库存、即时交付或质量保证",
+        "目录入口之外的咨询、购买或申请动作"
+      ],
+      "layoutConstraints": [
+        "按钮文案应能放入当前单行主按钮",
+        "限制说明必须保持可见"
+      ],
+      "rationale": "验证守卫能用已知产品事实替代内部页面策略，同时不扩大产品声明或动作。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_marketing_evidence_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "marketing",
+      "tags": [
+        "evidence",
+        "claim-safety",
+        "cta"
+      ],
+      "context": "A template gallery landing section. Exactly 12 public templates are available; there are no verified customer counts, ratings, or customer logos.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Conversion objective: establish market-leading breadth"
+        },
+        {
+          "role": "body",
+          "text": "A growing collection of production-ready templates trusted by teams everywhere."
+        },
+        {
+          "role": "button",
+          "text": "Explore further"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "The public gallery contains exactly 12 templates",
+        "The gallery route exists"
+      ],
+      "availableActions": [
+        {
+          "id": "view-templates",
+          "label": "View 12 templates",
+          "destination": "/templates"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "There are 12 public templates"
+      ],
+      "mustRemoveIntents": [
+        "Expose the team's conversion objective",
+        "Claim leadership as a substitute for evidence"
+      ],
+      "mustNotInfer": [
+        "Market leadership",
+        "Production readiness",
+        "Growth rate, customer adoption, trust, or ratings"
+      ],
+      "layoutConstraints": [
+        "The primary button remains a short single-line command"
+      ],
+      "rationale": "The result should lead with the verifiable inventory and the only real action, not generic marketing proof.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

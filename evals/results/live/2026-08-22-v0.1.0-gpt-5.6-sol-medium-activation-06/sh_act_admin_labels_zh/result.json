@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_admin_labels_zh",
+  "caseStatus": "accepted",
+  "caseHash": "97c692e5c84f3858a33e8e1f563dc19e4b4b97e1e8d1cd6f153a49d16efaca5d",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T15:08:48.871Z",
+  "finishedAt": "2026-08-22T15:09:04.676Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_admin_labels_zh",
+    "decision": "use-skill",
+    "selectedSkill": "speak-human",
+    "reason": "请求涉及后台渲染界面的列名、空状态和批量操作提示等用户可见文案优化；同时要求保留必要的领域状态术语，符合 speak-human 的适用范围。"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

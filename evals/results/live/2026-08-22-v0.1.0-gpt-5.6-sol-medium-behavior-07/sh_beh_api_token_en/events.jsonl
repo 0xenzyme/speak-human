@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a19-63ff-7c53-b1e6-482940ab6a25"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_api_token_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Revoke this API token?\"},{\"role\":\"body\",\"text\":\"Revoking this token immediately rejects future API requests using it. Existing request logs remain available, but revocation cannot be undone.\"},{\"role\":\"button\",\"text\":\"Revoke token\"}],\"notes\":\"The supplied input had no Cancel action role, so it was not added.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18338,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":198,"reasoning_output_tokens":99}}

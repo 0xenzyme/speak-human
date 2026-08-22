@@ -1,0 +1,1 @@
+{"caseId":"sh_act_marketing_page_zh","decision":"use-skill","reason":"请求涉及为真实渲染的落地页创建标题、说明和按钮等用户可见界面文案，且需要遵循仓库中已确认的产品事实；这正属于 speak-human 的文案守护范围。","selectedSkill":"speak-human"}

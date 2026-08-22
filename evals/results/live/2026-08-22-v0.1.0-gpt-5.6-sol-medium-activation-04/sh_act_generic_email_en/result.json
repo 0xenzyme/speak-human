@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_generic_email_en",
+  "caseStatus": "accepted",
+  "caseHash": "29c87a3ea9806da11400de8b6f487e3b0be32f5a2ba717572498bc8d7fbf9c4d",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T14:49:43.929Z",
+  "finishedAt": "2026-08-22T14:49:59.972Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_generic_email_en",
+    "decision": "no-skill",
+    "selectedSkill": null,
+    "reason": "The request concerns interpersonal email prose, explicitly outside website or product interface copy."
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "no-skill"
+  },
+  "error": null
+}

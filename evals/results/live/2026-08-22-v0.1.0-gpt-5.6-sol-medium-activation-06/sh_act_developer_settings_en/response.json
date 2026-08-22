@@ -1,0 +1,1 @@
+{"caseId":"sh_act_developer_settings_en","decision":"use-skill","reason":"The request involves creating a frontend settings screen and user-visible labels and error messages; speak-human governs this product UI copy, including preserving legitimate API and HTTP terminology for the developer audience.","selectedSkill":"speak-human"}

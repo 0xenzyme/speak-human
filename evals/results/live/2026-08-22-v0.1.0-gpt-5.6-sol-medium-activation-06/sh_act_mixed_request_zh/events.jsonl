@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a04-f149-7fa1-944c-e3e0d8527f28"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_mixed_request_zh\",\"decision\":\"use-skill\",\"selectedSkill\":\"speak-human\",\"reason\":\"请求同时涉及后端超时逻辑和页面上的用户可见失败提示文案；后者属于 speak-human 的适用范围。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":12447,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":141,"reasoning_output_tokens":71}}

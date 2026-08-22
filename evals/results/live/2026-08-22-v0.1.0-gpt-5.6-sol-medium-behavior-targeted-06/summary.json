@@ -1,0 +1,157 @@
+{
+  "mode": "live",
+  "networkOrModelCall": true,
+  "provenance": {
+    "runnerVersion": 10,
+    "manifestSchemaVersion": 1,
+    "skillVersion": "0.1.0",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "medium",
+    "timeoutSeconds": 600,
+    "sourceCommit": "5beaa90afa1c4c59d7d4c7c78c922f843157acc1",
+    "sourceDirty": true,
+    "provider": {
+      "source": "allowlisted-active-config",
+      "providerId": "OpenAI",
+      "baseUrlHash": "dcbe54e373401bb3d5d03bff79b2d1e5076470dc8abfc41d62e7bbfae3cbf172",
+      "wireApi": "responses",
+      "requiresOpenAIAuth": true,
+      "credentialMode": "openai-auth",
+      "configHash": "e29cc75b2c064101dab08ec845865e2366ec7a7152f57fc94f0757d92f06f859"
+    },
+    "lane": "behavior",
+    "skillHash": "2ce5c0b9885376bace99080e20d96bda778dfc398788b6fcab428a1e672b9227",
+    "manifestHash": "1cb9b4e306f64e240cc98aed7fb4ae206b10b5a3b1614e4371b12f3e9f0a1d6e",
+    "runnerHash": "aae8cd9cd8f0a447a14d9dca063fd545602e95d67f9ca612e1c2e888e464e211"
+  },
+  "cases": [
+    {
+      "id": "sh_beh_webhook_error_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "developer-tool",
+      "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec"
+    },
+    {
+      "id": "sh_beh_delete_rules_confirmation_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "confirmation",
+      "caseHash": "811f15f93b8ddf7f7b634115f2b505e9aa1d8fd3e693af71d63bafba0f75868d"
+    }
+  ],
+  "isolation": {
+    "temporaryCodexHome": true,
+    "temporaryEmptyWorkspace": true,
+    "onlyStagedUserSkill": "speak-human",
+    "userConfigMode": "temporary allowlisted provider-only config",
+    "userRulesIgnored": true,
+    "pluginLoadingDisabled": true,
+    "sandbox": "read-only",
+    "sessionPersistence": "ephemeral",
+    "authHandling": "temporary filesystem link; contents are not read or copied",
+    "userScopeInstall": false
+  },
+  "providerAuthorization": {
+    "required": true,
+    "host": "sub.videofree.fun",
+    "exactMatchProvided": true
+  },
+  "codexVersion": "codex-cli 0.149.0",
+  "codexLauncher": "windows-npm-entrypoint",
+  "startedAt": "2026-08-22T15:29:28.873Z",
+  "finishedAt": "2026-08-22T15:30:06.312Z",
+  "outputDirectory": "evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-behavior-targeted-06",
+  "casesRun": 2,
+  "invocationFailures": 0,
+  "assessmentFailures": 0,
+  "reviewRequiredCases": 2,
+  "cleanupWarnings": [],
+  "gateStatus": "review-required",
+  "results": [
+    {
+      "caseId": "sh_beh_webhook_error_zh",
+      "caseStatus": "accepted",
+      "caseHash": "0ffa649420f3b94a08af3d5e33daee568baab9aab0e03523edcefe2e43ac85ec",
+      "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+      "startedAt": "2026-08-22T15:29:28.877Z",
+      "finishedAt": "2026-08-22T15:29:45.430Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_webhook_error_zh",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Webhook 投递失败：HTTP 401"
+          },
+          {
+            "role": "body",
+            "text": "最近一次请求未通过鉴权，系统不会自动重试这次投递。你可以查看请求日志；当前页无法重发。"
+          },
+          {
+            "role": "button",
+            "text": "查看请求日志"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_beh_delete_rules_confirmation_en",
+      "caseStatus": "accepted",
+      "caseHash": "811f15f93b8ddf7f7b634115f2b505e9aa1d8fd3e693af71d63bafba0f75868d",
+      "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+      "startedAt": "2026-08-22T15:29:45.443Z",
+      "finishedAt": "2026-08-22T15:30:06.301Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_beh_delete_rules_confirmation_en",
+        "copy": [
+          {
+            "role": "heading",
+            "text": "Delete 3 draft automation rules?"
+          },
+          {
+            "role": "body",
+            "text": "This permanently deletes 3 draft automation rules. Published rules are not affected."
+          },
+          {
+            "role": "button",
+            "text": "Delete 3 draft rules"
+          }
+        ],
+        "notes": ""
+      },
+      "assessment": {
+        "pass": true,
+        "missing": [],
+        "blank": [],
+        "unsupportedActions": [],
+        "introducedRoles": [],
+        "excessiveRoles": [],
+        "missingNonActionRoles": [],
+        "missingSupportedActionRoles": [],
+        "reviewRequired": true,
+        "note": "Approved-copy, blank-fragment, action-presence, and role-shape checks are automated; semantic rubric review remains required."
+      },
+      "error": null
+    }
+  ]
+}

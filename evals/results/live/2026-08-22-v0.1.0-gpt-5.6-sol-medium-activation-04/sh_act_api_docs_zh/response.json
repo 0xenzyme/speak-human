@@ -1,0 +1,1 @@
+{"caseId":"sh_act_api_docs_zh","decision":"no-skill","reason":"该请求是开发者技术文档内容，不涉及产品界面上的用户可见文案，因此不适用 speak-human。","selectedSkill":null}

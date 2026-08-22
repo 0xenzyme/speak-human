@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a09-0e9a-7231-8ea0-723a6f0b994f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_loading_export_en\",\"copy\":[{\"role\":\"status\",\"text\":\"Preparing your report export...\"},{\"role\":\"helper\",\"text\":\"You can leave this page; the export will continue on the server.\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18221,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":183,"reasoning_output_tokens":120}}

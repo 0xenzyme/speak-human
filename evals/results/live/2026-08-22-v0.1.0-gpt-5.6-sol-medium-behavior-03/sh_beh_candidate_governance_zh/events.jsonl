@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a05-fc40-7891-bd56-fc17745bd7e6"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_candidate_governance_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"候选样本\"},{\"role\":\"body\",\"text\":\"候选、隔离和已入集是不同治理状态。当前列表仅显示候选样本。\"},{\"role\":\"status\",\"text\":\"候选：12 个；隔离：3 个\"},{\"role\":\"button\",\"text\":\"审核候选样本\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18349,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":502,"reasoning_output_tokens":398}}

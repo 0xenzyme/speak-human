@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavior",
+  "suite": "ui-states",
+  "description": "Common interface states with explicit facts, permissions, and recovery boundaries.",
+  "cases": [
+    {
+      "id": "sh_beh_form_validation_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "form-validation",
+      "tags": [
+        "form",
+        "validation"
+      ],
+      "context": "账号邀请表单。邮箱字段未通过客户端格式校验，表单尚未提交到服务器，用户可以修改该字段。",
+      "inputCopy": [
+        {
+          "role": "error",
+          "text": "前端 schema validation failed: email_invalid"
+        },
+        {
+          "role": "helper",
+          "text": "修复后进入下一验收步骤"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "邮箱格式无效",
+        "表单尚未提交",
+        "用户可以编辑邮箱字段"
+      ],
+      "availableActions": [
+        {
+          "id": "edit-email",
+          "label": "修改邮箱"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "明确指出邮箱格式问题"
+      ],
+      "mustRemoveIntents": [
+        "暴露 schema、错误代码或验收步骤"
+      ],
+      "mustNotInfer": [
+        "邮箱不存在、已被占用或被服务器拒绝",
+        "邀请已发送或账号已创建"
+      ],
+      "layoutConstraints": [
+        "错误信息与邮箱字段关联",
+        "适合字段下方一到两行显示"
+      ],
+      "rationale": "字段错误应说明用户能修正的事实，不能把客户端校验说成服务器结果。",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_loading_export_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "loading",
+      "tags": [
+        "loading",
+        "background-job"
+      ],
+      "context": "A report export runs on the server and continues if the user leaves the page. There is no progress estimate and no cancel control.",
+      "inputCopy": [
+        {
+          "role": "status",
+          "text": "Executing async export pipeline..."
+        },
+        {
+          "role": "helper",
+          "text": "Please keep this window open while the worker completes."
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "The report export is being prepared",
+        "It continues on the server after navigation",
+        "No completion estimate is available",
+        "There is no cancel action"
+      ],
+      "availableActions": [],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "The export is still being prepared"
+      ],
+      "mustRemoveIntents": [
+        "Expose pipeline and worker implementation language",
+        "Tell the user to keep the window open"
+      ],
+      "mustNotInfer": [
+        "A completion time or percentage",
+        "A cancel, background notification, or download action",
+        "That leaving the page stops the export"
+      ],
+      "layoutConstraints": [
+        "The status region must remain concise and stable while polling"
+      ],
+      "rationale": "Loading copy should state the true asynchronous condition without inventing progress or unnecessary instructions.",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_timeout_error_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "error",
+      "tags": [
+        "error",
+        "retry"
+      ],
+      "context": "保存设置时请求超时。服务器没有确认写入，页面保留用户输入，并提供重新保存按钮。",
+      "inputCopy": [
+        {
+          "role": "error",
+          "text": "mutation timeout，提交链路异常"
+        },
+        {
+          "role": "button",
+          "text": "继续"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "保存请求超时",
+        "服务器没有确认设置是否写入",
+        "用户输入仍保留在页面",
+        "用户可以重新保存"
+      ],
+      "availableActions": [
+        {
+          "id": "save-again",
+          "label": "重新保存"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "不能声称保存成功或失败",
+        "输入仍在页面",
+        "重新保存是可用动作"
+      ],
+      "mustRemoveIntents": [
+        "暴露 mutation 或提交链路实现语言",
+        "使用含义不明的继续按钮"
+      ],
+      "mustNotInfer": [
+        "设置一定没有写入或已经写入",
+        "超时的根因",
+        "刷新页面可以解决问题"
+      ],
+      "layoutConstraints": [
+        "错误提示和重新保存按钮应在同一状态区域"
+      ],
+      "rationale": "超时是一种未知结果，文案必须保留不确定性并只提供真实的恢复动作。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_import_success_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "success",
+      "tags": [
+        "counts",
+        "success"
+      ],
+      "context": "A completed contact import created 23 records and skipped 2 duplicate rows. The user can open the import report.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Import pipeline complete"
+        },
+        {
+          "role": "body",
+          "text": "Everything was imported successfully."
+        },
+        {
+          "role": "button",
+          "text": "Continue"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "23 records were created",
+        "2 duplicate rows were skipped",
+        "The import report is available"
+      ],
+      "availableActions": [
+        {
+          "id": "view-import-report",
+          "label": "View import report",
+          "destination": "/imports/current/report"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "23 records were created",
+        "2 duplicate rows were skipped",
+        "The report can be viewed"
+      ],
+      "mustRemoveIntents": [
+        "Expose pipeline terminology",
+        "Use a vague continuation command"
+      ],
+      "mustNotInfer": [
+        "All rows were imported",
+        "Skipped rows were invalid or deleted",
+        "The import changed any existing record"
+      ],
+      "layoutConstraints": [
+        "Both counts remain visible in the success state"
+      ],
+      "rationale": "Success copy must not hide partial outcomes behind a generic success claim.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_saved_filters_empty_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "empty",
+      "tags": [
+        "empty-state",
+        "real-action"
+      ],
+      "context": "报表页的已保存筛选区域为空。用户有创建筛选权限，页面提供创建按钮。",
+      "inputCopy": [
+        {
+          "role": "empty",
+          "text": "空状态目标：引导用户建立留存习惯"
+        },
+        {
+          "role": "button",
+          "text": "开始探索"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "当前没有已保存的筛选",
+        "用户可以创建筛选"
+      ],
+      "availableActions": [
+        {
+          "id": "create-filter",
+          "label": "创建筛选"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "为空的是已保存筛选，而不是报表数据",
+        "创建筛选是可用动作"
+      ],
+      "mustRemoveIntents": [
+        "暴露留存目标或用户引导策略",
+        "使用与实际动作无关的探索话术"
+      ],
+      "mustNotInfer": [
+        "报表没有数据",
+        "系统会自动保存筛选",
+        "已有推荐筛选"
+      ],
+      "layoutConstraints": [
+        "空状态只保留一个主动作"
+      ],
+      "rationale": "空状态需要准确指出缺少的对象，并把按钮映射到真实创建动作。",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_delete_rules_confirmation_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "confirmation",
+      "tags": [
+        "destructive",
+        "confirmation"
+      ],
+      "context": "A confirmation dialog deletes 3 draft automation rules permanently. Published rules are not affected. Delete and Cancel are the only controls.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Confirm mutation"
+        },
+        {
+          "role": "body",
+          "text": "Proceed with cleanup? This action affects selected candidates."
+        },
+        {
+          "role": "button",
+          "text": "Continue"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "Exactly 3 draft automation rules will be deleted",
+        "Deletion is permanent",
+        "Published rules are not affected"
+      ],
+      "availableActions": [
+        {
+          "id": "delete-draft-rules",
+          "label": "Delete 3 draft rules"
+        },
+        {
+          "id": "cancel",
+          "label": "Cancel"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "Name the 3 draft automation rules",
+        "Deletion is permanent",
+        "Published rules remain unaffected"
+      ],
+      "mustRemoveIntents": [
+        "Use mutation, cleanup, or candidate as unexplained implementation language",
+        "Use a vague destructive command"
+      ],
+      "mustNotInfer": [
+        "Published rules or other drafts will be deleted",
+        "Deleted rules can be restored",
+        "Any action beyond Delete and Cancel"
+      ],
+      "layoutConstraints": [
+        "The destructive button includes the object and count",
+        "The warning remains visible before confirmation"
+      ],
+      "rationale": "Destructive confirmation copy must identify scope and consequence precisely.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_export_permission_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "permission",
+      "tags": [
+        "permission",
+        "request-access"
+      ],
+      "context": "分析看板。当前用户可以查看数据，但没有导出权限；页面提供向工作区管理员申请导出权限的入口。",
+      "inputCopy": [
+        {
+          "role": "status",
+          "text": "RBAC gate blocked export capability"
+        },
+        {
+          "role": "button",
+          "text": "解锁功能"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "当前用户可以查看看板数据",
+        "当前用户没有导出权限",
+        "用户可以向工作区管理员申请导出权限"
+      ],
+      "availableActions": [
+        {
+          "id": "request-export-access",
+          "label": "申请导出权限"
+        }
+      ],
+      "permissionState": "restricted",
+      "mustPreservePropositions": [
+        "限制只涉及导出，不影响查看",
+        "申请对象是导出权限"
+      ],
+      "mustRemoveIntents": [
+        "暴露 RBAC gate 等实现语言",
+        "把申请权限包装成解锁功能"
+      ],
+      "mustNotInfer": [
+        "管理员一定会批准",
+        "申请后立即获得权限",
+        "用户需要付费升级"
+      ],
+      "layoutConstraints": [
+        "权限说明与申请按钮相邻"
+      ],
+      "rationale": "权限文案要说明当前仍可做什么、受限动作和真实申请路径。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_archived_project_readonly_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "read-only",
+      "tags": [
+        "archived",
+        "read-only"
+      ],
+      "context": "An archived project detail page. Archived projects can be viewed but not edited. The user can open project history; restore and duplicate controls do not exist.",
+      "inputCopy": [
+        {
+          "role": "status",
+          "text": "Mutation controls disabled by lifecycle state"
+        },
+        {
+          "role": "button",
+          "text": "Take action"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "The project is archived",
+        "It can be viewed but not edited",
+        "Project history is available"
+      ],
+      "availableActions": [
+        {
+          "id": "view-history",
+          "label": "View project history",
+          "destination": "/projects/current/history"
+        }
+      ],
+      "permissionState": "read-only",
+      "mustPreservePropositions": [
+        "The project is archived and read-only",
+        "Viewing project history is available"
+      ],
+      "mustRemoveIntents": [
+        "Expose mutation-control or lifecycle implementation language",
+        "Use a vague action label"
+      ],
+      "mustNotInfer": [
+        "The project can be restored, duplicated, or edited",
+        "The project was archived by the current user",
+        "Archived data will be deleted"
+      ],
+      "layoutConstraints": [
+        "The archived status remains visible near the project title"
+      ],
+      "rationale": "Read-only copy must make the limitation explicit without inventing a route out of it.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_maintenance_no_action_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "no-action",
+      "tags": [
+        "maintenance",
+        "no-action"
+      ],
+      "context": "连接状态横幅。服务计划维护到 03:00，客户端会自动重新连接；当前页面没有重试、状态页或联系支持入口。",
+      "inputCopy": [
+        {
+          "role": "status",
+          "text": "维护态兜底：建立用户信心并承接下一步"
+        },
+        {
+          "role": "button",
+          "text": "立即重试"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "计划维护持续到 03:00",
+        "客户端会自动重新连接",
+        "页面没有用户可执行的恢复动作"
+      ],
+      "availableActions": [],
+      "permissionState": "disabled",
+      "mustPreservePropositions": [
+        "维护结束时间为 03:00",
+        "系统会自动重新连接",
+        "不显示操作按钮"
+      ],
+      "mustRemoveIntents": [
+        "暴露建立信心或承接下一步的文案策略",
+        "显示不存在的立即重试动作"
+      ],
+      "mustNotInfer": [
+        "维护会提前结束",
+        "用户可以重试、查看状态页或联系支持",
+        "自动重新连接一定在 03:00 瞬间成功"
+      ],
+      "layoutConstraints": [
+        "横幅不能因不存在的按钮预留交互位置",
+        "时间在窄屏上保持完整"
+      ],
+      "rationale": "没有动作时应诚实说明状态和系统行为，不能为了页面模式补一个 CTA。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

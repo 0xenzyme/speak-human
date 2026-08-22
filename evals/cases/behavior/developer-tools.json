@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavior",
+  "suite": "developer-tools",
+  "description": "Developer-facing UI where technical terms are legitimate and protocol semantics must remain exact.",
+  "cases": [
+    {
+      "id": "sh_beh_webhook_error_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "zh-CN",
+      "surface": "developer-tool",
+      "tags": [
+        "api",
+        "http",
+        "retry"
+      ],
+      "context": "Webhook 投递详情。最近一次请求返回 HTTP 401，系统不会自动重试；用户可以查看请求日志，但不能从当前页重发。",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "API/DB note：下游鉴权未通过"
+        },
+        {
+          "role": "body",
+          "text": "delivery worker 收到 401，进入 no-retry branch。"
+        },
+        {
+          "role": "button",
+          "text": "继续处理"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "最近一次 webhook 请求返回 HTTP 401",
+        "系统不会自动重试这次投递",
+        "用户可以查看该请求的日志",
+        "当前页没有重发动作"
+      ],
+      "availableActions": [
+        {
+          "id": "view-request-log",
+          "label": "查看请求日志",
+          "destination": "/webhooks/deliveries/current/log"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "保留 webhook、HTTP 401 和不会自动重试这些技术事实",
+        "唯一动作是查看请求日志"
+      ],
+      "mustRemoveIntents": [
+        "暴露 worker、branch 或数据库备注等实现结构",
+        "使用没有对象的继续处理按钮"
+      ],
+      "mustNotInfer": [
+        "签名密钥错误是 401 的确定原因",
+        "当前页可以重发、修复或测试 webhook",
+        "后续请求都会失败"
+      ],
+      "layoutConstraints": [
+        "HTTP 状态码必须可扫描",
+        "按钮保持单行"
+      ],
+      "rationale": "面向开发者的自然语言应删除实现噪声，而不是删除 API、webhook 或 HTTP 语义。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_api_token_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "developer-tool",
+      "tags": [
+        "api-token",
+        "security",
+        "confirmation"
+      ],
+      "context": "An API token detail panel. Revoking the token immediately rejects future requests using it. Existing logs remain. Revoke and Cancel are the only controls.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Complete destructive mutation"
+        },
+        {
+          "role": "body",
+          "text": "This operation cleans up the credential lifecycle and cannot be rolled back."
+        },
+        {
+          "role": "button",
+          "text": "Proceed"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "Revocation immediately rejects future API requests using this token",
+        "Existing request logs remain available",
+        "Revocation cannot be undone"
+      ],
+      "availableActions": [
+        {
+          "id": "revoke-token",
+          "label": "Revoke token"
+        },
+        {
+          "id": "cancel",
+          "label": "Cancel"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "Identify the object as an API token",
+        "Future requests using the token are rejected immediately",
+        "Existing logs remain",
+        "Revocation cannot be undone"
+      ],
+      "mustRemoveIntents": [
+        "Describe the action as a mutation or lifecycle cleanup",
+        "Use a vague destructive command"
+      ],
+      "mustNotInfer": [
+        "Existing logs or historical requests are deleted",
+        "Other tokens are affected",
+        "A replacement token is created automatically"
+      ],
+      "layoutConstraints": [
+        "The destructive button names both action and object",
+        "The irreversible warning remains visible in the dialog"
+      ],
+      "rationale": "The rewrite must clarify a security-sensitive action while preserving API terminology and exact effects.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

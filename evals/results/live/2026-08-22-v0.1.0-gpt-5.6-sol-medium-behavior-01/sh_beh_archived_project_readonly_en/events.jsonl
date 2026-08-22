@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029fd-68b8-74d3-9f95-5ce046a9d02c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_archived_project_readonly_en\",\"copy\":[{\"role\":\"status\",\"text\":\"Archived — view only\"},{\"role\":\"button\",\"text\":\"View project history\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":13781,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":128,"reasoning_output_tokens":74}}

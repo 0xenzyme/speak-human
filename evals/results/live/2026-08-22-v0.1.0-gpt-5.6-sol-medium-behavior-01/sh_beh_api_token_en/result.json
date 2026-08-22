@@ -1,0 +1,36 @@
+{
+  "caseId": "sh_beh_api_token_en",
+  "caseStatus": "accepted",
+  "caseHash": "2d8ed4a21a147dafa7b180a2f4e7975514d7c396142f790d5f4d013e9a3f174d",
+  "suiteFileHash": "7f4ab918d21a13275790a919c5d9bdd08ae57d7e8c3b67e6a320e70f1035c6d3",
+  "startedAt": "2026-08-22T14:57:11.300Z",
+  "finishedAt": "2026-08-22T14:57:28.599Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_api_token_en",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Revoke API token?"
+      },
+      {
+        "role": "body",
+        "text": "Revoking this token immediately rejects future API requests that use it. Existing request logs remain available. This action cannot be undone."
+      },
+      {
+        "role": "button",
+        "text": "Revoke token"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

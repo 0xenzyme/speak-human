@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a01-4056-7fc2-80df-4f4732513ad8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_candidate_governance_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"候选样本\"},{\"role\":\"status\",\"text\":\"候选样本：12 个；隔离样本：3 个\"},{\"role\":\"button\",\"text\":\"审核候选样本\"}],\"notes\":\"已省略 body 角色，因其内容属于运营流程说明，不是用户需要的状态或操作信息。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18354,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":344,"reasoning_output_tokens":243}}

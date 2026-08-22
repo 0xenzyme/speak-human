@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_developer_settings_en",
+  "caseStatus": "accepted",
+  "caseHash": "08ef65ddd861b52a0dc8c9c94e2e41d2e18eb4e371447ea27ff4889e53480450",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T14:51:29.902Z",
+  "finishedAt": "2026-08-22T14:51:47.323Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_developer_settings_en",
+    "decision": "use-skill",
+    "reason": "The request involves building a frontend settings screen and writing user-visible labels and error messages, which is exactly the scope of speak-human. The developer audience and API/HTTP terminology are established, so the skill should activate.",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

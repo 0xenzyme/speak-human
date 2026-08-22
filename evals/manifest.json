@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "skill": {
+    "name": "speak-human",
+    "version": "0.1.0",
+    "versionFile": "VERSION",
+    "directory": "skills/speak-human",
+    "entrypoint": "skills/speak-human/SKILL.md",
+    "metadata": "skills/speak-human/agents/openai.yaml"
+  },
+  "discovery": {
+    "activation": {
+      "root": "evals/cases/activation",
+      "schema": "evals/schemas/activation-case.schema.json"
+    },
+    "behavior": {
+      "root": "evals/cases/behavior",
+      "schema": "evals/schemas/behavior-case.schema.json"
+    }
+  },
+  "rubric": "evals/rubric.md",
+  "resultsRoot": "evals/results",
+  "runners": {
+    "deterministic": "scripts/validate-evals.mjs",
+    "tests": "scripts/test-validate-evals.mjs",
+    "liveTests": "scripts/test-run-live-evals.mjs",
+    "live": "scripts/run-live-evals.mjs"
+  },
+  "lifecycle": {
+    "gatingStatuses": [
+      "accepted"
+    ],
+    "nonGatingStatuses": [
+      "candidate",
+      "retired"
+    ],
+    "requiredRepresentedStatuses": [
+      "candidate",
+      "accepted",
+      "retired"
+    ]
+  },
+  "coverage": {
+    "activation": {
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "expectations": [
+        "yes",
+        "no",
+        "review"
+      ],
+      "surfaces": [
+        "marketing",
+        "product-workflow",
+        "admin-ops",
+        "developer-tool",
+        "frontend-style-only",
+        "backend",
+        "technical-docs",
+        "generic-prose",
+        "mixed",
+        "localization"
+      ]
+    },
+    "behavior": {
+      "locales": [
+        "zh-CN",
+        "en"
+      ],
+      "surfaces": [
+        "marketing",
+        "product-workflow",
+        "admin-ops",
+        "developer-tool",
+        "form-validation",
+        "loading",
+        "error",
+        "success",
+        "empty",
+        "confirmation",
+        "permission",
+        "read-only",
+        "no-action"
+      ],
+      "localeFamilies": [
+        {
+          "id": "marketing",
+          "surfaces": [
+            "marketing"
+          ],
+          "locales": [
+            "zh-CN",
+            "en"
+          ]
+        },
+        {
+          "id": "product-workflow",
+          "surfaces": [
+            "product-workflow"
+          ],
+          "locales": [
+            "zh-CN",
+            "en"
+          ]
+        },
+        {
+          "id": "admin-ops",
+          "surfaces": [
+            "admin-ops"
+          ],
+          "locales": [
+            "zh-CN",
+            "en"
+          ]
+        },
+        {
+          "id": "developer-tool",
+          "surfaces": [
+            "developer-tool"
+          ],
+          "locales": [
+            "zh-CN",
+            "en"
+          ]
+        },
+        {
+          "id": "ui-states",
+          "surfaces": [
+            "form-validation",
+            "loading",
+            "error",
+            "success",
+            "empty",
+            "confirmation",
+            "permission",
+            "read-only",
+            "no-action"
+          ],
+          "locales": [
+            "zh-CN",
+            "en"
+          ]
+        }
+      ]
+    }
+  }
+}

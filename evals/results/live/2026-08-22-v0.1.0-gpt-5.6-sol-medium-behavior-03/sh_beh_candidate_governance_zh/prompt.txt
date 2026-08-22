@@ -1,0 +1,50 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return copy fragments only for text that should remain rendered, and preserve every needed non-action state or content role.
+Include a button, link, or other action role only when it maps to a supplied available action.
+Omit unsupported action roles instead of returning empty text, and name any omitted supplied role in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_candidate_governance_zh",
+  "locale": "zh-CN",
+  "surface": "admin-ops",
+  "context": "数据治理后台的候选样本列表。候选、隔离和已入集是三个不同的真实状态；当前列表只包含候选样本。",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "候选样本"
+    },
+    {
+      "role": "body",
+      "text": "运营验收阶段：先看 candidate，再推进入集闭环。"
+    },
+    {
+      "role": "status",
+      "text": "12 个候选，3 个已隔离"
+    }
+  ],
+  "approvedCopy": [
+    {
+      "role": "heading",
+      "text": "候选样本"
+    }
+  ],
+  "verifiedFacts": [
+    "当前列表包含 12 个候选样本",
+    "另有 3 个样本处于隔离状态",
+    "候选、隔离和已入集具有不同治理含义"
+  ],
+  "availableActions": [
+    {
+      "id": "review-candidates",
+      "label": "审核候选样本",
+      "destination": "/candidates/review"
+    }
+  ],
+  "permissionState": "restricted",
+  "layoutConstraints": [
+    "状态计数必须能逐项扫描",
+    "保留后台的紧凑信息密度"
+  ]
+}

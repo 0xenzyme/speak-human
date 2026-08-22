@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a0d-8baf-7bd3-970c-486fdb006c4f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_webhook_error_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"下游鉴权失败（HTTP 401）\"},{\"role\":\"body\",\"text\":\"最近一次 webhook 请求返回 HTTP 401，系统不会自动重试。\"}],\"notes\":\"已省略不对应可用操作的 button 角色“继续处理”。\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18363,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":230,"reasoning_output_tokens":144}}

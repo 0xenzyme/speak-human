@@ -1,0 +1,45 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return copy fragments only for text that should remain rendered, and preserve every needed non-action state or content role.
+Include a button, link, or other action role only when it maps to a supplied available action.
+Omit unsupported action roles instead of returning empty text, and name any omitted supplied role in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_import_failure_zh",
+  "locale": "zh-CN",
+  "surface": "product-workflow",
+  "context": "文件导入详情页。解析在第 214 行失败，已导入的记录没有保存；页面只有重新上传入口。",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "阶段 3 验收未通过"
+    },
+    {
+      "role": "body",
+      "text": "Parser pipeline 在 row 214 抛错，请完成修复闭环。"
+    },
+    {
+      "role": "button",
+      "text": "处理问题"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "解析在第 214 行失败",
+    "本次导入没有保存任何记录",
+    "用户可以重新上传文件"
+  ],
+  "availableActions": [
+    {
+      "id": "upload-again",
+      "label": "重新上传",
+      "destination": "/imports/new"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "错误标题不超过两行",
+    "主按钮保持一个"
+  ]
+}

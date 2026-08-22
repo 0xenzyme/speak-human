@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_api_docs_zh",
+  "caseStatus": "accepted",
+  "caseHash": "a0bc1033a62da0345bd3b1f349de50c5e037510bd8139e024350c010d51c7ec4",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T14:49:26.587Z",
+  "finishedAt": "2026-08-22T14:49:43.928Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_api_docs_zh",
+    "decision": "no-skill",
+    "reason": "该请求是开发者技术文档内容，不涉及产品界面上的用户可见文案，因此不适用 speak-human。",
+    "selectedSkill": null
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "no-skill"
+  },
+  "error": null
+}

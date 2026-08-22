@@ -1,0 +1,1 @@
+{"caseId":"sh_act_localization_strings_en","decision":"use-skill","reason":"The request adds rendered English UI copy for a destructive account-deletion confirmation dialog, which is exactly the scope of the speak-human skill.","selectedSkill":"speak-human"}

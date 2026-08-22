@@ -1,0 +1,38 @@
+{
+  "caseId": "sh_beh_import_success_en",
+  "caseStatus": "accepted",
+  "caseHash": "e831276e748ad76a8ef63bf3be49a76b6beca080347fe9fedde762fe841df92e",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:14:28.143Z",
+  "finishedAt": "2026-08-22T15:14:48.536Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_import_success_en",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Import complete"
+      },
+      {
+        "role": "body",
+        "text": "23 records were created, and 2 duplicate rows were skipped."
+      },
+      {
+        "role": "button",
+        "text": "View import report"
+      }
+    ],
+    "notes": "Omitted the supplied \"Continue\" action wording because no matching action was available."
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy, blank-fragment, and no-action checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

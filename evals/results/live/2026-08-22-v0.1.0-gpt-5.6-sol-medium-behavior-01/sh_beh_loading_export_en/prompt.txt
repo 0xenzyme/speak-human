@@ -1,0 +1,32 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_loading_export_en",
+  "locale": "en",
+  "surface": "loading",
+  "context": "A report export runs on the server and continues if the user leaves the page. There is no progress estimate and no cancel control.",
+  "inputCopy": [
+    {
+      "role": "status",
+      "text": "Executing async export pipeline..."
+    },
+    {
+      "role": "helper",
+      "text": "Please keep this window open while the worker completes."
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "The report export is being prepared",
+    "It continues on the server after navigation",
+    "No completion estimate is available",
+    "There is no cancel action"
+  ],
+  "availableActions": [],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "The status region must remain concise and stable while polling"
+  ]
+}

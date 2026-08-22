@@ -1,0 +1,413 @@
+{
+  "mode": "live",
+  "networkOrModelCall": true,
+  "provenance": {
+    "runnerVersion": 8,
+    "manifestSchemaVersion": 1,
+    "skillVersion": "0.1.0",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "medium",
+    "timeoutSeconds": 600,
+    "sourceCommit": "5beaa90afa1c4c59d7d4c7c78c922f843157acc1",
+    "sourceDirty": true,
+    "provider": {
+      "source": "allowlisted-active-config",
+      "providerId": "OpenAI",
+      "baseUrlHash": "dcbe54e373401bb3d5d03bff79b2d1e5076470dc8abfc41d62e7bbfae3cbf172",
+      "wireApi": "responses",
+      "requiresOpenAIAuth": true,
+      "credentialMode": "openai-auth",
+      "configHash": "e29cc75b2c064101dab08ec845865e2366ec7a7152f57fc94f0757d92f06f859"
+    },
+    "lane": "activation",
+    "skillHash": "2ce5c0b9885376bace99080e20d96bda778dfc398788b6fcab428a1e672b9227",
+    "manifestHash": "1cb9b4e306f64e240cc98aed7fb4ae206b10b5a3b1614e4371b12f3e9f0a1d6e",
+    "runnerHash": "32a5d03d6a23abfdc9113d9efe60873aa0b12509ae7a827064cd5823d6d32dcb"
+  },
+  "cases": [
+    {
+      "id": "sh_act_css_only",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "frontend-style-only",
+      "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137"
+    },
+    {
+      "id": "sh_act_backend_refactor_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "backend",
+      "caseHash": "808e02c6ef1afd094792a9ecf3906a6e997ed394f0a55a442d070ebc6634fb1d"
+    },
+    {
+      "id": "sh_act_api_docs_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "technical-docs",
+      "caseHash": "a0bc1033a62da0345bd3b1f349de50c5e037510bd8139e024350c010d51c7ec4"
+    },
+    {
+      "id": "sh_act_generic_email_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "generic-prose",
+      "caseHash": "29c87a3ea9806da11400de8b6f487e3b0be32f5a2ba717572498bc8d7fbf9c4d"
+    },
+    {
+      "id": "sh_act_approved_copy_boundary_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482"
+    },
+    {
+      "id": "sh_act_admin_term_boundary_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "admin-ops",
+      "caseHash": "7a0f55edcc6c8d1d6ad33cab672da08a12073c4889a5ac362ddff309e1e8c229"
+    },
+    {
+      "id": "sh_act_marketing_page_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "caseHash": "6aa8d31426454a955b5563928e2b943a5150886127f84637835560ad8594e4fa"
+    },
+    {
+      "id": "sh_act_product_workflow_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "product-workflow",
+      "caseHash": "3c9fc4c5185a165e094478c940630e404fc69a819503d4753c3eebf5f6ace90f"
+    },
+    {
+      "id": "sh_act_admin_labels_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "admin-ops",
+      "caseHash": "97c692e5c84f3858a33e8e1f563dc19e4b4b97e1e8d1cd6f153a49d16efaca5d"
+    },
+    {
+      "id": "sh_act_developer_settings_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "developer-tool",
+      "caseHash": "08ef65ddd861b52a0dc8c9c94e2e41d2e18eb4e371447ea27ff4889e53480450"
+    },
+    {
+      "id": "sh_act_mixed_request_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "mixed",
+      "caseHash": "1072d930a4bbb33b10407df5ee8a86c3413ee0d7d5b480dff2bf364b8f2d764e"
+    },
+    {
+      "id": "sh_act_localization_strings_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "localization",
+      "caseHash": "8b9d460d0d8683042c3a3a7daf0839c1576d866fb30b2cbc25515025298370dc"
+    }
+  ],
+  "isolation": {
+    "temporaryCodexHome": true,
+    "temporaryEmptyWorkspace": true,
+    "onlyStagedUserSkill": "speak-human",
+    "userConfigMode": "temporary allowlisted provider-only config",
+    "userRulesIgnored": true,
+    "pluginLoadingDisabled": true,
+    "sandbox": "read-only",
+    "sessionPersistence": "ephemeral",
+    "authHandling": "temporary filesystem link; contents are not read or copied",
+    "userScopeInstall": false
+  },
+  "providerAuthorization": {
+    "required": true,
+    "host": "sub.videofree.fun",
+    "exactMatchProvided": true
+  },
+  "codexVersion": "codex-cli 0.149.0",
+  "codexLauncher": "windows-npm-entrypoint",
+  "startedAt": "2026-08-22T15:06:37.961Z",
+  "finishedAt": "2026-08-22T15:09:54.864Z",
+  "outputDirectory": "evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-activation-06",
+  "casesRun": 12,
+  "invocationFailures": 0,
+  "assessmentFailures": 0,
+  "reviewRequiredCases": 2,
+  "cleanupWarnings": [],
+  "gateStatus": "review-required",
+  "results": [
+    {
+      "caseId": "sh_act_css_only",
+      "caseStatus": "accepted",
+      "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:06:37.967Z",
+      "finishedAt": "2026-08-22T15:06:54.104Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_css_only",
+        "decision": "no-skill",
+        "reason": "这是纯样式调整，不涉及创建、修改或评审任何用户可见文案。",
+        "selectedSkill": null
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "no-skill"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_backend_refactor_en",
+      "caseStatus": "accepted",
+      "caseHash": "808e02c6ef1afd094792a9ecf3906a6e997ed394f0a55a442d070ebc6634fb1d",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:06:54.105Z",
+      "finishedAt": "2026-08-22T15:07:09.896Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_backend_refactor_en",
+        "decision": "no-skill",
+        "selectedSkill": null,
+        "reason": "This is a backend-only refactor with no rendered strings, API response changes, or user-facing behavior changes, so speak-human does not apply."
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "no-skill"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_api_docs_zh",
+      "caseStatus": "accepted",
+      "caseHash": "a0bc1033a62da0345bd3b1f349de50c5e037510bd8139e024350c010d51c7ec4",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:07:09.899Z",
+      "finishedAt": "2026-08-22T15:07:27.676Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_api_docs_zh",
+        "decision": "no-skill",
+        "reason": "这是面向开发者的 webhook API 技术文档，不是产品界面上的可见文案；speak-human 不适用于此类内容。",
+        "selectedSkill": null
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "no-skill"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_generic_email_en",
+      "caseStatus": "accepted",
+      "caseHash": "29c87a3ea9806da11400de8b6f487e3b0be32f5a2ba717572498bc8d7fbf9c4d",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:07:27.677Z",
+      "finishedAt": "2026-08-22T15:07:43.571Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_generic_email_en",
+        "decision": "no-skill",
+        "reason": "The request concerns interpersonal email prose, not website or product interface copy.",
+        "selectedSkill": null
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "no-skill"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_approved_copy_boundary_zh",
+      "caseStatus": "accepted",
+      "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:07:43.575Z",
+      "finishedAt": "2026-08-22T15:08:00.931Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_approved_copy_boundary_zh",
+        "decision": "use-skill",
+        "reason": "该请求涉及前端首页组件及用户可见文案；speak-human 用于守护并保留已确认的界面文案，且可检查重构中的意外变更。",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": null,
+        "expected": "contextual-boundary",
+        "reviewRequired": true,
+        "observedDecision": "use-skill",
+        "observedSelectedSkill": "speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_admin_term_boundary_en",
+      "caseStatus": "accepted",
+      "caseHash": "7a0f55edcc6c8d1d6ad33cab672da08a12073c4889a5ac362ddff309e1e8c229",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T15:08:00.935Z",
+      "finishedAt": "2026-08-22T15:08:16.885Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_admin_term_boundary_en",
+        "decision": "use-skill",
+        "reason": "The request reviews user-visible status labels in an operations console, which is frontend/product UI copy. The operator audience and approved product terms are sufficiently defined.",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": null,
+        "expected": "contextual-boundary",
+        "reviewRequired": true,
+        "observedDecision": "use-skill",
+        "observedSelectedSkill": "speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_marketing_page_zh",
+      "caseStatus": "accepted",
+      "caseHash": "6aa8d31426454a955b5563928e2b943a5150886127f84637835560ad8594e4fa",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:08:16.888Z",
+      "finishedAt": "2026-08-22T15:08:32.997Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_marketing_page_zh",
+        "decision": "use-skill",
+        "reason": "请求涉及为真实渲染的落地页创建标题、说明和按钮等用户可见界面文案，且需要遵循仓库中已确认的产品事实；这正属于 speak-human 的文案守护范围。",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_product_workflow_en",
+      "caseStatus": "accepted",
+      "caseHash": "3c9fc4c5185a165e094478c940630e404fc69a819503d4753c3eebf5f6ace90f",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:08:33.001Z",
+      "finishedAt": "2026-08-22T15:08:48.867Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_product_workflow_en",
+        "decision": "use-skill",
+        "reason": "The request adds rendered loading, success, and failure copy to a product workflow UI, which is exactly the scope of speak-human.",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_admin_labels_zh",
+      "caseStatus": "accepted",
+      "caseHash": "97c692e5c84f3858a33e8e1f563dc19e4b4b97e1e8d1cd6f153a49d16efaca5d",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:08:48.871Z",
+      "finishedAt": "2026-08-22T15:09:04.676Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_admin_labels_zh",
+        "decision": "use-skill",
+        "selectedSkill": "speak-human",
+        "reason": "请求涉及后台渲染界面的列名、空状态和批量操作提示等用户可见文案优化；同时要求保留必要的领域状态术语，符合 speak-human 的适用范围。"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_developer_settings_en",
+      "caseStatus": "accepted",
+      "caseHash": "08ef65ddd861b52a0dc8c9c94e2e41d2e18eb4e371447ea27ff4889e53480450",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:09:04.679Z",
+      "finishedAt": "2026-08-22T15:09:21.985Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_developer_settings_en",
+        "decision": "use-skill",
+        "reason": "The request involves creating a frontend settings screen and user-visible labels and error messages; speak-human governs this product UI copy, including preserving legitimate API and HTTP terminology for the developer audience.",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_mixed_request_zh",
+      "caseStatus": "accepted",
+      "caseHash": "1072d930a4bbb33b10407df5ee8a86c3413ee0d7d5b480dff2bf364b8f2d764e",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:09:21.989Z",
+      "finishedAt": "2026-08-22T15:09:38.922Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_mixed_request_zh",
+        "decision": "use-skill",
+        "selectedSkill": "speak-human",
+        "reason": "请求同时涉及后端超时逻辑和页面上的用户可见失败提示文案；后者属于 speak-human 的适用范围。"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_localization_strings_en",
+      "caseStatus": "accepted",
+      "caseHash": "8b9d460d0d8683042c3a3a7daf0839c1576d866fb30b2cbc25515025298370dc",
+      "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+      "startedAt": "2026-08-22T15:09:38.926Z",
+      "finishedAt": "2026-08-22T15:09:54.844Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_localization_strings_en",
+        "decision": "use-skill",
+        "reason": "The request adds rendered English UI copy for a destructive account-deletion confirmation dialog, which is exactly the scope of the speak-human skill.",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": true,
+        "expected": "use-skill:speak-human"
+      },
+      "error": null
+    }
+  ]
+}

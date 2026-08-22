@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "kind": "behavior",
+  "suite": "admin-ops",
+  "description": "Operational interfaces where domain terms and lifecycle distinctions are part of the user's job.",
+  "cases": [
+    {
+      "id": "sh_beh_candidate_governance_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "zh-CN",
+      "surface": "admin-ops",
+      "tags": [
+        "domain-terms",
+        "governance",
+        "status"
+      ],
+      "context": "数据治理后台的候选样本列表。候选、隔离和已入集是三个不同的真实状态；当前列表只包含候选样本。",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "候选样本"
+        },
+        {
+          "role": "body",
+          "text": "运营验收阶段：先看 candidate，再推进入集闭环。"
+        },
+        {
+          "role": "status",
+          "text": "12 个候选，3 个已隔离"
+        }
+      ],
+      "approvedCopy": [
+        {
+          "role": "heading",
+          "text": "候选样本"
+        }
+      ],
+      "verifiedFacts": [
+        "当前列表包含 12 个候选样本",
+        "另有 3 个样本处于隔离状态",
+        "候选、隔离和已入集具有不同治理含义"
+      ],
+      "availableActions": [
+        {
+          "id": "review-candidates",
+          "label": "审核候选样本",
+          "destination": "/candidates/review"
+        }
+      ],
+      "permissionState": "restricted",
+      "mustPreservePropositions": [
+        "保留候选样本这一领域名称",
+        "候选为 12 个，隔离为 3 个",
+        "不能把候选描述成已经入集"
+      ],
+      "mustRemoveIntents": [
+        "向运营人员展示验收阶段和闭环推进话术",
+        "中英文混用同一个候选概念"
+      ],
+      "mustNotInfer": [
+        "所有候选都可入集",
+        "隔离样本已被删除或拒绝",
+        "当前用户拥有入集权限"
+      ],
+      "layoutConstraints": [
+        "状态计数必须能逐项扫描",
+        "保留后台的紧凑信息密度"
+      ],
+      "rationale": "守卫应删除团队流程话术，但不能因 candidate 像开发术语就抹掉真实治理概念。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_release_queue_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "admin-ops",
+      "tags": [
+        "operations",
+        "permission",
+        "status"
+      ],
+      "context": "An operations release queue. A release is approved but not deployed. Only release managers can deploy; this viewer can inspect the record.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "Accepted-state sync"
+        },
+        {
+          "role": "status",
+          "text": "Approval gate passed; execute the delivery path"
+        },
+        {
+          "role": "button",
+          "text": "Continue"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "The release is approved",
+        "The release has not been deployed",
+        "Only release managers can deploy",
+        "The current viewer can inspect the release record"
+      ],
+      "availableActions": [
+        {
+          "id": "view-release",
+          "label": "View release",
+          "destination": "/releases/current"
+        }
+      ],
+      "permissionState": "read-only",
+      "mustPreservePropositions": [
+        "Approved and deployed remain distinct states",
+        "The current viewer cannot deploy",
+        "Viewing the release record is available"
+      ],
+      "mustRemoveIntents": [
+        "Expose internal gate and delivery-path instructions",
+        "Use a vague continuation action"
+      ],
+      "mustNotInfer": [
+        "The release is live or deployment has started",
+        "The viewer can deploy or request deployment",
+        "A successful approval guarantees deployment"
+      ],
+      "layoutConstraints": [
+        "Status and permission must be visible without opening the record"
+      ],
+      "rationale": "Operations copy can be concise without collapsing materially different lifecycle states or permissions.",
+      "safetyImpact": "critical",
+      "supersedes": []
+    }
+  ]
+}

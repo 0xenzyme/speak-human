@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_mixed_request_zh",
+  "caseStatus": "accepted",
+  "caseHash": "1072d930a4bbb33b10407df5ee8a86c3413ee0d7d5b480dff2bf364b8f2d764e",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T14:51:47.324Z",
+  "finishedAt": "2026-08-22T14:52:02.641Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_mixed_request_zh",
+    "decision": "use-skill",
+    "reason": "请求同时包含后端超时逻辑和页面上用户可见的失败提示文案修改；speak-human 应用于后者。",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

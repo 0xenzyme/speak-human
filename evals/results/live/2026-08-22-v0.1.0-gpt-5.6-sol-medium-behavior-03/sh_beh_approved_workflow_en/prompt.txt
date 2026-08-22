@@ -1,0 +1,44 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return copy fragments only for text that should remain rendered, and preserve every needed non-action state or content role.
+Include a button, link, or other action role only when it maps to a supplied available action.
+Omit unsupported action roles instead of returning empty text, and name any omitted supplied role in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_approved_workflow_en",
+  "locale": "en",
+  "surface": "product-workflow",
+  "context": "A billing settings panel. Legal approved the renewal sentence. The current viewer can see the plan but cannot change it; no request-access control exists.",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "Plan settings"
+    },
+    {
+      "role": "body",
+      "text": "Your subscription renews automatically on October 1 unless canceled before renewal."
+    },
+    {
+      "role": "status",
+      "text": "Implementation note: hide mutation controls for viewer role"
+    }
+  ],
+  "approvedCopy": [
+    {
+      "role": "body",
+      "text": "Your subscription renews automatically on October 1 unless canceled before renewal."
+    }
+  ],
+  "verifiedFacts": [
+    "The subscription renews automatically on October 1 unless canceled before renewal",
+    "The viewer role cannot change the plan",
+    "There is no request-access action"
+  ],
+  "availableActions": [],
+  "permissionState": "read-only",
+  "layoutConstraints": [
+    "Do not add a button or link",
+    "Keep the approved sentence as one unchanged copy fragment"
+  ]
+}

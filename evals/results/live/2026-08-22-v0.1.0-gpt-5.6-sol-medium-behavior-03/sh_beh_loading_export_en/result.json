@@ -1,0 +1,34 @@
+{
+  "caseId": "sh_beh_loading_export_en",
+  "caseStatus": "accepted",
+  "caseHash": "afa3b157016b5b4d99674a186cf8d792fdaf9611a557573a0c4a23323dfb3385",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:13:51.641Z",
+  "finishedAt": "2026-08-22T15:14:10.687Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_loading_export_en",
+    "copy": [
+      {
+        "role": "status",
+        "text": "Preparing your report export..."
+      },
+      {
+        "role": "helper",
+        "text": "You can leave this page; the export will continue on the server."
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy, blank-fragment, and no-action checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

@@ -1,0 +1,38 @@
+{
+  "caseId": "sh_beh_form_validation_zh",
+  "caseStatus": "accepted",
+  "caseHash": "3d952f9787329294856161a74b4f1c041528286107087adce0ae98f795685756",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:13:30.321Z",
+  "finishedAt": "2026-08-22T15:13:51.637Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_form_validation_zh",
+    "copy": [
+      {
+        "role": "error",
+        "text": "邮箱格式无效"
+      },
+      {
+        "role": "helper",
+        "text": "请修改邮箱地址。"
+      },
+      {
+        "role": "button",
+        "text": "修改邮箱"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "blank": [],
+    "unsupportedActions": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy, blank-fragment, and no-action checks are automated; semantic rubric review remains required."
+  },
+  "error": null
+}

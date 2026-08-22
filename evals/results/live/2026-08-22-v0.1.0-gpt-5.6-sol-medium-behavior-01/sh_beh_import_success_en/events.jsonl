@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029fc-25bf-7a91-bc2b-18ac99c05704"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_import_success_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Import complete\"},{\"role\":\"body\",\"text\":\"23 records created. 2 duplicate rows skipped. View the import report for details.\"},{\"role\":\"button\",\"text\":\"View import report\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18167,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":159,"reasoning_output_tokens":86}}

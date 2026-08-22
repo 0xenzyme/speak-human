@@ -1,0 +1,22 @@
+{
+  "caseId": "sh_act_admin_labels_zh",
+  "caseStatus": "accepted",
+  "caseHash": "97c692e5c84f3858a33e8e1f563dc19e4b4b97e1e8d1cd6f153a49d16efaca5d",
+  "suiteFileHash": "706229452216ef9f8629b81727d54167fa5314721acdc27d78e3c4ad956c51cd",
+  "startedAt": "2026-08-22T14:51:12.091Z",
+  "finishedAt": "2026-08-22T14:51:29.898Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_admin_labels_zh",
+    "decision": "use-skill",
+    "reason": "该请求涉及内部运营界面的列名、空状态和批量操作提示等用户可见文案，且需要在提升可理解性的同时保留必要领域术语，符合 speak-human 的 UI 文案守护范围。",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": true,
+    "expected": "use-skill:speak-human"
+  },
+  "error": null
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a0e-68c2-79f2-a7a9-d13c1d65bb17"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_delete_rules_confirmation_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Delete 3 draft automation rules?\"},{\"role\":\"body\",\"text\":\"This permanently deletes 3 draft automation rules. Published rules are not affected.\"}],\"notes\":\"Omitted supplied button role \\\"Continue\\\" because it does not map to an available action.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":13952,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":151,"reasoning_output_tokens":67}}

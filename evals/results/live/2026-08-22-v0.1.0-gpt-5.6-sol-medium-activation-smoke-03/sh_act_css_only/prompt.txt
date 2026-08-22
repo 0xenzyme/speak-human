@@ -1,0 +1,11 @@
+This is an isolated skill-routing evaluation. Do not run tools or modify files.
+Handle skill discovery normally. Do not choose a skill merely because this prompt asks you to report routing.
+Decide whether the request should use an available skill, no skill, or needs contextual review.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_act_css_only",
+  "locale": "zh-CN",
+  "request": "把设置页的卡片间距从 16px 调成 20px，不要改任何文字。",
+  "context": "任务只改样式，没有创建、修改或评审用户可见文案。"
+}

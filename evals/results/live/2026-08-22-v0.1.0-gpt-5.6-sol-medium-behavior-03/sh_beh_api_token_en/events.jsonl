@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a07-1ba3-7582-92c4-57574042958b"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_api_token_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Revoke API token?\"},{\"role\":\"body\",\"text\":\"Revoking this token immediately rejects future requests using it. Existing request logs remain available. This action cannot be undone.\"},{\"role\":\"button\",\"text\":\"Revoke token\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18291,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":389,"reasoning_output_tokens":307}}

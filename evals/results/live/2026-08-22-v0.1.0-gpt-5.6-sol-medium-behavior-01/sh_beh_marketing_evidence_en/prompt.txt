@@ -1,0 +1,40 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_marketing_evidence_en",
+  "locale": "en",
+  "surface": "marketing",
+  "context": "A template gallery landing section. Exactly 12 public templates are available; there are no verified customer counts, ratings, or customer logos.",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "Conversion objective: establish market-leading breadth"
+    },
+    {
+      "role": "body",
+      "text": "A growing collection of production-ready templates trusted by teams everywhere."
+    },
+    {
+      "role": "button",
+      "text": "Explore further"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "The public gallery contains exactly 12 templates",
+    "The gallery route exists"
+  ],
+  "availableActions": [
+    {
+      "id": "view-templates",
+      "label": "View 12 templates",
+      "destination": "/templates"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "The primary button remains a short single-line command"
+  ]
+}

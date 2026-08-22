@@ -1,0 +1,1 @@
+{"caseId":"sh_act_admin_term_boundary_en","decision":"use-skill","reason":"The request reviews user-visible status labels in an operations console, which is frontend product UI copy. speak-human applies to clarify labels while preserving established product terms like Candidate and API.","selectedSkill":"speak-human"}

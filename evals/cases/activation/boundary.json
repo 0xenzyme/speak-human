@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "kind": "activation",
+  "suite": "boundary",
+  "description": "Negative and contextual routing cases that keep the skill from becoming a generic writing or frontend rule.",
+  "cases": [
+    {
+      "id": "sh_act_css_only",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "frontend-style-only",
+      "tags": [
+        "css-only",
+        "negative"
+      ],
+      "request": "把设置页的卡片间距从 16px 调成 20px，不要改任何文字。",
+      "context": "任务只改样式，没有创建、修改或评审用户可见文案。",
+      "expectedActivation": "no",
+      "rationale": "纯样式变更不需要文案守卫。",
+      "safetyImpact": "low",
+      "supersedes": [
+        "sh_act_css_only_legacy"
+      ]
+    },
+    {
+      "id": "sh_act_backend_refactor_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "backend",
+      "tags": [
+        "backend-only",
+        "negative"
+      ],
+      "request": "Refactor the retry scheduler to remove duplicate database queries without changing the API response or UI.",
+      "context": "No rendered string, response contract, or user-facing behavior changes.",
+      "expectedActivation": "no",
+      "rationale": "Internal implementation work is outside the skill's scope.",
+      "safetyImpact": "low",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_api_docs_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "technical-docs",
+      "tags": [
+        "documentation",
+        "negative"
+      ],
+      "request": "补充 webhook API 文档，说明签名头、重试顺序和 HTTP 429 响应。",
+      "context": "内容是开发者技术文档，不是产品界面上的可见文案。",
+      "expectedActivation": "no",
+      "rationale": "Speak Human 不默认改写技术文档或协议含义。",
+      "safetyImpact": "medium",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_generic_email_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "synthetic",
+      "locale": "en",
+      "surface": "generic-prose",
+      "tags": [
+        "generic-writing",
+        "negative"
+      ],
+      "request": "Make this email to my colleague sound warmer and less formal.",
+      "context": "The text is interpersonal prose and is not part of a website or product interface.",
+      "expectedActivation": "no",
+      "rationale": "Generic tone editing is not UI copy guarding.",
+      "safetyImpact": "none",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_approved_copy_boundary_zh",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "tags": [
+        "approved-copy",
+        "review-boundary"
+      ],
+      "request": "重构首页组件。页面文案已由法务和产品确认，必须原样保留。",
+      "context": "前端组件包含用户可见文案，但用户明确禁止改写，守卫最多用于检查意外变更。",
+      "expectedActivation": "review",
+      "rationale": "是否选择取决于代理能否以只保护、不改写的方式参与，不能把自动激活解释成改文案授权。",
+      "safetyImpact": "critical",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_admin_term_boundary_en",
+      "status": "accepted",
+      "addedAt": "2026-08-22",
+      "acceptedAt": "2026-08-22",
+      "origin": "regression",
+      "locale": "en",
+      "surface": "admin-ops",
+      "tags": [
+        "domain-terms",
+        "review-boundary"
+      ],
+      "request": "Review the Candidate API status labels in the operations console for clarity.",
+      "context": "Candidate and API are defined product terms used by operators, but surrounding labels may contain implementation commentary.",
+      "expectedActivation": "review",
+      "rationale": "The copy is in scope, while terminology decisions require audience and product context rather than a blacklist.",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_accessibility_mixed_candidate_en",
+      "status": "candidate",
+      "addedAt": "2026-08-22",
+      "origin": "real-redacted",
+      "locale": "en",
+      "surface": "frontend-style-only",
+      "tags": [
+        "accessibility",
+        "mixed-boundary"
+      ],
+      "request": "Tighten the icon-button spacing and replace its ambiguous aria-label.",
+      "context": "Most of the change is visual, but the accessible name is user-facing interface copy.",
+      "expectedActivation": "review",
+      "rationale": "This tests whether accessibility copy is recognized without attracting every CSS task; more observations are needed before gating.",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_act_css_only_legacy",
+      "status": "retired",
+      "addedAt": "2026-08-22",
+      "retiredAt": "2026-08-22",
+      "retirementReason": "Merged into the better-scoped CSS-only negative case.",
+      "replacedBy": "sh_act_css_only",
+      "duplicateOf": "sh_act_css_only",
+      "origin": "synthetic",
+      "locale": "zh-CN",
+      "surface": "frontend-style-only",
+      "tags": [
+        "css-only",
+        "negative"
+      ],
+      "request": "把设置页的卡片间距从 16px 调成 20px，不要改任何文字。",
+      "context": "任务只改样式，没有创建、修改或评审用户可见文案。",
+      "expectedActivation": "no",
+      "rationale": "保留为生命周期与去重追溯样例，不再参与门禁。",
+      "safetyImpact": "low",
+      "supersedes": []
+    }
+  ]
+}

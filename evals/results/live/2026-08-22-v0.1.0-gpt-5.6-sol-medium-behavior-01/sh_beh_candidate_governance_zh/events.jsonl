@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f8-dce1-70c2-8e32-f85f5c0acc91"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_candidate_governance_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"候选样本\"},{\"role\":\"body\",\"text\":\"当前列表包含候选样本，可审核后决定是否入集。\"},{\"role\":\"status\",\"text\":\"候选 12 个；隔离 3 个\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18267,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":325,"reasoning_output_tokens":241}}

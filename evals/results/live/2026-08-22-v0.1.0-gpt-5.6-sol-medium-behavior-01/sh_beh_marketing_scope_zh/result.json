@@ -1,0 +1,36 @@
+{
+  "caseId": "sh_beh_marketing_scope_zh",
+  "caseStatus": "accepted",
+  "caseHash": "d42e46ec66b0a91e2c9550ece55ab8c50eea9f146a8f332c62e3c6697dd65d84",
+  "suiteFileHash": "3bcc713e2c622061be196f70a4719d6202ee97f676dadd25ab3f8e9a7e8be469",
+  "startedAt": "2026-08-22T14:57:28.601Z",
+  "finishedAt": "2026-08-22T14:57:50.464Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_marketing_scope_zh",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "文本、图片和音频数据"
+      },
+      {
+        "role": "body",
+        "text": "固定示例，不代表实时库存。"
+      },
+      {
+        "role": "button",
+        "text": "查看数据目录"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

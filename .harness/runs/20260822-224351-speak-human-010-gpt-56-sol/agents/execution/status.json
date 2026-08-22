@@ -1,0 +1,16 @@
+{
+  "node": "execution",
+  "label": "Runtime Execution",
+  "phase": "completed",
+  "createdAt": "2026-08-22T14:43:51.131Z",
+  "updatedAt": "2026-08-22T15:40:38.420Z",
+  "dependencies": [],
+  "mode": "implementer",
+  "prompt": "agents/execution/prompt.md",
+  "result": "agents/execution/result.md",
+  "summary": "完成 Speak Human 0.1.0 隔离 live eval、按证据修正 skill 与 runner，并生成逐案控制器审阅报告。",
+  "verificationSummary": "activation-06：12 calls、0 invocation failures、10 automated pass + 2 accepted contextual reviews；behavior-07：17 calls、0 invocation failures、17/17 controller rubric pass；targeted v11 follow-up 通过。",
+  "thread": "01a02947-0925-7093-9da1-41ecfe38fa94",
+  "surface": "current-thread foreground controller",
+  "isolationEvidence": "顺序隔离执行；每 case 使用临时 CODEX_HOME、provider-only config、auth link、空 workspace、read-only sandbox、plugins/apps disabled、ephemeral session。"
+}

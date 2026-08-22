@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f2-276c-7a50-84c4-34a6f301d92d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_css_only\",\"decision\":\"no-skill\",\"reason\":\"请求仅调整设置页卡片间距的样式，明确不创建、修改或评审任何用户可见文案，因此 speak-human 不适用。\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16823,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":117,"reasoning_output_tokens":48}}

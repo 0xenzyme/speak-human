@@ -1,0 +1,45 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Use only roles present in inputCopy. Do not add a role, change a role or control type, or return more fragments for a role than were supplied.
+Return one rewritten fragment for every supplied non-action role; removing internal language must not drop a verified fact, state, permission, or limitation.
+For a supplied button, link, or action role, keep that same role and replace vague text with the applicable supplied available-action label.
+A vague original label does not make the control unsupported. Omit the action role only when no applicable supplied action exists; name omissions in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_import_success_en",
+  "locale": "en",
+  "surface": "success",
+  "context": "A completed contact import created 23 records and skipped 2 duplicate rows. The user can open the import report.",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "Import pipeline complete"
+    },
+    {
+      "role": "body",
+      "text": "Everything was imported successfully."
+    },
+    {
+      "role": "button",
+      "text": "Continue"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "23 records were created",
+    "2 duplicate rows were skipped",
+    "The import report is available"
+  ],
+  "availableActions": [
+    {
+      "id": "view-import-report",
+      "label": "View import report",
+      "destination": "/imports/current/report"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "Both counts remain visible in the success state"
+  ]
+}

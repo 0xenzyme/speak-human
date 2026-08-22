@@ -1,0 +1,1 @@
+{"caseId":"sh_act_css_only","decision":"no-skill","reason":"该任务仅调整 CSS 间距，且明确不涉及创建、修改或评审用户可见文案；speak-human 不适用于纯样式改动。","selectedSkill":null}

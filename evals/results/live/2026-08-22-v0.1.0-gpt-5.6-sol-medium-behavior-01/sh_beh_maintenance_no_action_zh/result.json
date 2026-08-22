@@ -1,0 +1,32 @@
+{
+  "caseId": "sh_beh_maintenance_no_action_zh",
+  "caseStatus": "accepted",
+  "caseHash": "434f1c74ac2084fb26c10824230fffdf64488abf84cab2014a4e87760647dbde",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:01:25.678Z",
+  "finishedAt": "2026-08-22T15:01:49.932Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_maintenance_no_action_zh",
+    "copy": [
+      {
+        "role": "status",
+        "text": "服务计划维护中，持续到 03:00。客户端会自动重新连接，请稍候。"
+      },
+      {
+        "role": "button",
+        "text": ""
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

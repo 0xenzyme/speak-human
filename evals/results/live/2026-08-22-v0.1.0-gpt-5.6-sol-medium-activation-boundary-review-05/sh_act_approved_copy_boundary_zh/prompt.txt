@@ -1,0 +1,14 @@
+This is an isolated activation evaluation for the candidate skill speak-human. Do not run tools or modify files.
+Use normal skill discovery to decide whether speak-human applies. Ignore whether a different skill might also apply.
+Use decision="use-skill" and selectedSkill="speak-human" when it should activate.
+Use decision="no-skill" and selectedSkill=null when it should not activate.
+Use decision="review" and selectedSkill=null when activation depends on missing product or audience context.
+Do not select the candidate merely because this prompt asks you to evaluate it.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_act_approved_copy_boundary_zh",
+  "locale": "zh-CN",
+  "request": "重构首页组件。页面文案已由法务和产品确认，必须原样保留。",
+  "context": "前端组件包含用户可见文案，但用户明确禁止改写，守卫最多用于检查意外变更。"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a1f-9773-77a0-b6be-5a1670ac57dc"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_marketing_scope_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"文本、图片和音频数据\"},{\"role\":\"body\",\"text\":\"固定示例，不代表实时库存。\"},{\"role\":\"button\",\"text\":\"查看数据目录\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":14015,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":247,"reasoning_output_tokens":176}}

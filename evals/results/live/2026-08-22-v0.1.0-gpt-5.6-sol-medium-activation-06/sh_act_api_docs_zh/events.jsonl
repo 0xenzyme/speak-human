@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a02-ed71-7963-a194-0a5ecf3c32c3"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_api_docs_zh\",\"decision\":\"no-skill\",\"reason\":\"这是面向开发者的 webhook API 技术文档，不是产品界面上的可见文案；speak-human 不适用于此类内容。\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16834,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":89,"reasoning_output_tokens":19}}

@@ -1,0 +1,14 @@
+This is an isolated activation evaluation for the candidate skill speak-human. Do not run tools or modify files.
+Use normal skill discovery to decide whether speak-human applies. Ignore whether a different skill might also apply.
+Use decision="use-skill" and selectedSkill="speak-human" when it should activate.
+Use decision="no-skill" and selectedSkill=null when it should not activate.
+Use decision="review" and selectedSkill=null when activation depends on missing product or audience context.
+Do not select the candidate merely because this prompt asks you to evaluate it.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_act_admin_labels_zh",
+  "locale": "zh-CN",
+  "request": "调整后台候选样本表的列名、空状态和批量操作提示，让运营同事能直接看懂，但保留候选、隔离和入集这些状态含义。",
+  "context": "这是内部运营产品的渲染界面；领域术语是操作者完成工作的必要信息。"
+}

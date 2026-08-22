@@ -1,0 +1,87 @@
+{
+  "mode": "live",
+  "networkOrModelCall": true,
+  "provenance": {
+    "runnerVersion": 5,
+    "manifestSchemaVersion": 1,
+    "skillVersion": "0.1.0",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "medium",
+    "timeoutSeconds": 300,
+    "sourceCommit": "5beaa90afa1c4c59d7d4c7c78c922f843157acc1",
+    "sourceDirty": true,
+    "provider": {
+      "source": "allowlisted-active-config",
+      "providerId": "OpenAI",
+      "baseUrlHash": "dcbe54e373401bb3d5d03bff79b2d1e5076470dc8abfc41d62e7bbfae3cbf172",
+      "wireApi": "responses",
+      "requiresOpenAIAuth": true,
+      "credentialMode": "openai-auth",
+      "configHash": "e29cc75b2c064101dab08ec845865e2366ec7a7152f57fc94f0757d92f06f859"
+    },
+    "lane": "activation",
+    "skillHash": "2042cdd41dbef790bd1aa7ee6c70d21e18f83420928733f43c3db2d453425576",
+    "manifestHash": "1cb9b4e306f64e240cc98aed7fb4ae206b10b5a3b1614e4371b12f3e9f0a1d6e",
+    "runnerHash": "c2100e6620340dd471b41558e4854dc740337039a3b82bb8cfc9756bbdbd36a6"
+  },
+  "cases": [
+    {
+      "id": "sh_act_css_only",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "frontend-style-only",
+      "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137"
+    }
+  ],
+  "isolation": {
+    "temporaryCodexHome": true,
+    "temporaryEmptyWorkspace": true,
+    "onlyStagedUserSkill": "speak-human",
+    "userConfigMode": "temporary allowlisted provider-only config",
+    "userRulesIgnored": true,
+    "pluginLoadingDisabled": true,
+    "sandbox": "read-only",
+    "sessionPersistence": "ephemeral",
+    "authHandling": "temporary filesystem link; contents are not read or copied",
+    "userScopeInstall": false
+  },
+  "providerAuthorization": {
+    "required": true,
+    "host": "sub.videofree.fun",
+    "exactMatchProvided": true
+  },
+  "codexVersion": "codex-cli 0.149.0",
+  "codexLauncher": "windows-npm-entrypoint",
+  "startedAt": "2026-08-22T14:45:12.597Z",
+  "finishedAt": "2026-08-22T14:45:33.162Z",
+  "outputDirectory": "evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-activation-smoke-03",
+  "casesRun": 1,
+  "invocationFailures": 0,
+  "assessmentFailures": 1,
+  "cleanupWarnings": [],
+  "gateStatus": "failed",
+  "results": [
+    {
+      "caseId": "sh_act_css_only",
+      "caseStatus": "accepted",
+      "caseHash": "21337c4dda946fa09c254003a1e190c6b6ea5146a2e61796a857af326301a137",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T14:45:12.602Z",
+      "finishedAt": "2026-08-22T14:45:33.144Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_css_only",
+        "decision": "use-skill",
+        "reason": "这是一个前端界面样式调整请求，涉及设置页卡片间距与布局细节，适用 impeccable；任务不涉及用户可见文案，因此不使用 speak-human。",
+        "selectedSkill": "impeccable"
+      },
+      "assessment": {
+        "pass": false,
+        "expected": "no-skill"
+      },
+      "error": null
+    }
+  ]
+}

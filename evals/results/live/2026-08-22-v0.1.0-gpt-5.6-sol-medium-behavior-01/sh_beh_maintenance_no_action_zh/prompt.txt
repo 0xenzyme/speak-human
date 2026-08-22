@@ -1,0 +1,32 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_maintenance_no_action_zh",
+  "locale": "zh-CN",
+  "surface": "no-action",
+  "context": "连接状态横幅。服务计划维护到 03:00，客户端会自动重新连接；当前页面没有重试、状态页或联系支持入口。",
+  "inputCopy": [
+    {
+      "role": "status",
+      "text": "维护态兜底：建立用户信心并承接下一步"
+    },
+    {
+      "role": "button",
+      "text": "立即重试"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "计划维护持续到 03:00",
+    "客户端会自动重新连接",
+    "页面没有用户可执行的恢复动作"
+  ],
+  "availableActions": [],
+  "permissionState": "disabled",
+  "layoutConstraints": [
+    "横幅不能因不存在的按钮预留交互位置",
+    "时间在窄屏上保持完整"
+  ]
+}

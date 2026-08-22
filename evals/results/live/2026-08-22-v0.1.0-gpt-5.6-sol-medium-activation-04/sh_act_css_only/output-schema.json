@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "caseId",
+    "decision",
+    "selectedSkill",
+    "reason"
+  ],
+  "properties": {
+    "caseId": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "use-skill",
+        "no-skill",
+        "review"
+      ]
+    },
+    "selectedSkill": {
+      "enum": [
+        "speak-human",
+        null
+      ]
+    },
+    "reason": {
+      "type": "string"
+    }
+  }
+}

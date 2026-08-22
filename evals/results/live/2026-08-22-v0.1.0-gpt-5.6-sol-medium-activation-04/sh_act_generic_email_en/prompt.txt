@@ -1,0 +1,14 @@
+This is an isolated activation evaluation for the candidate skill speak-human. Do not run tools or modify files.
+Use normal skill discovery to decide whether speak-human applies. Ignore whether a different skill might also apply.
+Use decision="use-skill" and selectedSkill="speak-human" when it should activate.
+Use decision="no-skill" and selectedSkill=null when it should not activate.
+Use decision="review" and selectedSkill=null when activation depends on missing product or audience context.
+Do not select the candidate merely because this prompt asks you to evaluate it.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_act_generic_email_en",
+  "locale": "en",
+  "request": "Make this email to my colleague sound warmer and less formal.",
+  "context": "The text is interpersonal prose and is not part of a website or product interface."
+}

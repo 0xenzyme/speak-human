@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f9-3b07-7792-8264-836be354e73e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_release_queue_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Release approved\"},{\"role\":\"status\",\"text\":\"Approved, not deployed. Only release managers can deploy.\"},{\"role\":\"button\",\"text\":\"View release\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18188,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":168,"reasoning_output_tokens":102}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f2-f791-7641-a749-733abc9ff826"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_generic_email_en\",\"decision\":\"no-skill\",\"selectedSkill\":null,\"reason\":\"The request concerns interpersonal email prose, explicitly outside website or product interface copy.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":12427,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":94,"reasoning_output_tokens":43}}

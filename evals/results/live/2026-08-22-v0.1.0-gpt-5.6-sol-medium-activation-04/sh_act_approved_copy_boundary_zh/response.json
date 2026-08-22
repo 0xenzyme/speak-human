@@ -1,0 +1,1 @@
+{"caseId":"sh_act_approved_copy_boundary_zh","decision":"use-skill","reason":"该请求涉及重构含用户可见文案的前端首页组件；speak-human 明确要求保留已批准的文案，可用于防止重构时发生意外改写。","selectedSkill":"speak-human"}

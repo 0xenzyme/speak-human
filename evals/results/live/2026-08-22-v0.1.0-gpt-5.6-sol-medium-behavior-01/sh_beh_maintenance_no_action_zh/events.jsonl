@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029fd-acb7-7a13-9b85-57f559a4f509"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_maintenance_no_action_zh\",\"copy\":[{\"role\":\"status\",\"text\":\"服务计划维护中，持续到 03:00。客户端会自动重新连接，请稍候。\"},{\"role\":\"button\",\"text\":\"\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18164,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":361,"reasoning_output_tokens":292}}

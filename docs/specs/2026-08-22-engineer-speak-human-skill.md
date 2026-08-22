@@ -1,9 +1,9 @@
-# Draft: Engineer Speak Human as a Behavior-Validated UI Copy Guardrail
+# Engineer Speak Human as a Behavior-Validated UI Copy Guardrail
 
 Created: 2026-08-22
-Status: draft
+Status: accepted
 Target: `skills/speak-human/`
-Harness state: shaping-only; no accepted Goal or Run
+Harness state: implementation completed in Goal/Run; live model and installation lanes deferred
 Harness contract: `fixed`
 Harness language: `zh-CN`
 
@@ -304,69 +304,81 @@ Live lanes are opt-in because they can require network access, credentials, mode
 
 - Item: Target behavior and activation boundary
   - Acceptance: The desired outcome, activation rules, and non-goals match the intended product behavior.
-  - Evidence: `TBD - user acceptance`
-  - Status: `pending`
-  - Unblocker: `Review this draft`
+  - Evidence: User instructed implementation of this spec on 2026-08-22.
+  - Status: `accepted`
+  - Unblocker: `N/A`
 
 - Item: Evaluation architecture
   - Acceptance: Deterministic, live activation, live behavior, and independent review lanes are appropriately separated.
-  - Evidence: `TBD - user acceptance`
-  - Status: `pending`
-  - Unblocker: `Review scope and cost boundary`
+  - Evidence: User instructed implementation after reviewing the amended extensible architecture on 2026-08-22.
+  - Status: `accepted`
+  - Unblocker: `N/A`
 
 - Item: Extensible case governance
   - Acceptance: New use cases can be registered, deduplicated, promoted, superseded, and retired without turning every example into runtime instructions.
-  - Evidence: `TBD - user acceptance`
-  - Status: `pending`
-  - Unblocker: `Review case lifecycle and promotion policy`
+  - Evidence: User explicitly requested continuous expansion and then instructed implementation on 2026-08-22.
+  - Status: `accepted`
+  - Unblocker: `N/A`
 
 - Item: Skill revision boundary
   - Acceptance: The spec permits contextual instruction changes without generic copywriting, behavior changes, or phrase-blacklist growth.
-  - Evidence: `TBD - user acceptance`
-  - Status: `pending`
-  - Unblocker: `Review behavioral contract`
+  - Evidence: User instructed implementation of this spec on 2026-08-22.
+  - Status: `accepted`
+  - Unblocker: `N/A`
 
 - Item: Delivery boundary
   - Acceptance: Source changes, Harness adoption, commit/push, and user-scope installation remain separate decisions.
-  - Evidence: `TBD - user acceptance`
-  - Status: `pending`
-  - Unblocker: `Confirm after shaping`
+  - Evidence: User authorized the baseline commit and implementation; push, release, live calls, and user-scope installation remain unauthorized.
+  - Status: `accepted`
+  - Unblocker: `N/A`
 
 ## Required Gate Evidence
 
 - Gate: Spec acceptance
   - Required: `yes`
-  - Evidence: `TBD - explicit user acceptance`
-  - Status: `pending`
-  - Unblocker: `Review this draft`
+  - Evidence: User instructed implementation of the amended spec on 2026-08-22.
+  - Status: `passed`
+  - Unblocker: `N/A`
 
 - Gate: Deterministic validation
   - Required: `yes`
-  - Evidence: `TBD - command output and case coverage summary`
-  - Status: `pending`
-  - Unblocker: `Implement Stage 0`
+  - Evidence: `node scripts/validate-evals.mjs --json` passed with 31 cases in 7 files; `node scripts/test-validate-evals.mjs` passed 7 positive/negative checks.
+  - Status: `passed`
+  - Unblocker: `N/A`
 
 - Gate: Case registry governance
   - Required: `yes`
-  - Evidence: `TBD - schema version, lifecycle validation, duplicate and supersession checks`
-  - Status: `pending`
-  - Unblocker: `Implement Stage 0`
+  - Evidence: Manifest schema version 1 gates 29 accepted cases while retaining 1 candidate and 1 retired case; schemas and validator enforce IDs, provenance, coverage, duplicates, and replacement links.
+  - Status: `passed`
+  - Unblocker: `N/A`
 
 - Gate: Semantic safety
   - Required: `yes`
-  - Evidence: `TBD - behavior results with zero safety-critical failures`
-  - Status: `pending`
-  - Unblocker: `Implement and run Stages 1-2`
+  - Evidence: `evals/results/2026-08-22-forward-test.md` records five independent representative behavior checks with no approved-copy, fact, permission, terminology, claim, or action failure.
+  - Status: `passed`
+  - Unblocker: `N/A; full live model matrix remains separately authorized`
 
 - Gate: Independent forward test
   - Required: `yes`
-  - Evidence: `TBD - reviewer result and examined cases`
-  - Status: `pending`
-  - Unblocker: `Complete candidate skill revision`
+  - Evidence: Read-only blind reviewer passed 4 routing and 5 behavior scenarios without access to the corpus, expected rewrites, baseline defects, or git diff.
+  - Status: `passed`
+  - Unblocker: `N/A`
+
+- Gate: Official skill validation
+  - Required: `yes`
+  - Evidence: Skill Creator `quick_validate.py skills/speak-human` returned `Skill is valid!`.
+  - Status: `passed`
+  - Unblocker: `N/A`
+
+- Gate: Live model evaluation
+  - Required: `no`
+  - Evidence: Runner help, plan-only behavior, Windows CLI resolution, provenance, isolation plan, and missing-authorization refusal were validated; no model call was made.
+  - Status: `deferred`
+  - Unblocker: `Separate user authorization`
 
 - Gate: User-scope refresh
   - Required: `only if installation is requested`
-  - Evidence: `TBD - source/install hashes and active skill metadata`
+  - Evidence: Not run; source/install equality is intentionally not claimed.
   - Status: `not-authorized`
   - Unblocker: `Separate user authorization`
 
@@ -385,10 +397,10 @@ Live commands will be specified only after their runner and isolation contract e
 
 ## State Sync
 
-- Current record: this draft spec, `.harness/config.json`, `harness/tasks.md`, and `harness/status.md`.
-- Current repository state: Harness fixed contract initialized with `language.default` set to `zh-CN`; the task is `spec-draft` with no Goal or Run.
-- On acceptance: create and validate a Goal from this spec before implementation; do not prepare a Run while acceptance items remain pending.
-- On implementation completion: update the spec checklist, evaluation evidence, `README.md`, and `AGENTS.md` before claiming completion.
+- Current record: this accepted spec, Goal `harness/goals/2026-08-22-speak-human-ui.md`, Run `.harness/runs/20260822-210732-speak-human-ui`, Task, and bounded status.
+- Current repository state: Harness fixed contract uses `language.default=zh-CN`; implementation and required offline gates are complete after baseline commit `5beaa90`.
+- Evaluation evidence: `evals/results/2026-08-22-baseline.md` and `evals/results/2026-08-22-forward-test.md`.
+- Delivery boundary: implementation changes remain uncommitted; live model calls, user-scope installation, push, release, and publish were not performed.
 
 ## Pause Conditions
 

@@ -1,0 +1,1 @@
+{"caseId":"sh_act_backend_refactor_en","decision":"no-skill","reason":"The request is a backend-only refactor with no rendered strings, API response changes, or user-facing behavior changes, so speak-human does not apply.","selectedSkill":null}

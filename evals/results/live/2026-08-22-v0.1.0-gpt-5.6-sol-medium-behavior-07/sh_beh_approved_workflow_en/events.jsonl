@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a1a-9c61-7580-8766-6f63c0e468dd"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_approved_workflow_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Plan details\"},{\"role\":\"body\",\"text\":\"Your subscription renews automatically on October 1 unless canceled before renewal.\"},{\"role\":\"status\",\"text\":\"You can view this plan, but you can't change it.\"}],\"notes\":\"The approved renewal sentence is unchanged. No action controls were added.\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18344,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":155,"reasoning_output_tokens":62}}

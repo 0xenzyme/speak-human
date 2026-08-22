@@ -2,33 +2,36 @@
 
 ## Project Structure & Module Organization
 
-The distributable skill lives in `skills/speak-human/`. Its `SKILL.md` file contains YAML front matter and the instructions that govern rewriting behavior. `skills/speak-human/agents/openai.yaml` defines the display name, short description, and default prompt shown by compatible agents. The root `README.md` documents the purpose, installation, and package layout.
-
-Keep files required at runtime inside `skills/speak-human/` so they are included when the skill is installed. Add folders such as `examples/`, `references/`, or `scripts/` only when they support a concrete use case.
+The installable skill is in `skills/speak-human/`: `SKILL.md` defines behavior and `agents/openai.yaml` defines discovery metadata. `VERSION` and `evals/manifest.json` record the release candidate version. Maintainer-only assets live at the root. `evals/cases/` contains activation and behavior suites; `evals/rubric.md` defines semantic review. Scripts are in `scripts/`, and durable planning records are in `docs/` and `harness/`.
 
 ## Development and Validation Commands
 
-This repository has no build step or runtime dependencies. From the repository root, use:
+There is no build step or dependency installation.
 
 ```powershell
-rg --files
-Get-Content -Raw skills\speak-human\SKILL.md
+node scripts\validate-evals.mjs
+node scripts\test-validate-evals.mjs
+node scripts\test-run-live-evals.mjs
+node scripts\validate-evals.mjs --list
+node scripts\run-live-evals.mjs --help
+python -B -X utf8 "$env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py" skills\speak-human
 git diff --check
-git diff -- README.md skills/speak-human
 ```
 
-These commands inspect the package, review the complete instruction flow, catch whitespace errors, and show the effective change. After installing the skill locally, invoke `$speak-human` against representative UI copy for an end-to-end check.
+The first command is the offline repository gate. The live runner is plan-only unless `--execute` is explicitly supplied; model calls and user-scope installation require separate authorization.
 
 ## Coding Style & Naming Conventions
 
-Write Markdown and YAML as UTF-8. Use short, descriptive Markdown headings and direct, imperative instructions. Indent YAML with two spaces. Skill names and directories use lowercase kebab-case, such as `speak-human`; user-facing names use title case, such as `Speak Human`.
-
-Keep `SKILL.md` front matter limited to valid metadata. Examples should contrast a specific internal phrase with natural user-facing wording. Preserve product facts, caveats, permissions, and legal meaning; never improve fluency by inventing claims.
+Use UTF-8, two-space JSON/YAML indentation, canonical JSON formatting, short Markdown headings, and direct instructions. Skill directories use lowercase kebab-case. Case IDs use `sh_act_*` or `sh_beh_*`; suite and tag values use lowercase kebab-case. Keep examples product-neutral and redact real observations.
 
 ## Testing Guidelines
 
-There is currently no automated test suite or coverage target. Manually test at least one example containing internal process language and one containing legitimate technical terminology that should remain. Confirm that the result is understandable without project context, names a real next action, and introduces no unsupported facts. Recheck `README.md`, `SKILL.md`, and `openai.yaml` when names, prompts, or installation details change.
+Add or update cases for behavior changes. `accepted` cases gate coverage; `candidate` cases gather evidence; `retired` cases require a reason and traceable replacement when applicable. Test semantic invariants rather than exact prose. Approved wording, facts, limitations, permissions, and real actions must survive; unsupported claims or invented actions are failures. Run both the deterministic validator and official skill validator before review.
 
 ## Commit & Pull Request Guidelines
 
-The repository has no commit history yet, so no established convention exists. Use concise, imperative, scoped messages, for example `docs: clarify claim-safety guidance`. Pull requests should explain the user-facing problem, list changed paths, include before/after copy examples, and report manual validation. Link relevant issues; include screenshots only when agent UI metadata or presentation changes.
+The initial history uses scoped, imperative messages such as `chore: initialize speak-human skill repository`; continue with `type: concise summary`. Do not commit generated live results casually. Pull requests should state the behavioral gap, list affected case IDs, explain any lifecycle changes, and report validation commands. Include before/after copy only as evidence, never as a universal required wording.
+
+## Security & Delivery Boundaries
+
+Never store credentials, customer data, or unredacted production copy in cases or results. Source validation, live evaluation, user-scope installation, commit, push, and release are distinct steps; report only the steps actually completed.

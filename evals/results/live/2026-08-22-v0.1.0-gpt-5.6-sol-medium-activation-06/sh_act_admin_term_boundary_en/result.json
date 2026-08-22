@@ -1,0 +1,25 @@
+{
+  "caseId": "sh_act_admin_term_boundary_en",
+  "caseStatus": "accepted",
+  "caseHash": "7a0f55edcc6c8d1d6ad33cab672da08a12073c4889a5ac362ddff309e1e8c229",
+  "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+  "startedAt": "2026-08-22T15:08:00.935Z",
+  "finishedAt": "2026-08-22T15:08:16.885Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_act_admin_term_boundary_en",
+    "decision": "use-skill",
+    "reason": "The request reviews user-visible status labels in an operations console, which is frontend/product UI copy. The operator audience and approved product terms are sufficiently defined.",
+    "selectedSkill": "speak-human"
+  },
+  "assessment": {
+    "pass": null,
+    "expected": "contextual-boundary",
+    "reviewRequired": true,
+    "observedDecision": "use-skill",
+    "observedSelectedSkill": "speak-human"
+  },
+  "error": null
+}

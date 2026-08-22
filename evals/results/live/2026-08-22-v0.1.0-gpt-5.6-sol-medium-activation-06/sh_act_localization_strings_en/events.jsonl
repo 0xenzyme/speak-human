@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a02a05-3365-77a0-bbd6-c9345d473c4d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_localization_strings_en\",\"decision\":\"use-skill\",\"reason\":\"The request adds rendered English UI copy for a destructive account-deletion confirmation dialog, which is exactly the scope of the speak-human skill.\",\"selectedSkill\":\"speak-human\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":16826,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":117,"reasoning_output_tokens":52}}

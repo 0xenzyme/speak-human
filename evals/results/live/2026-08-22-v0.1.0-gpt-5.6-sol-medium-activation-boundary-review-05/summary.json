@@ -1,0 +1,123 @@
+{
+  "mode": "live",
+  "networkOrModelCall": true,
+  "provenance": {
+    "runnerVersion": 7,
+    "manifestSchemaVersion": 1,
+    "skillVersion": "0.1.0",
+    "model": "gpt-5.6-sol",
+    "reasoningEffort": "medium",
+    "timeoutSeconds": 600,
+    "sourceCommit": "5beaa90afa1c4c59d7d4c7c78c922f843157acc1",
+    "sourceDirty": true,
+    "provider": {
+      "source": "allowlisted-active-config",
+      "providerId": "OpenAI",
+      "baseUrlHash": "dcbe54e373401bb3d5d03bff79b2d1e5076470dc8abfc41d62e7bbfae3cbf172",
+      "wireApi": "responses",
+      "requiresOpenAIAuth": true,
+      "credentialMode": "openai-auth",
+      "configHash": "e29cc75b2c064101dab08ec845865e2366ec7a7152f57fc94f0757d92f06f859"
+    },
+    "lane": "activation",
+    "skillHash": "2042cdd41dbef790bd1aa7ee6c70d21e18f83420928733f43c3db2d453425576",
+    "manifestHash": "1cb9b4e306f64e240cc98aed7fb4ae206b10b5a3b1614e4371b12f3e9f0a1d6e",
+    "runnerHash": "f7c60f1c9159b01c281e2dfaf370957f7369652050ace1f9bf567ca542650bad"
+  },
+  "cases": [
+    {
+      "id": "sh_act_approved_copy_boundary_zh",
+      "status": "accepted",
+      "locale": "zh-CN",
+      "surface": "marketing",
+      "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482"
+    },
+    {
+      "id": "sh_act_admin_term_boundary_en",
+      "status": "accepted",
+      "locale": "en",
+      "surface": "admin-ops",
+      "caseHash": "7a0f55edcc6c8d1d6ad33cab672da08a12073c4889a5ac362ddff309e1e8c229"
+    }
+  ],
+  "isolation": {
+    "temporaryCodexHome": true,
+    "temporaryEmptyWorkspace": true,
+    "onlyStagedUserSkill": "speak-human",
+    "userConfigMode": "temporary allowlisted provider-only config",
+    "userRulesIgnored": true,
+    "pluginLoadingDisabled": true,
+    "sandbox": "read-only",
+    "sessionPersistence": "ephemeral",
+    "authHandling": "temporary filesystem link; contents are not read or copied",
+    "userScopeInstall": false
+  },
+  "providerAuthorization": {
+    "required": true,
+    "host": "sub.videofree.fun",
+    "exactMatchProvided": true
+  },
+  "codexVersion": "codex-cli 0.149.0",
+  "codexLauncher": "windows-npm-entrypoint",
+  "startedAt": "2026-08-22T14:54:44.132Z",
+  "finishedAt": "2026-08-22T14:55:17.423Z",
+  "outputDirectory": "evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-activation-boundary-review-05",
+  "casesRun": 2,
+  "invocationFailures": 0,
+  "assessmentFailures": 0,
+  "reviewRequiredCases": 2,
+  "cleanupWarnings": [],
+  "gateStatus": "review-required",
+  "results": [
+    {
+      "caseId": "sh_act_approved_copy_boundary_zh",
+      "caseStatus": "accepted",
+      "caseHash": "8c23f73fce3ce863095f406efe0f8d323db801b7815dd92fc3df7fb162af3482",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T14:54:44.136Z",
+      "finishedAt": "2026-08-22T14:55:00.678Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_approved_copy_boundary_zh",
+        "decision": "use-skill",
+        "selectedSkill": "speak-human",
+        "reason": "请求涉及重构包含用户可见文案的前端组件，且要求原样保留已批准文案；speak-human 可用于守卫并检查意外文案变更，而无需改写。"
+      },
+      "assessment": {
+        "pass": null,
+        "expected": "contextual-boundary",
+        "reviewRequired": true,
+        "observedDecision": "use-skill",
+        "observedSelectedSkill": "speak-human"
+      },
+      "error": null
+    },
+    {
+      "caseId": "sh_act_admin_term_boundary_en",
+      "caseStatus": "accepted",
+      "caseHash": "7a0f55edcc6c8d1d6ad33cab672da08a12073c4889a5ac362ddff309e1e8c229",
+      "suiteFileHash": "f67fb281288854142c3cbf15502dcbcd3f70f0ed1674fa0773db510349cd7995",
+      "startedAt": "2026-08-22T14:55:00.683Z",
+      "finishedAt": "2026-08-22T14:55:17.402Z",
+      "exitCode": 0,
+      "signal": null,
+      "authLinkType": "symbolic-link",
+      "output": {
+        "caseId": "sh_act_admin_term_boundary_en",
+        "decision": "use-skill",
+        "reason": "The request reviews user-visible operations-console status labels, which falls within speak-human's scope for frontend UI copy clarity while preserving defined product terms.",
+        "selectedSkill": "speak-human"
+      },
+      "assessment": {
+        "pass": null,
+        "expected": "contextual-boundary",
+        "reviewRequired": true,
+        "observedDecision": "use-skill",
+        "observedSelectedSkill": "speak-human"
+      },
+      "error": null
+    }
+  ]
+}

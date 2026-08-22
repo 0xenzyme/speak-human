@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "status": "failed",
+  "lane": "activation",
+  "model": "gpt-5.6-sol",
+  "reasoningEffort": "medium",
+  "caseId": "sh_act_css_only",
+  "startedAt": "2026-08-22T14:24:58.950Z",
+  "finishedAt": "2026-08-22T14:29:58.964Z",
+  "reason": "The isolated CLI lost the active custom provider when user config was ignored; WebSocket and HTTPS requests timed out.",
+  "classification": "runner network-configuration failure",
+  "modelResultProduced": false,
+  "timeoutProtectionPassed": true,
+  "subsequentCasesStarted": false
+}

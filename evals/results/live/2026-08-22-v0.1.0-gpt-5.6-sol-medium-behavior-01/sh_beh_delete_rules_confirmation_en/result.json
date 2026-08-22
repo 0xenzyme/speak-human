@@ -1,0 +1,36 @@
+{
+  "caseId": "sh_beh_delete_rules_confirmation_en",
+  "caseStatus": "accepted",
+  "caseHash": "811f15f93b8ddf7f7b634115f2b505e9aa1d8fd3e693af71d63bafba0f75868d",
+  "suiteFileHash": "ba5a86e8b8e0e69c48062be15a8e198d4037308f6e2ee43fc405ef576f4b4443",
+  "startedAt": "2026-08-22T15:00:29.118Z",
+  "finishedAt": "2026-08-22T15:00:49.385Z",
+  "exitCode": 0,
+  "signal": null,
+  "authLinkType": "symbolic-link",
+  "output": {
+    "caseId": "sh_beh_delete_rules_confirmation_en",
+    "copy": [
+      {
+        "role": "heading",
+        "text": "Delete 3 draft automation rules?"
+      },
+      {
+        "role": "body",
+        "text": "This will permanently delete 3 draft automation rules. Published rules are not affected."
+      },
+      {
+        "role": "button",
+        "text": "Delete 3 draft rules"
+      }
+    ],
+    "notes": ""
+  },
+  "assessment": {
+    "pass": true,
+    "missing": [],
+    "reviewRequired": true,
+    "note": "Only exact approved-copy preservation is checked automatically; semantic rubric review remains required."
+  },
+  "error": null
+}

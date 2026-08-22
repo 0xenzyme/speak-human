@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f7-cce6-7f01-b84e-6b8a777d1afe"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_admin_term_boundary_en\",\"decision\":\"use-skill\",\"reason\":\"The request reviews user-visible operations-console status labels, which falls within speak-human's scope for frontend UI copy clarity while preserving defined product terms.\",\"selectedSkill\":\"speak-human\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":16817,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":115,"reasoning_output_tokens":49}}

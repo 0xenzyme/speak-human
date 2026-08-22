@@ -1,0 +1,40 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Use only roles present in inputCopy. Do not add a role, change a role or control type, or return more fragments for a role than were supplied.
+Return one rewritten fragment for every supplied non-action role; removing internal language must not drop a verified fact, state, permission, or limitation.
+For a supplied button, link, or action role, keep that same role and replace vague text with the applicable supplied available-action label.
+A vague original label does not make the control unsupported. Omit the action role only when no applicable supplied action exists; name omissions in notes.
+Return only the required JSON object.
+
+{
+  "caseId": "sh_beh_export_permission_zh",
+  "locale": "zh-CN",
+  "surface": "permission",
+  "context": "分析看板。当前用户可以查看数据，但没有导出权限；页面提供向工作区管理员申请导出权限的入口。",
+  "inputCopy": [
+    {
+      "role": "status",
+      "text": "RBAC gate blocked export capability"
+    },
+    {
+      "role": "button",
+      "text": "解锁功能"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "当前用户可以查看看板数据",
+    "当前用户没有导出权限",
+    "用户可以向工作区管理员申请导出权限"
+  ],
+  "availableActions": [
+    {
+      "id": "request-export-access",
+      "label": "申请导出权限"
+    }
+  ],
+  "permissionState": "restricted",
+  "layoutConstraints": [
+    "权限说明与申请按钮相邻"
+  ]
+}

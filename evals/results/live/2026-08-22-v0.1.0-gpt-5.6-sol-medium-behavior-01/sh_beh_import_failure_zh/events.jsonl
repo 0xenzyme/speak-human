@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029fa-aac4-7d03-8177-d8527ac91aa9"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_import_failure_zh\",\"copy\":[{\"role\":\"heading\",\"text\":\"文件解析失败（第 214 行）\"},{\"role\":\"body\",\"text\":\"本次导入未保存任何记录。请重新上传文件。\"},{\"role\":\"button\",\"text\":\"重新上传\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18204,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":306,"reasoning_output_tokens":229}}

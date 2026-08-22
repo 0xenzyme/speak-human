@@ -1,0 +1,1 @@
+{"caseId":"sh_act_product_workflow_en","decision":"use-skill","reason":"The request adds rendered loading, success, and failure copy to a product workflow UI, which is exactly the scope of speak-human.","selectedSkill":"speak-human"}

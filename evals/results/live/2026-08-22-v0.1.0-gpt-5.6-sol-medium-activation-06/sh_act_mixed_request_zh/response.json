@@ -1,0 +1,1 @@
+{"caseId":"sh_act_mixed_request_zh","decision":"use-skill","selectedSkill":"speak-human","reason":"请求同时涉及后端超时逻辑和页面上的用户可见失败提示文案；后者属于 speak-human 的适用范围。"}

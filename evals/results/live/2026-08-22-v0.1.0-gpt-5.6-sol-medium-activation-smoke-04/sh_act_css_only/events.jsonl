@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029f1-3740-7ff1-874c-de93971b526f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_act_css_only\",\"decision\":\"no-skill\",\"reason\":\"该任务仅调整 CSS 间距，且明确不涉及创建、修改或评审用户可见文案；speak-human 不适用于纯样式改动。\",\"selectedSkill\":null}"}}
+{"type":"turn.completed","usage":{"input_tokens":16841,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":110,"reasoning_output_tokens":38}}

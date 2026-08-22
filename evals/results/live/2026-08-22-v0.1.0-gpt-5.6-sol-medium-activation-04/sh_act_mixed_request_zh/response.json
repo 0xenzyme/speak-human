@@ -1,0 +1,1 @@
+{"caseId":"sh_act_mixed_request_zh","decision":"use-skill","reason":"请求同时包含后端超时逻辑和页面上用户可见的失败提示文案修改；speak-human 应用于后者。","selectedSkill":"speak-human"}

@@ -1,0 +1,115 @@
+{
+  "harnessContract": "fixed",
+  "phase": "completed",
+  "createdAt": "2026-08-22T14:43:51.131Z",
+  "updatedAt": "2026-08-22T15:43:56.319Z",
+  "cwd": "D:\\project\\skills\\speak-human",
+  "goalPath": "harness\\goals\\2026-08-22-speak-human-010-gpt-56-sol.md",
+  "runDir": ".harness\\runs\\20260822-224351-speak-human-010-gpt-56-sol",
+  "workMode": "local",
+  "executionRole": "implementer",
+  "communication": {
+    "commentary": "minimal",
+    "source": "configured",
+    "reportCadence": "material-transition-or-host-heartbeat",
+    "notifyOn": "blocker, risk, scope-or-authorization-change, user-decision, failed-verification, state-transition",
+    "guidance": "Use one short kickoff that combines skill, reason, scope, boundaries, and next action. Do not narrate routine UI-visible tool activity or repeat unchanged boundaries. Later commentary must add a new material fact unless it is a one-sentence host-required heartbeat."
+  },
+  "conversationRoute": "current-thread",
+  "executionContextLock": {
+    "conversationLane": "current-thread",
+    "controllerThread": "current-thread",
+    "executionCwd": "D:\\project\\skills\\speak-human",
+    "executionBranch": "master",
+    "executionSlot": "N/A",
+    "remoteControlWorktree": "no"
+  },
+  "acceptanceMapRequired": false,
+  "acceptanceMapSource": "",
+  "acceptanceMapItemCount": 0,
+  "milestoneCompletionMapRequired": false,
+  "milestoneCompletionMapSource": "",
+  "milestoneCompletionMapItemCount": 0,
+  "milestoneCompletionMapRequiredLabels": [],
+  "stageCompletionMapRequired": false,
+  "stageCompletionMapSource": "",
+  "stageCompletionMapItemCount": 0,
+  "stageCompletionMapRequiredLabels": [],
+  "specAcceptanceChecklistSource": "goal",
+  "specAcceptanceChecklistItemCount": 3,
+  "requiredGates": [],
+  "requiredGateEvidenceSource": "goal",
+  "requiredGateEvidenceItemCount": 4,
+  "taskSize": "medium",
+  "files": [
+    "run.md",
+    "prompt.md",
+    "subagents.md",
+    "dag.md",
+    "dag.json",
+    "agents",
+    "status.json"
+  ],
+  "logs": "logs/",
+  "executionDag": {
+    "version": 1,
+    "dag": "dag.json",
+    "agentsDir": "agents",
+    "enforcement": "required-before-run-completion",
+    "enforced": true,
+    "communication": {
+      "commentary": "minimal",
+      "source": "configured",
+      "reportCadence": "material-transition-or-host-heartbeat",
+      "notifyOn": "blocker, risk, scope-or-authorization-change, user-decision, failed-verification, state-transition",
+      "guidance": "Use one short kickoff that combines skill, reason, scope, boundaries, and next action. Do not narrate routine UI-visible tool activity or repeat unchanged boundaries. Later commentary must add a new material fact unless it is a one-sentence host-required heartbeat."
+    },
+    "launchPolicy": "runtime-dispatched",
+    "runtimeOwnership": "Codex owns scheduling, delegation, concurrency, cancellation, and model selection; Harness records dependencies, ownership, verification, and candidate evidence",
+    "parallelSafety": {
+      "requirement": "parallel writers require separate locked worktrees/cwds; otherwise concurrent nodes must be read-only or have proven non-overlapping file ownership"
+    },
+    "nodeCount": 2,
+    "parallelLayers": [
+      [
+        "execution"
+      ],
+      [
+        "verification"
+      ]
+    ],
+    "readyNodes": [],
+    "runningNodes": [],
+    "waitingNodes": [],
+    "completedNodes": [
+      "execution",
+      "verification"
+    ],
+    "blockedNodes": [],
+    "allNodesCompleted": true,
+    "nodeStatus": {
+      "execution": {
+        "phase": "completed",
+        "ownership": "accepted goal scope in the current Codex runtime; runtime Goal and Plan own transient execution",
+        "verification": "activation-06：12 calls、0 invocation failures、10 automated pass + 2 accepted contextual reviews；behavior-07：17 calls、0 invocation failures、17/17 controller rubric pass；targeted v11 follow-up 通过。",
+        "candidateEvidence": "agents/execution/result.md",
+        "thread": "01a02947-0925-7093-9da1-41ecfe38fa94",
+        "surface": "current-thread foreground controller",
+        "isolationEvidence": "顺序隔离执行；每 case 使用临时 CODEX_HOME、provider-only config、auth link、空 workspace、read-only sandbox、plugins/apps disabled、ephemeral session。"
+      },
+      "verification": {
+        "phase": "completed",
+        "ownership": "fresh deterministic validation, durable acceptance evidence, and residual-risk reporting",
+        "verification": "validate-evals 31 cases 通过；validator self-test 8/8；live runner safety 7/7；runner v11 syntax/plan 通过；canonical 12+17 artifacts 断言通过；official quick_validate、Harness config validate、git diff --check 通过。",
+        "candidateEvidence": "agents/verification/result.md",
+        "thread": "01a02947-0925-7093-9da1-41ecfe38fa94",
+        "surface": "current-thread foreground verifier",
+        "isolationEvidence": "本地只读验证；CLI plan networkOrModelCall=false；未安装、提交或发布。"
+      }
+    }
+  },
+  "verificationCommands": [],
+  "summary": "Speak Human 0.1.0 GPT-5.6 Sol 隔离 live eval 已完成并同步 accepted state。",
+  "verificationSummary": "12/12 activation 与 17/17 behavior 通过控制器 rubric；0 invocation failure；31-case validator、8/8 self-test、7/7 runner safety、runner v11 plan、official skill validator、Harness config、artifact assertions 和 git diff --check 均通过。",
+  "gateEvidence": "Goal checklist 与 4 项 required gate evidence 均为 satisfied；Task 已移到 Done，bounded status 已完成，review report 与 canonical artifacts 已记录。"
+}

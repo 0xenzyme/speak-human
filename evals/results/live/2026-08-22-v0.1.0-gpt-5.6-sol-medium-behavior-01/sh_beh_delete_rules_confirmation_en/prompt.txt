@@ -1,0 +1,45 @@
+Use $speak-human to rewrite only the supplied rendered interface copy.
+Do not run tools, modify files, invent product behavior, or provide a preferred implementation.
+Return one copy fragment for each supplied interface role and only the required JSON object.
+
+{
+  "caseId": "sh_beh_delete_rules_confirmation_en",
+  "locale": "en",
+  "surface": "confirmation",
+  "context": "A confirmation dialog deletes 3 draft automation rules permanently. Published rules are not affected. Delete and Cancel are the only controls.",
+  "inputCopy": [
+    {
+      "role": "heading",
+      "text": "Confirm mutation"
+    },
+    {
+      "role": "body",
+      "text": "Proceed with cleanup? This action affects selected candidates."
+    },
+    {
+      "role": "button",
+      "text": "Continue"
+    }
+  ],
+  "approvedCopy": [],
+  "verifiedFacts": [
+    "Exactly 3 draft automation rules will be deleted",
+    "Deletion is permanent",
+    "Published rules are not affected"
+  ],
+  "availableActions": [
+    {
+      "id": "delete-draft-rules",
+      "label": "Delete 3 draft rules"
+    },
+    {
+      "id": "cancel",
+      "label": "Cancel"
+    }
+  ],
+  "permissionState": "unrestricted",
+  "layoutConstraints": [
+    "The destructive button includes the object and count",
+    "The warning remains visible before confirmation"
+  ]
+}

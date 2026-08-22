@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a029fa-63fe-7760-bc3b-aa7c505d592d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"caseId\":\"sh_beh_marketing_evidence_en\",\"copy\":[{\"role\":\"heading\",\"text\":\"Browse the template gallery\"},{\"role\":\"body\",\"text\":\"Explore 12 public templates in the gallery.\"},{\"role\":\"button\",\"text\":\"View 12 templates\"}],\"notes\":\"\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":18180,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":181,"reasoning_output_tokens":111}}
