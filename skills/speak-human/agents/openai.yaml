@@ -1,7 +1,7 @@
 interface:
   display_name: "Speak Human"
-  short_description: "Keep generated UI copy clear, factual, and user-facing"
-  default_prompt: "Use $speak-human to review this interface copy, preserve verified meaning and real actions, and remove internal development language."
+  short_description: "让生成的 UI 文案清晰、真实、面向用户并保留原意"
+  default_prompt: "使用 $speak-human 审查这段界面文案，保留已验证含义和真实动作，并移除内部开发语言。"
 
 policy:
   allow_implicit_invocation: true

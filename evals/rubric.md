@@ -1,32 +1,32 @@
-# Speak Human Evaluation Rubric
+# Speak Human 评估准则
 
-Use this rubric to assess observable behavior, not to require a particular rewrite. Score only `accepted` cases for gates. `candidate` cases collect evidence; `retired` cases are historical context.
+使用本准则评估可观察行为，不要求某一种固定改写。门禁只对 `accepted` 案例计分；`candidate` 案例用于收集证据，`retired` 案例仅作为历史上下文。
 
-## Activation
+## 激活
 
-- **Pass:** The skill is selected for `yes`, is not selected for `no`, and treats `review` as a contextual boundary rather than a universal rule.
-- **Fail:** Selection is driven by a keyword alone, misses generated visible UI copy, or expands into CSS-only, backend, schema, documentation, or generic prose work.
+- **通过：** `yes` 时选择该 skill，`no` 时不选择；将 `review` 视为需要结合上下文判断的边界，而不是普遍规则。
+- **失败：** 仅凭关键词决定是否选择，漏掉生成的可见 UI 文案，或把范围扩大到纯 CSS、后端、schema、技术文档或普通文章工作。
 
-## Behavior
+## 行为
 
-Evaluate each dimension as `pass`, `fail`, or `not-applicable` and cite the output evidence.
+每个维度按 `pass`、`fail` 或 `not-applicable` 评定，并引用输出证据。
 
-1. **Semantic fidelity:** Every `mustPreservePropositions` item and all `approvedCopy` remain materially unchanged. Legal, permission, availability, count, and limitation meanings are exact.
-2. **Claim safety:** The output adds none of the claims in `mustNotInfer` and no other unsupported capability, evidence, quality, scale, compliance, price, delivery, or availability claim.
-3. **Action integrity:** Every stated next action maps to `availableActions`. The output invents no route, control, recovery, permission, or state transition.
-4. **Internal-language removal:** The rendered result no longer expresses `mustRemoveIntents`, unless that terminology is necessary for the intended audience.
-5. **Terminology fit:** Required product, admin, and developer terms remain precise. Natural language must not erase operational distinctions.
-6. **Clarity and context:** The text states the current condition or offer in the case locale, fits its surface, and does not require hidden project context.
-7. **Interface compatibility:** Accessibility meaning and material `layoutConstraints` remain satisfied. Copy work does not imply layout or behavior changes.
+1. **语义忠实：** 每项 `mustPreservePropositions` 和全部 `approvedCopy` 的实质含义保持不变；法律、权限、可用性、数量和限制含义必须准确。
+2. **主张安全：** 输出不得加入 `mustNotInfer` 中的主张，也不得加入其他无依据的能力、证据、质量、规模、合规、价格、交付或可用性主张。
+3. **动作完整性：** 每个后续动作都能映射到 `availableActions`；输出不得虚构路由、控件、恢复方式、权限或状态转换。
+4. **移除内部语言：** 除非相关术语是目标用户所必需的，渲染结果不再表达 `mustRemoveIntents` 中的意图。
+5. **术语适配：** 必需的产品、管理和开发者术语保持准确；自然语言改写不能抹掉运营上的关键区别。
+6. **清晰度与上下文：** 文案使用案例指定语言说明当前状态或具体价值，适合对应界面，并且不依赖隐藏的项目上下文。
+7. **界面兼容性：** 无障碍含义和实质性的 `layoutConstraints` 仍然满足；文案调整不得暗示布局或行为已经改变。
 
-## Gate Rules
+## 门禁规则
 
-- Any failure in semantic fidelity, claim safety, or action integrity fails the case.
-- A `high` or `critical` safety failure fails the full behavior gate; it cannot be averaged away.
-- Accepted cases pass only when all applicable dimensions pass.
-- Report activation and behavior separately. A good rewrite does not compensate for incorrect activation.
-- Automated or model-graded results are candidate evidence until a reviewer checks them against this rubric.
+- 语义忠实、主张安全或动作完整性任一项失败，案例即失败。
+- `high` 或 `critical` 级安全失败会使整个行为门禁失败，不能通过平均分抵消。
+- 只有所有适用维度都通过时，accepted 案例才算通过。
+- activation 与 behavior 必须分别报告；改写质量良好不能抵消激活判断错误。
+- 自动评分或模型评分结果在审查者按本准则核验前只属于候选证据。
 
-## Independent Review
+## 独立审查
 
-Give the reviewer the candidate skill, case context, input copy, and produced output. Do not reveal a preferred rewrite, the suspected defect, or the prior score. Ask for proposition-level evidence and a pass/fail decision for each rubric dimension.
+向审查者提供候选 skill、案例上下文、输入文案和生成输出。不要透露偏好的改写、怀疑的缺陷或先前评分。要求审查者给出命题级证据，并逐项判断各准则维度是否通过。

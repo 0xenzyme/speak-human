@@ -1,129 +1,129 @@
-# Engineer Speak Human as a Behavior-Validated UI Copy Guardrail
+# 将 Speak Human 工程化为经行为验证的 UI 文案守卫
 
 Created: 2026-08-22
 Status: accepted
 Target: `skills/speak-human/`
-Harness state: implementation completed in Goal/Run; live model and installation lanes deferred
+Harness state: Goal/Run 中的实现已完成；live model 与安装通道后置
 Harness contract: `fixed`
 Harness language: `zh-CN`
 
-## Decision
+## 决策
 
-- Keep Speak Human as a standalone Codex skill with its own release and evaluation lifecycle.
-- Engineer it as a guardrail for user-visible copy created or changed during frontend development, not only as an explicit copy-rewriting tool.
-- Define observable behavior and evaluation cases before changing `SKILL.md`.
-- Maintain an extensible case corpus with explicit lifecycle, provenance, and promotion rules.
-- Preserve automatic skill discovery. Do not make invocation explicit-only.
-- Keep deterministic validation separate from optional live model evaluation.
-- Do not merge the skill into Agent Harness. Harness structures this work but is not a runtime dependency of the skill.
+- Speak Human 保持为独立 Codex skill，拥有自己的发布与评估生命周期。
+- 将它工程化为前端开发过程中创建或修改用户可见文案时使用的守卫，而不只是显式改写工具。
+- 修改 `SKILL.md` 前，先定义可观察行为和评估案例。
+- 维护可扩展案例库，并明确生命周期、来源和晋级规则。
+- 保留 skill 自动发现，不改成仅允许显式调用。
+- 将确定性验证与可选 live model 评估分开。
+- 不把该 skill 合并进 Agent Harness；Harness 只负责组织工作，不是 skill 的运行时依赖。
 
-## Problem
+## 问题
 
-The current skill is structurally valid and has useful rules for separating product facts from internal rationale. It does not yet prove the behavior expected from GPT-5.6 during page development.
+当前 skill 在结构上有效，也包含区分产品事实与内部理由的实用规则，但还不能证明 GPT-5.6 在页面开发过程中能够稳定表现出预期行为。
 
-Current gaps are:
+当前缺口包括：
 
-- discovery metadata emphasizes explicit rewriting rather than creating or editing rendered UI copy;
-- examples can introduce unsupported claims such as scale or coverage;
-- a phrase blacklist can remove legitimate product, operations, or developer terminology;
-- hierarchy and CTA guidance can imply actions or behavior that do not exist;
-- approved copy and source-of-record content are not explicitly protected;
-- common UI states and developer-facing products are underrepresented;
-- structural validation exists, but activation and output behavior have no repeatable evaluation suite.
+- discovery metadata 更强调显式改写，没有覆盖创建或编辑实际渲染的 UI 文案；
+- 示例可能引入规模、覆盖范围等无依据主张；
+- 词语黑名单可能误删合理的产品、运营或开发者术语；
+- 层级和 CTA 指引可能暗示实际不存在的动作或行为；
+- 已批准文案和内容数据源没有得到明确保护；
+- 常见 UI 状态与面向开发者的产品覆盖不足；
+- 已有结构验证，但 activation 与输出行为缺少可重复运行的评估套件。
 
-## Desired Outcome
+## 预期结果
 
-When Codex creates or edits user-visible interface text, Speak Human should:
+当 Codex 创建或编辑用户可见的界面文本时，Speak Human 应当：
 
-1. activate without requiring the user to say "rewrite this copy";
-2. remove implementation commentary, design rationale, evaluation rubrics, internal workflow labels, and generated filler from rendered text;
-3. preserve approved wording, verified facts, material limitations, legal meaning, permissions, and audience-appropriate domain terminology;
-4. avoid inventing claims, states, actions, routes, permissions, or product behavior;
-5. improve only the copy within the requested surface unless broader layout or behavior changes are explicitly requested;
-6. remain useful for marketing pages, product workflows, admin tools, and developer products without imposing one voice or sales style.
+1. 无需用户明确说“改写这段文案”也能正确激活；
+2. 从渲染文本中移除实现说明、设计理由、评估准则、内部流程标签和生成式填充内容；
+3. 保留已批准措辞、已验证事实、实质限制、法律含义、权限，以及适合目标用户的领域术语；
+4. 不虚构主张、状态、动作、路由、权限或产品行为；
+5. 除非用户明确要求扩大到布局或行为，只改进所请求界面范围内的文案；
+6. 适用于营销页、产品流程、管理工具和开发者产品，同时不强加单一语气或销售风格。
 
 ## Scope
 
-- Refine the skill description and invocation metadata so discovery covers visible-copy work during frontend implementation.
-- Restructure `SKILL.md` around contextual classification and semantic preservation rather than fixed phrase replacement.
-- Add explicit rules for approved copy, source-of-record content, real actions, scope containment, locale, and product voice.
-- Cover headings, labels, buttons, forms, empty states, loading states, errors, success messages, confirmations, permission states, metadata, and accessibility labels.
-- Add an extensible repository-level registry of activation and behavior evaluations in both Chinese and English.
-- Add deterministic evaluation-data validation and an opt-in live Codex evaluation path.
-- Document repeatable source validation and, when separately authorized, user-scope installation verification.
+- 优化 skill 描述和调用元数据，使自动发现覆盖前端实现期间的可见文案工作。
+- 围绕上下文分类与语义保真重构 `SKILL.md`，不再依赖固定词语替换。
+- 为已批准文案、内容数据源、真实动作、范围约束、locale 和产品语气增加明确规则。
+- 覆盖标题、标签、按钮、表单、空状态、加载状态、错误、成功消息、确认、权限状态、metadata 和无障碍标签。
+- 在仓库层建立可扩展的中英文 activation 与 behavior 评估登记体系。
+- 增加确定性评估数据验证和可选执行的 live Codex 评估路径。
+- 记录可重复的源代码验证方法；另行授权后再验证用户级安装。
 
 ## Non-Goals
 
-- Generic prose polishing, brand-voice invention, or marketing optimization.
-- AI-detector evasion or making generated text appear human-authored.
-- Rewriting technical documentation, API contracts, database schemas, code identifiers, logs, or internal runbooks by default.
-- Changing layouts, navigation, permissions, workflows, or application behavior merely to improve wording.
-- Inventing customer evidence, metrics, availability, compliance, security, pricing, delivery, or performance claims.
-- Maintaining a universal blacklist or translation dictionary.
-- Copying every newly observed case into `SKILL.md` or treating one product's wording as a universal rule.
-- Requiring exact output wording or snapshotting prose as the primary test strategy.
-- Packaging Speak Human as a plugin or integrating it into Agent Harness in this scope.
-- Commit, push, release, or user-scope installation without separate authorization.
+- 普通文章润色、虚构品牌语气或营销优化。
+- 规避 AI 检测，或让生成文本伪装成人工创作。
+- 默认改写技术文档、API 契约、数据库 schema、代码标识、日志或内部 runbook。
+- 仅为了改善措辞而更改布局、导航、权限、工作流或应用行为。
+- 虚构客户证据、指标、可用性、合规、安全、价格、交付或性能主张。
+- 维护通用黑名单或翻译字典。
+- 把每个新观察到的案例复制进 `SKILL.md`，或把单一产品措辞当作普遍规则。
+- 要求输出固定措辞，或把文案快照作为主要测试策略。
+- 在本范围内把 Speak Human 打包为 plugin 或集成进 Agent Harness。
+- 未经单独授权执行 commit、push、release 或用户级安装。
 
-## Behavioral Contract
+## 行为契约
 
-### Activation
+### 激活
 
-Activate when the task creates, edits, or reviews rendered website or product UI copy, especially when Codex is generating the visible text. Explicit copy-rewrite requests remain supported.
+当任务创建、编辑或审查网站或产品 UI 中实际渲染的文案时激活，尤其是 Codex 正在生成可见文本时。显式文案改写请求仍然支持。
 
-Do not activate for a CSS-only change, backend refactor, internal code naming, technical documentation, API/schema work, or generic prose editing when no user-visible product copy is in scope.
+如果范围内没有用户可见的产品文案，则不要因纯 CSS 修改、后端重构、内部代码命名、技术文档、API/schema 工作或普通文章编辑而激活。
 
-Boundary cases must be decided by the audience and the role of the text, not by keywords. The same term can be internal leakage in one product and required user language in another.
+边界案例应根据受众和文本承担的角色判断，不能只看关键词。同一个术语在某个产品中可能是内部语言泄漏，在另一个产品中却可能是用户必需语言。
 
-### Semantic Preservation
+### 语义保真
 
-- Treat user-provided approved copy and repository content sources as authoritative unless the user asks to change them.
-- Preserve every proposition that affects capability, availability, quantity, quality, price, permission, safety, compliance, delivery, or legal meaning.
-- Preserve domain and technical terms when the intended user needs them to understand or operate the product.
-- Remove internal rationale only from rendered text; do not erase it from product documents or source comments unless requested.
-- When facts or real actions are missing, use conservative literal wording or surface the missing decision. Do not fill gaps with plausible product behavior.
+- 除非用户要求更改，否则将用户提供的已批准文案和仓库内容源视为权威。
+- 保留每项影响能力、可用性、数量、质量、价格、权限、安全、合规、交付或法律含义的命题。
+- 当目标用户理解或操作产品需要领域与技术术语时，保留这些术语。
+- 只从渲染文本中移除内部理由；除非用户要求，不要从产品文档或源码注释中删除。
+- 缺少事实或真实动作时，采用保守、直白的措辞，或明确指出缺失决策；不要用看似合理的产品行为填补空白。
 
-### Action Integrity
+### 动作完整性
 
-- A CTA must map to an action, route, or control that actually exists in the scoped implementation.
-- Do not add a CTA merely because a page pattern normally has one.
-- Preserve disabled, unavailable, permission-limited, and read-only states.
-- Error and empty-state copy may explain recovery only when the recovery action is real and available to the current user.
+- CTA 必须映射到当前实现范围内真实存在的动作、路由或控件。
+- 不要仅因为常见页面模式通常包含 CTA 就新增 CTA。
+- 保留 disabled、unavailable、permission-limited 和 read-only 状态。
+- 只有恢复动作真实存在且当前用户可用时，错误或空状态文案才能说明该恢复方式。
 
-### Surface-Specific Behavior
+### 不同界面的行为
 
-| Surface | Required behavior |
+| 界面类型 | 必需行为 |
 | --- | --- |
-| Marketing or landing page | State the concrete offer and verified evidence; remove funnel, persuasion, and layout rationale. |
-| Product workflow | State the current condition, affected object, and real next action without exposing implementation sequence. |
-| Admin or operations UI | Preserve precise statuses, identifiers, lifecycle terms, and controls needed to do the work. |
-| Developer product | Preserve API, protocol, credential, webhook, retry, and error terminology when technically accurate and user-relevant. |
-| Errors and empty states | Explain what is true now and, when available, one legitimate recovery or next action. |
+| 营销页或 landing page | 说明具体价值与已验证证据；移除漏斗策略、说服策略和布局理由。 |
+| 产品工作流 | 说明当前状态、受影响对象和真实下一动作，不暴露实现顺序。 |
+| 管理或运营 UI | 保留完成工作所需的准确状态、标识、生命周期术语和控件。 |
+| 开发者产品 | 在技术准确且与用户相关时，保留 API、协议、凭据、webhook、retry 和错误术语。 |
+| 错误与空状态 | 说明当前真实情况；如果存在，给出一个合法的恢复方式或下一动作。 |
 
-### Scope Containment
+### 范围约束
 
-- Inspect enough surrounding visible context to keep the changed copy coherent, but do not rewrite unrelated surfaces.
-- Do not rename code identifiers, routes, analytics events, schema fields, or localization keys solely to make visible copy sound natural.
-- Preserve the interface language and established product vocabulary.
-- Verify text fit at relevant breakpoints when the task includes a runnable interface; otherwise record layout-fit risk without expanding the task.
+- 检查足够的相邻可见上下文，确保修改后的文案连贯，但不要改写无关界面。
+- 不要仅为了让可见文案更自然而重命名代码标识、路由、analytics event、schema 字段或 localization key。
+- 保留现有界面语言和既定产品词汇。
+- 任务包含可运行界面时，应在相关 breakpoint 验证文本适配；否则只记录版面适配风险，不扩大任务范围。
 
-## Skill Design
+## Skill 设计
 
-The revised entrypoint should remain concise and self-contained:
+修订后的入口应保持简洁且自包含：
 
-1. A discriminating frontmatter description that covers frontend creation and editing.
-2. A short decision model for approved copy, facts, user value, real actions, domain terms, and internal language.
-3. A proportional workflow for inspecting the scoped rendered surface.
-4. Semantic, claim, action, and scope safeguards.
-5. A completion check based on meaning rather than forbidden words.
+1. 一段有区分度、覆盖前端创建和编辑场景的 frontmatter description。
+2. 一套针对已批准文案、事实、用户价值、真实动作、领域术语和内部语言的简短决策模型。
+3. 与任务规模相称的渲染界面检查流程。
+4. 针对语义、主张、动作和范围的安全约束。
+5. 基于含义而不是禁用词的完成检查。
 
-Remove or replace the current fixed translation table and keyword blacklist. Do not add supporting references unless conditional material becomes substantial enough to justify progressive disclosure.
+移除或替换现有固定翻译表和关键词黑名单。只有条件性内容足够多、确实需要渐进披露时，才新增 supporting reference。
 
-`agents/openai.yaml` should remain aligned with the final description and default prompt. Implicit invocation remains enabled by default.
+`agents/openai.yaml` 应与最终 description 和 default prompt 保持一致。默认继续允许 implicit invocation。
 
-## Evaluation Architecture
+## 评估架构
 
-Planned repository shape:
+计划中的仓库结构：
 
 ```text
 evals/
@@ -150,241 +150,241 @@ skills/speak-human/
 `-- agents/openai.yaml
 ```
 
-Evaluation files are maintainer assets and must remain outside the distributable skill directory unless the skill needs them at runtime. The manifest declares the schema version, case discovery paths, required coverage groups, and gating policy. Runners discover conforming case files instead of hard-coding the initial filenames.
+评估文件属于维护者资产；除非 skill 在运行时确实需要，否则必须放在可分发 skill 目录之外。manifest 声明 schema 版本、案例发现路径、必需覆盖组和门禁策略。runner 应发现符合契约的案例文件，而不是硬编码首批文件名。
 
-### Activation Cases
+### Activation 案例
 
-Each case records:
+每个案例记录：
 
-- stable case ID and locale;
-- lifecycle status and provenance;
-- user request and relevant task context;
-- surface type;
-- expected activation: `yes`, `no`, or `review`;
-- short routing rationale.
+- 稳定案例 ID 和 locale；
+- 生命周期状态与来源；
+- 用户请求和相关任务上下文；
+- 界面类型；
+- 预期 activation：`yes`、`no` 或 `review`；
+- 简短路由理由。
 
-The initial matrix must include:
+初始矩阵必须包括：
 
-- landing-page and product-page creation with generated visible copy;
-- component edits containing internal process language;
-- CSS-only and backend-only changes;
-- technical documentation and API/schema work;
-- admin terminology that must remain;
-- developer-tool UI containing legitimate technical language;
-- already-natural or explicitly approved copy;
-- mixed requests where only part of the task changes visible text.
+- 包含生成式可见文案的 landing page 和产品页创建；
+- 含内部流程语言的组件编辑；
+- 纯 CSS 与纯后端修改；
+- 技术文档和 API/schema 工作；
+- 必须保留的管理术语；
+- 包含合理技术语言的开发者工具 UI；
+- 已经自然或已明确批准的文案；
+- 只有部分工作涉及可见文本的混合请求。
 
-### Behavior Cases
+### Behavior 案例
 
-Each case records:
+每个案例记录：
 
-- input copy and enough surrounding interface context;
-- approved copy and verified facts;
-- available actions and permission state;
-- propositions that must remain;
-- internal intents that must not remain rendered;
-- claims, actions, and semantics that must not be inferred;
-- breakpoint or length constraints when material.
+- 输入文案和足够的相邻界面上下文；
+- 已批准文案与已验证事实；
+- 可用动作和权限状态；
+- 必须保留的命题；
+- 不得继续出现在渲染结果中的内部意图；
+- 不得推断的主张、动作与语义；
+- 具有实质影响时的 breakpoint 或长度限制。
 
-Required surface coverage includes marketing, SaaS workflow, admin/operations, developer tooling, form validation, loading, error, success, empty, confirmation, permission, read-only, and no-action states.
+必需界面覆盖包括营销、SaaS 工作流、管理/运营、开发者工具、表单验证、加载、错误、成功、空状态、确认、权限、只读和无动作状态。
 
-### Case Lifecycle and Extension Policy
+### 案例生命周期与扩展策略
 
-The corpus is designed to grow as real usage reveals new failures and boundary conditions. New cases must be addable without changing the runner when they conform to the current schema.
+案例库应随着真实使用暴露的新失败与边界条件持续增长。新案例只要符合当前 schema，就必须能在不修改 runner 的情况下加入。
 
-Each case has one lifecycle state:
+每个案例只能处于一种生命周期状态：
 
-- `candidate`: captured from a new observation but not yet accepted as a regression gate;
-- `accepted`: reviewed, deduplicated, reproducible, and included in the applicable gate;
-- `retired`: retained with a reason and replacement or superseding case when applicable, but no longer gates current behavior.
+- `candidate`：来自新观察，但尚未被接受为回归门禁；
+- `accepted`：已经审查、去重、可复现，并纳入适用门禁；
+- `retired`：保留原因，并在适用时记录替代或取代案例，但不再约束当前行为。
 
-Every new case must include:
+每个新案例必须包括：
 
-- a stable ID, locale, surface tags, and date added;
-- origin type such as `synthetic`, `real-redacted`, or `regression`;
-- the minimum context needed to reproduce the decision without customer data or secrets;
-- expected semantic invariants and the safety impact of failure;
-- links to any case it duplicates, supersedes, or narrows.
+- 稳定 ID、locale、界面标签和加入日期；
+- `synthetic`、`real-redacted` 或 `regression` 等 origin 类型；
+- 不包含客户数据或秘密、但足以复现判断的最小上下文；
+- 预期语义不变量和失败的安全影响；
+- 与重复、被取代或被收窄案例的关联。
 
-Adding a case does not automatically justify adding a new instruction to `SKILL.md`. Promote a case-derived lesson into the runtime skill only when it exposes a general decision gap, repeats across materially different surfaces, or violates a safety-critical invariant. Product-specific wording, isolated stylistic preferences, and near-duplicates stay in the corpus without expanding the entrypoint.
+加入案例并不自动意味着应向 `SKILL.md` 增加新指令。只有案例揭示通用决策缺口、在实质不同的界面中重复出现，或违反安全关键不变量时，才能把案例经验提升为运行时 skill 规则。产品特定措辞、孤立的风格偏好和近似重复案例应留在案例库中，不扩张入口指令。
 
-When a genuinely distinct surface family emerges, add a new behavior case file and manifest coverage group. Add a runtime reference only if that family requires substantial conditional guidance that cannot remain concise in `SKILL.md`. Schema changes require a version increment, migration notes, and compatibility validation for existing accepted cases.
+出现真正不同的界面类型时，新增 behavior 案例文件和 manifest coverage group。只有该类型需要大量条件性指引、无法在 `SKILL.md` 中保持简洁时，才新增运行时 reference。Schema 变化需要递增版本、编写迁移说明，并验证现有 accepted 案例的兼容性。
 
-The maintenance loop is:
+维护循环如下：
 
-1. capture and redact the observed scenario as `candidate`;
-2. reproduce it against a recorded skill and model version;
-3. check for duplicates and identify the missing or violated invariant;
-4. accept, merge, narrow, or retire the case;
-5. change the skill only when the promotion rule is met;
-6. rerun affected groups plus the safety-critical regression set.
+1. 将观察到的场景脱敏后记录为 `candidate`；
+2. 使用已记录的 skill 与模型版本复现；
+3. 检查重复项，识别缺失或被违反的不变量；
+4. 接受、合并、收窄或退役案例；
+5. 只有满足晋级规则时才修改 skill；
+6. 重新运行受影响分组与安全关键回归集。
 
-### Evaluation Rubric
+### 评估准则
 
-Evaluate observable invariants rather than exact prose:
+评估可观察不变量，而不是固定文案：
 
-- correct skill activation;
-- no leaked internal rationale or implementation commentary;
-- semantic fidelity and approved-copy preservation;
-- zero unsupported claims;
-- zero invented actions, routes, permissions, or state transitions;
-- preservation of required domain and technical terminology;
-- clear state and recovery language where applicable;
-- locale, voice, accessibility, and layout-fit compatibility.
+- skill 激活正确；
+- 不泄漏内部理由或实现说明；
+- 语义忠实并保留已批准文案；
+- 不产生无依据主张；
+- 不虚构动作、路由、权限或状态转换；
+- 保留必需的领域与技术术语；
+- 适用时清楚说明状态和恢复方式；
+- 兼容 locale、语气、无障碍和布局适配要求。
 
-Safety-critical failures cannot be averaged away by stylistic quality. Model-graded or subagent-graded results are candidate evidence until independently reviewed.
+安全关键失败不能被风格质量的平均分抵消。模型或 subagent 评分结果在独立审查前只属于候选证据。
 
-### Validation Lanes
+### 验证通道
 
-1. **Deterministic lane:** validate the manifest and schemas, JSON structure, unique IDs across files, lifecycle transitions, required fields, coverage declarations, supersession links, file references, skill structure, and whitespace. It must not require network access or a model call.
-2. **Live activation lane:** use an isolated temporary Codex home to determine whether the candidate skill is selected for activation cases. Record the runtime model, skill hash, case hash, and timestamp.
-3. **Live behavior lane:** explicitly invoke the candidate skill to isolate instruction quality, then score outputs against the semantic rubric. Do not use exact wording as the pass condition.
-4. **Independent review lane:** evaluate representative outputs without providing the intended rewrite or suspected defect to the reviewer.
+1. **确定性通道：** 验证 manifest 与 schemas、JSON 结构、跨文件唯一 ID、生命周期转换、必需字段、覆盖声明、取代关系、文件引用、skill 结构和空白字符；不得需要网络或模型调用。
+2. **Live activation 通道：** 使用隔离的临时 Codex home，判断候选 skill 是否会被 activation 案例选中；记录运行模型、skill hash、case hash 和时间戳。
+3. **Live behavior 通道：** 显式调用候选 skill 以隔离指令质量，再根据语义准则评分；不得以固定措辞作为通过条件。
+4. **独立审查通道：** 不向审查者提供预期改写或怀疑缺陷，评估代表性输出。
 
-Live lanes are opt-in because they can require network access, credentials, model availability, and cost. They are not authorized by acceptance of this spec alone.
+Live 通道采取 opt-in，因为可能需要网络访问、凭据、可用模型和费用。仅接受本 Spec 并不授权执行这些通道。
 
-## Delivery Stages
+## 交付阶段
 
-### Stage 0: Evaluation Contract
+### Stage 0：评估契约
 
-- Add the versioned manifest, evaluation case schemas, lifecycle rules, initial case groups, rubric, and deterministic validator.
-- Validate the current skill without changing it and record baseline failures.
+- 增加带版本的 manifest、评估案例 schemas、生命周期规则、初始案例组、rubric 和确定性验证器。
+- 在不修改当前 skill 的情况下完成验证，并记录 baseline failures。
 
-### Stage 1: Skill Revision
+### Stage 1：Skill 修订
 
-- Revise discovery metadata and `SKILL.md` only where baseline evidence supports a change.
-- Remove contradictory, project-specific, or keyword-based guidance.
-- Apply the case-to-rule promotion policy; do not expand runtime instructions for every accepted case.
-- Keep the entrypoint focused on non-obvious decisions.
+- 只有 baseline 证据支持时，才修订 discovery metadata 和 `SKILL.md`。
+- 移除相互矛盾、项目特定或基于关键词的指引。
+- 应用案例到规则的晋级策略；不要为每个 accepted 案例扩张运行时指令。
+- 让入口聚焦于非显而易见的决策。
 
-### Stage 2: Behavioral Verification
+### Stage 2：行为验证
 
-- Run deterministic validation.
-- Run isolated activation and behavior evaluations when separately authorized.
-- Perform an independent forward test against representative Chinese and English cases.
-- Correct demonstrated failures without accumulating rules for every example.
+- 运行确定性验证。
+- 另行授权后运行隔离的 activation 与 behavior 评估。
+- 对代表性的中英文案例执行独立前向测试。
+- 修复已证明的失败，不为每个示例堆叠规则。
 
-### Stage 3: Documentation and Installation Boundary
+### Stage 3：文档与安装边界
 
-- Update `README.md` and `AGENTS.md` with actual validation commands and repository layout.
-- Validate the distributable skill with the official skill validator.
-- Keep repository validation separate from user-scope installation.
-- If installation is later authorized, update the user-scope copy and verify source/install hashes before calling the refresh complete.
+- 用实际存在的验证命令和仓库结构更新 `README.md` 与 `AGENTS.md`。
+- 使用官方 skill validator 验证可分发 skill。
+- 将仓库验证与用户级安装分开。
+- 后续如获安装授权，先更新用户级副本并核对源文件与安装文件 hash，再宣布刷新完成。
 
-## Durable Control Invariants
+## 持久控制不变量
 
-- `harness-rule:path-containment`: implementation writes stay inside this repository; user-scope installation is a separate authorized action.
-- `harness-rule:candidate-accepted-evidence`: generated outputs and automated scores remain candidate evidence until reviewed against the rubric.
-- `harness-rule:authoritative-completion-state`: structural validation alone cannot complete the work; behavioral gates and state sync must pass.
-- `harness-rule:state-sync-evidence`: README, contributor guidance, evaluation results, and installed-state claims must match the actual implementation state.
-- `harness-rule:project-neutral-core`: examples and rules must generalize across products and must not encode one dataset, workflow, or prior page as universal policy.
-- `harness-rule:durable-tier-boundary`: shaping does not create a Goal or Run; durable execution begins only after spec acceptance and explicit Harness adoption or Goal creation.
+- `harness-rule:path-containment`：实现写入必须留在本仓库内；用户级安装是需要单独授权的操作。
+- `harness-rule:candidate-accepted-evidence`：生成输出和自动评分在按 rubric 审查前仍属于候选证据。
+- `harness-rule:authoritative-completion-state`：仅结构验证不能完成工作；行为门禁和状态同步也必须通过。
+- `harness-rule:state-sync-evidence`：README、贡献者指南、评估结果与安装状态主张必须符合实际实现状态。
+- `harness-rule:project-neutral-core`：示例和规则必须能跨产品泛化，不能把某个数据集、工作流或历史页面写成普遍策略。
+- `harness-rule:durable-tier-boundary`：shaping 不创建 Goal 或 Run；只有 Spec 被接受并明确采用 Harness 或创建 Goal 后，持久执行才开始。
 
 ## Acceptance Criteria
 
-- The description selects Speak Human for frontend tasks that create or change visible UI copy without becoming a catchall for all frontend work.
-- High-confidence positive and negative activation cases pass; documented boundary cases do not silently become universal rules.
-- New conforming cases can be added in a discovered case file without runner changes.
-- Candidate, accepted, and retired cases are distinguishable, traceable, and validated according to their gating role.
-- Case-derived guidance enters `SKILL.md` only through the documented promotion rule.
-- All approved-copy and must-preserve propositions survive behavior evaluation.
-- No behavior case introduces an unsupported claim, action, route, permission, or state transition.
-- Legitimate domain and developer terminology remains when required by the audience.
-- Internal development, design, evaluation, and acceptance language is absent from rendered output unless it is itself the product domain.
-- Marketing, product, admin, developer, and common UI-state cases are represented in both Chinese and English.
-- Tests judge semantic invariants rather than exact output wording.
-- Deterministic validation runs locally without network access.
-- Live evaluation records model and artifact provenance and runs only with separate authorization.
-- The official skill validator passes for the final distributable directory.
-- Repository and installed hashes are reported as equal only after an authorized installation and direct verification.
-- Documentation describes only commands and files that actually exist.
-- No Agent Harness runtime dependency or plugin merge is introduced.
+- description 能为创建或修改可见 UI 文案的前端任务选择 Speak Human，但不会成为所有前端工作的 catchall。
+- 高置信度正向和负向 activation 案例通过；已记录的边界案例不会悄然变成普遍规则。
+- 符合契约的新案例可以加入可发现案例文件，不需要修改 runner。
+- candidate、accepted 和 retired 案例可区分、可追溯，并按各自门禁角色验证。
+- 案例产生的指引只能通过已记录的晋级规则进入 `SKILL.md`。
+- 所有 approved copy 和 must-preserve 命题在 behavior 评估中保留。
+- behavior 案例不得引入无依据主张、动作、路由、权限或状态转换。
+- 目标用户需要时，保留合理的领域和开发者术语。
+- 除非其本身就是产品领域，渲染输出中不出现内部开发、设计、评估和验收语言。
+- 营销、产品、管理、开发者和常见 UI 状态案例均有中英文覆盖。
+- 测试判断语义不变量，不要求固定输出措辞。
+- 确定性验证可在本地运行，不需要网络访问。
+- Live 评估记录模型与工件来源，且只在另行授权后运行。
+- 最终可分发目录通过官方 skill validator。
+- 只有完成授权安装和直接核验后，才报告仓库与安装 hash 相等。
+- 文档只描述真实存在的命令和文件。
+- 不引入 Agent Harness 运行时依赖，也不合并为 plugin。
 
 ## Spec Acceptance Checklist
 
-- Item: Target behavior and activation boundary
-  - Acceptance: The desired outcome, activation rules, and non-goals match the intended product behavior.
-  - Evidence: User instructed implementation of this spec on 2026-08-22.
+- Item: 目标行为与激活边界
+  - Acceptance: 预期结果、激活规则和 non-goals 与目标产品行为一致。
+  - Evidence: 用户于 2026-08-22 指示实施本 Spec。
   - Status: `accepted`
   - Unblocker: `N/A`
 
-- Item: Evaluation architecture
-  - Acceptance: Deterministic, live activation, live behavior, and independent review lanes are appropriately separated.
-  - Evidence: User instructed implementation after reviewing the amended extensible architecture on 2026-08-22.
+- Item: 评估架构
+  - Acceptance: 确定性、live activation、live behavior 与独立审查通道得到适当分离。
+  - Evidence: 用户于 2026-08-22 审查修订后的可扩展架构后指示实施。
   - Status: `accepted`
   - Unblocker: `N/A`
 
-- Item: Extensible case governance
-  - Acceptance: New use cases can be registered, deduplicated, promoted, superseded, and retired without turning every example into runtime instructions.
-  - Evidence: User explicitly requested continuous expansion and then instructed implementation on 2026-08-22.
+- Item: 可扩展案例治理
+  - Acceptance: 新用例可以登记、去重、晋级、取代和退役，不会把每个示例都变成运行时指令。
+  - Evidence: 用户明确要求持续扩展，并于 2026-08-22 指示实施。
   - Status: `accepted`
   - Unblocker: `N/A`
 
-- Item: Skill revision boundary
-  - Acceptance: The spec permits contextual instruction changes without generic copywriting, behavior changes, or phrase-blacklist growth.
-  - Evidence: User instructed implementation of this spec on 2026-08-22.
+- Item: Skill 修订边界
+  - Acceptance: Spec 允许结合上下文修改指令，但不扩展到普通文案写作、产品行为变更或词语黑名单增长。
+  - Evidence: 用户于 2026-08-22 指示实施本 Spec。
   - Status: `accepted`
   - Unblocker: `N/A`
 
-- Item: Delivery boundary
-  - Acceptance: Source changes, Harness adoption, commit/push, and user-scope installation remain separate decisions.
-  - Evidence: User authorized the baseline commit and implementation; push, release, live calls, and user-scope installation remain unauthorized.
+- Item: 交付边界
+  - Acceptance: 源代码修改、采用 Harness、commit/push 与用户级安装仍是相互独立的决策。
+  - Evidence: 用户授权了 baseline commit 与实现；push、release、live 调用和用户级安装当时仍未授权。
   - Status: `accepted`
   - Unblocker: `N/A`
 
 ## Required Gate Evidence
 
-- Gate: Spec acceptance
+- Gate: Spec 验收
   - Required: `yes`
-  - Evidence: User instructed implementation of the amended spec on 2026-08-22.
+  - Evidence: 用户于 2026-08-22 指示实施修订后的 Spec。
   - Status: `passed`
   - Unblocker: `N/A`
 
-- Gate: Deterministic validation
+- Gate: 确定性验证
   - Required: `yes`
-  - Evidence: `node scripts/validate-evals.mjs --json` passed with 31 cases in 7 files; `node scripts/test-validate-evals.mjs` passed 7 positive/negative checks.
+  - Evidence: `node scripts/validate-evals.mjs --json` 对 7 个文件中的 31 个案例验证通过；`node scripts/test-validate-evals.mjs` 通过 7 项正向/负向检查。
   - Status: `passed`
   - Unblocker: `N/A`
 
-- Gate: Case registry governance
+- Gate: 案例登记治理
   - Required: `yes`
-  - Evidence: Manifest schema version 1 gates 29 accepted cases while retaining 1 candidate and 1 retired case; schemas and validator enforce IDs, provenance, coverage, duplicates, and replacement links.
+  - Evidence: Manifest schema version 1 对 29 个 accepted 案例执行门禁，同时保留 1 个 candidate 和 1 个 retired 案例；schemas 与 validator 强制检查 ID、来源、覆盖率、重复项和替代关系。
   - Status: `passed`
   - Unblocker: `N/A`
 
-- Gate: Semantic safety
+- Gate: 语义安全
   - Required: `yes`
-  - Evidence: `evals/results/2026-08-22-forward-test.md` records five independent representative behavior checks with no approved-copy, fact, permission, terminology, claim, or action failure.
+  - Evidence: `evals/results/2026-08-22-forward-test.md` 记录 5 项独立的代表性行为检查，未出现 approved copy、事实、权限、术语、主张或动作失败。
   - Status: `passed`
-  - Unblocker: `N/A; full live model matrix remains separately authorized`
+  - Unblocker: `N/A；完整 live model 矩阵仍需单独授权`
 
-- Gate: Independent forward test
+- Gate: 独立前向测试
   - Required: `yes`
-  - Evidence: Read-only blind reviewer passed 4 routing and 5 behavior scenarios without access to the corpus, expected rewrites, baseline defects, or git diff.
-  - Status: `passed`
-  - Unblocker: `N/A`
-
-- Gate: Official skill validation
-  - Required: `yes`
-  - Evidence: Skill Creator `quick_validate.py skills/speak-human` returned `Skill is valid!`.
+  - Evidence: 只读盲审者在无法访问案例库、预期改写、baseline 缺陷或 git diff 的条件下，通过 4 个路由和 5 个 behavior 场景。
   - Status: `passed`
   - Unblocker: `N/A`
 
-- Gate: Live model evaluation
+- Gate: 官方 skill 验证
+  - Required: `yes`
+  - Evidence: Skill Creator 的 `quick_validate.py skills/speak-human` 返回 `Skill is valid!`。
+  - Status: `passed`
+  - Unblocker: `N/A`
+
+- Gate: Live model 评估
   - Required: `no`
-  - Evidence: Runner help, plan-only behavior, Windows CLI resolution, provenance, isolation plan, and missing-authorization refusal were validated; no model call was made.
+  - Evidence: 已验证 runner help、plan-only 行为、Windows CLI 解析、来源记录、隔离计划和缺少授权时的拒绝；未发起模型调用。
   - Status: `deferred`
-  - Unblocker: `Separate user authorization`
+  - Unblocker: `需要用户单独授权`
 
-- Gate: User-scope refresh
+- Gate: 用户级刷新
   - Required: `only if installation is requested`
-  - Evidence: Not run; source/install equality is intentionally not claimed.
+  - Evidence: 未运行；明确不主张 source/install 相等。
   - Status: `not-authorized`
-  - Unblocker: `Separate user authorization`
+  - Unblocker: `需要用户单独授权`
 
 ## Verification
 
-Planned verification after implementation:
+实现后的计划验证：
 
 ```powershell
 node scripts/validate-evals.mjs
@@ -393,19 +393,19 @@ node <agent-harness>/scripts/agent-harness.mjs config validate --cwd . --json
 git diff --check
 ```
 
-Live commands will be specified only after their runner and isolation contract exist. A successful structural validator must not be reported as proof of GPT-5.6 behavior.
+只有 runner 与隔离契约存在后才会指定 live 命令。结构验证成功不得被描述为 GPT-5.6 行为已经得到证明。
 
 ## State Sync
 
-- Current record: this accepted spec, Goal `harness/goals/2026-08-22-speak-human-ui.md`, Run `.harness/runs/20260822-210732-speak-human-ui`, Task, and bounded status.
-- Current repository state: Harness fixed contract uses `language.default=zh-CN`; implementation and required offline gates are complete after baseline commit `5beaa90`.
-- Evaluation evidence: `evals/results/2026-08-22-baseline.md` and `evals/results/2026-08-22-forward-test.md`.
-- Delivery boundary: implementation changes remain uncommitted; live model calls, user-scope installation, push, release, and publish were not performed.
+- 当前记录：本 accepted Spec、Goal `harness/goals/2026-08-22-speak-human-ui.md`、Run `.harness/runs/20260822-210732-speak-human-ui`、Task 和有边界的 status。
+- 当前仓库状态：Harness fixed contract 使用 `language.default=zh-CN`；baseline commit `5beaa90` 之后，实现和必需离线门禁均已完成。
+- 评估证据：`evals/results/2026-08-22-baseline.md` 与 `evals/results/2026-08-22-forward-test.md`。
+- 交付边界：当时实现改动尚未提交；未执行 live model 调用、用户级安装、push、release 或 publish。
 
 ## Pause Conditions
 
-- The requested behavior conflicts with approved copy, verified product facts, legal meaning, permissions, or accessibility requirements.
-- A proposed test requires network access, paid model calls, credentials, or user-scope mutation without authorization.
-- The evaluation runner cannot prove which model or skill version produced a result.
-- The skill change would require application behavior, layout, routing, or source-of-record content changes outside the accepted scope.
-- New evidence shows that automatic activation cannot be made discriminating without unacceptable false positives.
+- 请求行为与已批准文案、已验证产品事实、法律含义、权限或无障碍要求发生 `conflict`。
+- 拟议测试未经授权便需要网络访问、`paid` model 调用、`credentials` 或用户级写入。
+- 评估 runner 无法证明结果由哪个模型或 skill 版本生成。
+- Skill 修改需要超出已接受范围的应用 `product` 行为、布局、路由或内容数据源变更。
+- 新证据表明 automatic activation 无法在避免不可接受误报的同时保持区分度；应暂停并等待新 `instruction`。
