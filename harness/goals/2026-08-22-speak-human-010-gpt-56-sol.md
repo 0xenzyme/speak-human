@@ -156,7 +156,8 @@ delegation, concurrency, and cancellation; Harness records ownership and evidenc
 - Accepted evidence: canonical `activation-06`, canonical `behavior-07`, targeted v11 scorer follow-up, and `evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-review.md`.
 - Task/status synchronization: `harness/tasks.md` moves this Task to Done; `harness/status.md` records the completed phase and current evidence.
 - Diagnostic evidence: earlier smoke, failed-runner, and targeted-correction directories remain non-canonical evidence and are not counted in the 12/17 gate totals.
-- Delivery boundary: installation, commit, tag, push, release, and publish were not performed.
+- Delivery boundary at Goal completion: installation, commit, tag, push, release, and publish were not part of the live-eval Run.
+- Postflight delivery: on 2026-08-23, after separate user authorization, source and evidence were committed as `e574399259e195af71c753b0c911408e7a0b1037`, pushed to private `0xenzyme/speak-human` on `master`, and installed to `C:\Users\Admin\.codex\skills\speak-human` with committed-source hash equality verified. No tag, GitHub release, or public publication was created.
 - Need user: None.
 - Remaining: None.
 

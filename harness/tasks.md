@@ -21,7 +21,8 @@ recent-Done window; move older terminal records to the configured task archive.
   - Run: `.harness/runs/20260822-224351-speak-human-010-gpt-56-sol`
   - Completed: `gpt-5.6-sol`、`medium` reasoning、`sub.videofree.fun` exact-host guard 下，12/12 activation 与 17/17 behavior 通过控制器验收，0 invocation failure。
   - Evidence: `evals/results/live/2026-08-22-v0.1.0-gpt-5.6-sol-medium-review.md` 记录 canonical runs、hash、逐案 rubric 与修正过程。
-  - Boundary: 用户级安装、commit、tag、push、release 和 publish 未执行。
+  - Delivery: `e574399` 已推送到 private `0xenzyme/speak-human` 的 `master`；用户级安装已按提交源哈希校验完成。
+  - Boundary: tag、GitHub release 与公开发布未执行。
 
 - [x] P1 将 Speak Human 工程化为可验证、可扩展的 UI 文案守卫
   - Type: skill engineering
