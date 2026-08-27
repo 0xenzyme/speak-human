@@ -128,6 +128,126 @@
       "rationale": "Natural wording cannot override approved legal copy or create a missing permission workflow.",
       "safetyImpact": "critical",
       "supersedes": []
+    },
+    {
+      "id": "sh_beh_reverse_emphasis_zh",
+      "status": "candidate",
+      "addedAt": "2026-08-27",
+      "origin": "real-redacted",
+      "locale": "zh-CN",
+      "surface": "product-workflow",
+      "tags": [
+        "reverse-emphasis",
+        "internal-language"
+      ],
+      "context": "分析报告导出说明。已确认导出物是固定、版本化的字段集合；页面只有下载该字段集合的入口。规划讨论否决了把全部回答交给一个模型生成整份报告，但稿子仍把否决项写进了界面。",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "这条链路中不存在把全部回答交给一个模型、让它生成整份报告的步骤"
+        },
+        {
+          "role": "body",
+          "text": "导出器不返回无界报告 JSON。"
+        },
+        {
+          "role": "button",
+          "text": "继续评估"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "导出结果是固定、版本化的字段集合",
+        "用户可以下载该字段集合"
+      ],
+      "availableActions": [
+        {
+          "id": "download-fields",
+          "label": "下载字段集合",
+          "destination": "/reports/current/fields"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "说明导出物是固定、版本化的字段集合",
+        "只提供下载该字段集合这一真实动作"
+      ],
+      "mustRemoveIntents": [
+        "把已否决的整份报告生成方案写给用户",
+        "用“不返回无界报告 JSON”代替实际导出物"
+      ],
+      "mustNotInfer": [
+        "可以下载整份自由文本报告",
+        "字段集合无版本或可任意扩展",
+        "会把全部回答交给一个模型重写报告"
+      ],
+      "layoutConstraints": [
+        "标题不超过两行",
+        "主按钮保持一个"
+      ],
+      "rationale": "反向强调要把已否决路径从界面删除，并把否定契约改写成用户实际拿到的输出物；不能把真实限制一并抹掉。",
+      "safetyImpact": "high",
+      "supersedes": []
+    },
+    {
+      "id": "sh_beh_reverse_emphasis_en",
+      "status": "candidate",
+      "addedAt": "2026-08-27",
+      "origin": "real-redacted",
+      "locale": "en",
+      "surface": "product-workflow",
+      "tags": [
+        "reverse-emphasis",
+        "internal-language"
+      ],
+      "context": "Export help on an analysis report. The confirmed artifact is a fixed, versioned field set, and the page only offers that download. Planning rejected handing every answer to one model to write the whole report, but the draft still explains the rejection to the user.",
+      "inputCopy": [
+        {
+          "role": "heading",
+          "text": "This flow has no step that hands every answer to one model to generate the entire report"
+        },
+        {
+          "role": "body",
+          "text": "The exporter does not return unbounded report JSON."
+        },
+        {
+          "role": "button",
+          "text": "Continue evaluation"
+        }
+      ],
+      "approvedCopy": [],
+      "verifiedFacts": [
+        "The export is a fixed, versioned field set",
+        "The user can download that field set"
+      ],
+      "availableActions": [
+        {
+          "id": "download-fields",
+          "label": "Download field set",
+          "destination": "/reports/current/fields"
+        }
+      ],
+      "permissionState": "unrestricted",
+      "mustPreservePropositions": [
+        "State that the export is a fixed, versioned field set",
+        "Offer only the download of that field set"
+      ],
+      "mustRemoveIntents": [
+        "Tell the user about the rejected whole-report generation path",
+        "Use “does not return unbounded report JSON” in place of the actual artifact"
+      ],
+      "mustNotInfer": [
+        "A download of an unbounded free-text report",
+        "An unversioned or arbitrarily expandable field set",
+        "That every answer will be sent to one model to rewrite the report"
+      ],
+      "layoutConstraints": [
+        "The heading fits in two lines",
+        "Keep a single primary button"
+      ],
+      "rationale": "Reverse emphasis should drop rejected-path residue and restate the real output; it must not delete genuine limitations.",
+      "safetyImpact": "high",
+      "supersedes": []
     }
   ]
 }

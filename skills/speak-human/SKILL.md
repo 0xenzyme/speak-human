@@ -23,7 +23,7 @@ Before editing, separate these categories:
 - **Verified product facts:** capability, scope, quantity, availability, quality, price, delivery, security, compliance, and material limitations supported by the task or repository. Preserve their meaning.
 - **Real actions and states:** controls, routes, permissions, recovery paths, and lifecycle states that exist for the current user. Describe only what is actually available.
 - **Audience vocabulary:** product, operational, or technical terms the intended user needs. Preserve precise terms even when they also appear in source code.
-- **Internal language:** implementation commentary, layout rationale, persuasion strategy, evaluation criteria, team workflow, and generated filler. Remove it from rendered copy when it does not serve the audience.
+- **Internal language:** implementation commentary, layout rationale, persuasion strategy, evaluation criteria, team workflow, generated filler, and conversation residue about rejected options. Remove it from rendered copy when it does not serve the audience.
 
 Classify by context, not by a word list. Terms such as candidate, API, webhook, retry, version, dataset, or authorization may be essential in an operations or developer product and irrelevant on a consumer page.
 
@@ -37,6 +37,16 @@ Classify by context, not by a word list. Terms such as candidate, API, webhook, 
 6. Check adjacent headings, labels, states, and actions for consistency. If the interface is runnable, verify that text remains readable at relevant breakpoints; otherwise avoid speculative layout work.
 
 When essential facts are missing, use conservative literal wording or omit the unsupported proposition. Ask only when the missing choice would materially change meaning or implementation.
+
+## Rewrite Reverse Emphasis
+
+A rejected option from planning is not automatically user-facing copy. Do not keep it in the rendered text as a "we don't do X" statement.
+
+- If a sentence exists only to record that a discarded path is absent, delete it.
+- If a constraint is only the inverse of the real output or behavior, name that output or behavior.
+- Keep a negative when it is a material limitation, permission boundary, legal condition, or current-state fact the user needs.
+
+Judge by the reader's job, not by the presence of 不 or not. "Does not auto-retry" can be the current state; "this flow has no step that hands every answer to one model" is meeting residue.
 
 ## Adapt to the Surface
 
@@ -65,5 +75,6 @@ Before handing off, verify:
 - Every stated action exists, is available in the current state, and names its object or outcome.
 - Status, permission, uncertainty, counts, and limitations retain their original meaning.
 - Internal development or design rationale is absent from rendered copy unless it is legitimate audience vocabulary.
+- Rejected-option residue is absent; if a constraint is only the inverse of a real output, the copy names that output.
 - The changed copy covers relevant success, failure, empty, loading, disabled, and accessibility states without expanding scope.
 - The wording is coherent with neighboring UI and fits the implemented surface.
